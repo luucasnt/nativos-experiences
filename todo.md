@@ -189,3 +189,13 @@
 - [x] Reorganizar o header desktop para o menu completo caber com leitura clara, sem esmagar links nem CTA.
 - [x] Redesenhar os ícones para que garrafa, coco, pacote de snack, lenço com folha, álcool em gel, carregador e cadeirinha sejam reconhecíveis à primeira vista.
 - [x] Recompilar, reiniciar a prévia e anexar novas provas visuais dos três pontos.
+
+## Nova especificação final — Pasted_content.txt
+
+- [x] Confirmar quantos componentes/definições de ícones existem e consolidar o caminho renderizado.
+- [x] Aplicar literalmente os SVGs fornecidos para coco, snacks, lenço, carregadores e família; preservar o ícone de garrafa e higiene conforme especificado.
+- [x] Unificar álcool em gel e lenço em um único diferencial, totalizando exatamente 6 itens em PT e EN.
+- [x] Simplificar menu desktop para Transfer, Frota, Concierge, Casamentos e Eventos, Parcerias, com English e CTA separados.
+- [x] Garantir espaçamento e leitura do header em viewport de 1440px.
+- [x] Capturar screenshots em zoom individual dos ícones e do header desktop em 1440px.
+- [x] Build, HTML bruto e checkpoint final.

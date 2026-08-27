@@ -17,3 +17,9 @@ A lista final foi reduzida para exatamente sete diferenciais, conforme o documen
 ## Auditoria das imagens do usuário
 
 A imagem original do header mede 1284×143 e confirma que os nove links, seletor de idioma e CTA estão comprimidos em uma única linha, reduzindo a legibilidade. A imagem original da frota confirma visualmente `010` antes de `Blindado`, portanto a correção precisa cobrir a fonte efetivamente renderizada nessa seção, não apenas uma ocorrência de template encontrada por busca.
+
+## Pasted_content.txt — validação final
+
+A implementação agora tem um único mapa de ícones em `components/Differentiators.tsx`; os cinco SVGs fornecidos foram aplicados literalmente nos componentes correspondentes. `lib/data.ts` contém exatamente seis diferenciais PT/EN, com higiene unificada em “Álcool em gel e lenço umedecido disponíveis a bordo”. `SiteChrome.tsx` contém cinco links principais — Transfer, Frota, Concierge, Casamentos e Eventos e Parcerias — enquanto English e o CTA permanecem separados. O build passou com 41 rotas, e a prévia atualizada foi capturada em viewport desktop de 1440 px e em zoom individual dos ícones.
+
+A captura anterior à reinicialização mostrou o chrome antigo; ela foi descartada. A captura válida é a feita após o reinício e o build limpo, na qual o header exibe os cinco destinos e o bloco de diferenciais exibe seis itens.
