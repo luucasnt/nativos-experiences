@@ -1,19 +1,15 @@
-# Tarefas — reconstrução B2C da Nativos Experiences
+# Auditoria e reconstrução B2C — Nativos Experiences
 
-> O portfólio enviado é apenas fonte factual. A experiência comercial do site deve falar com o cliente final de luxo.
+> O site deve usar o site atual como fonte factual, mas ter conteúdo, arquitetura e apresentação originais para o cliente final de luxo.
 
-- [x] Extrair e consolidar os serviços, rotas, diferenciais, contatos e provas autorizadas do portfólio PDF.
-- [x] Verificar o site atual `www.nativosexperiences.com` e registrar arquitetura, mensagens, CTAs e informações operacionais.
-- [x] Separar fatos confirmados de hipóteses e itens que exigem validação da empresa.
-- [x] Reescrever o posicionamento como transfer de luxo em Trancoso, Bahia.
-- [x] Redesenhar a arquitetura de conversão para reservas, cotações e atendimento premium.
-- [x] Atualizar SEO local e semântico para Trancoso, Porto Seguro, Bahia e transfer executivo/de luxo.
-- [x] Substituir imagens e elementos visuais que não representem transfer, hospitalidade e litoral baiano.
-- [x] Implementar a nova versão no projeto sem alterar backend ou inventar avaliações/depoimentos.
-- [x] Validar desktop, mobile, acessibilidade, links, formulário, metadados e build de produção.
-- [ ] Salvar checkpoint atualizado e entregar a versão revisada.
-- [x] Substituir a direção neo-futurista por luxo rústico contemporâneo inspirado em Trancoso.
-- [x] Remover o foco visual e textual em parceiros B2B.
-- [x] Reescrever a jornada para reserva de transfer, motorista à disposição e concierge para viajantes.
-- [x] Gerar e aplicar ativos visuais com litoral, areia, arquitetura e hospitalidade de Trancoso.
-- [x] Validar se a primeira impressão comunica luxo, acolhimento e destino — não transporte utilitário.
+- [x] Mapear todas as páginas e abas do site atual.
+- [x] Consolidar transfer de Porto Seguro, Aeroporto Terravista, Trancoso e demais rotas.
+- [x] Consolidar serviços de concierge, motorista à disposição, casamentos e eventos.
+- [x] Dar destaque factual ao carro blindado e validar a formulação de exclusividade regional.
+- [x] Consolidar frota, categorias, capacidades e hospitalidade a bordo.
+- [x] Mapear destinos, FAQs, contatos, idiomas e CTAs existentes.
+- [x] Definir palavras-chave e arquitetura SEO local para o público B2C.
+- [x] Criar conteúdo original para cada intenção de busca, sem copiar o site atual.
+- [x] Implementar páginas e componentes B2C na nova identidade Casa de Areia.
+- [x] Validar links, metadados, dados estruturados, responsividade, acessibilidade e conversão.
+- [ ] Salvar checkpoint e entregar a versão final revisada.
