@@ -191,21 +191,3 @@ a { color:inherit; text-decoration:none; }
 .services-dropdown a:hover { color:var(--mist); background:rgba(255,107,53,.12); padding-left:25px; }
 @media (max-width:1100px) and (min-width:801px) { .nav-links { gap:20px; margin-right:28px; }.nav-links a,.services-trigger { font-size:9px; }.nav-actions { gap:16px; }.nav-cta { padding:11px 10px; font-size:9px; } }
 @media (max-width:800px) { .services-menu { display:none; } }
-
-/* Casa de Areia: bloco editorial inspirado na referência — seis cards, ícones pequenos, sem caixas. */
-.differentials-grid { grid-template-columns:repeat(3,minmax(0,1fr)); gap:58px 6vw; border:0; }
-.differential { min-height:0; border:0; padding:0; display:block; }
-.differential:nth-child(even) { border:0; padding-left:0; }
-.differential-mark,.differential-mark--water,.differential-mark--coconut,.differential-mark--snacks,.differential-mark--signal,.differential-mark--family { width:28px; height:28px; min-width:28px; min-height:28px; margin:0 0 18px; border:0; border-radius:0; transform:none; display:grid; place-items:center; color:#b7986d; background:transparent; }
-.differential-mark svg { width:25px; height:25px; stroke-width:1.15; }
-.differential h3 { margin:0 0 12px; color:var(--ink); font:500 25px/1.05 'Cormorant Garamond',serif; letter-spacing:-.02em; }
-.differential p { max-width:320px; margin:0; color:#5f6b65; font-size:16px; line-height:1.6; }
-@media (max-width:800px) { .differentials-grid { margin-top:48px; grid-template-columns:1fr; gap:42px; }.differential,.differential:nth-child(even) { border:0; padding:0; }.differential-mark { margin-bottom:14px; }.differential h3 { font-size:24px; }.differential p { max-width:100%; font-size:15px; } }
-
-/* Casa de Areia: a referência usa cards editoriais largos; o headline não comprime a grade lateral. */
-.differentiators { display:block; }
-.differentials-intro { max-width:520px; }
-.differentials-grid { width:100%; margin-top:72px; grid-template-columns:repeat(3,minmax(0,1fr)); gap:68px 7vw; }
-.differential h3 { max-width:300px; }
-.differential p { max-width:330px; }
-@media (max-width:800px) { .differentials-grid { margin-top:48px; gap:42px; } }
