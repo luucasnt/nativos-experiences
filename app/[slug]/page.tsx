@@ -2,7 +2,7 @@
 import type { Metadata } from "next";
 import { Differentiators } from "@/components/Differentiators";
 import { Footer, Header, eventWhatsapp, partnershipWhatsapp, whatsapp, WhatsAppButton } from "@/components/SiteChrome";
-import { allSlugs, differentiators, getServiceBySlug } from "@/lib/data";
+import { allSlugs, differentiatorContent, differentiators, getServiceBySlug } from "@/lib/data";
 
 const siteUrl = "https://nativosexperiences.com";
 
@@ -57,7 +57,7 @@ export default async function ServiceRoute({ params }: { params: Promise<{ slug:
         </div>
         <div className="service-facts"><span className="facts-label">O que você pode esperar</span>{page.items.map((item, index) => <div className="service-fact" key={item}><span>0{index+1}</span><strong>{item}</strong></div>)}</div>
       </div>
-      <Differentiators items={pageDifferentials} compact />
+      <Differentiators items={pageDifferentials} content={differentiatorContent[page.type]} compact />
       <div className="service-faqs"><span className="facts-label">Perguntas frequentes</span>{page.faqs.map((faq) => <details key={faq.question}><summary>{faq.question}</summary><p>{faq.answer}</p></details>)}</div>
       {related.length > 0 && <nav className="service-related" aria-label="Serviços relacionados"><span className="facts-label">Continue a planejar</span><div>{related.map((item) => item && <a key={item.slug} href={`/${item.slug}`}><span>{item.kicker}</span><strong>{item.title}</strong></a>)}</div></nav>}
     </section>

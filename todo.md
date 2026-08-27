@@ -103,3 +103,14 @@
 - [x] Validar build, HTML SSR, schemas, CTAs, links e responsividade.
 - [x] Entregar alterações por página e lista de afirmações `[CONFIRMAR]`.
 - [ ] Salvar checkpoint atualizado.
+
+## Correção estrutural dos diferenciais e rodapé
+
+- [x] Auditar o componente Differentiators, suas props e todas as páginas que o utilizam.
+- [x] Substituir siglas/textos em círculos por ícones gráficos reais e consistentes.
+- [x] Tornar headline e copy dos diferenciais obrigatórios por página, sem hardcode compartilhado.
+- [x] Definir conteúdo específico para Home/Transfer, Blindado, Motorista, Eventos, Concierge, Frota, Destinos, Reserva e Parcerias.
+- [x] Adicionar contato@nativosexperiences.com como mailto visível no rodapé de todas as páginas.
+- [x] Validar que Parcerias não exibe headline de chegada.
+- [x] Validar desktop, mobile e build após a refatoração.
+- [x] Entregar resumo de alterações por página e confirmar explicitamente a parametrização do componente.
