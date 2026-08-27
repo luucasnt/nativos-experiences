@@ -1,7 +1,7 @@
 // Casa de Areia: chrome compartilhado, com navegação curta e CTA de conversão para o cliente final.
 export const whatsapp = "https://wa.me/5573991681630?text=Ol%C3%A1!%20Gostaria%20de%20falar%20com%20um%20concierge%20da%20Nativos%20Experiences.";
 export const partnershipWhatsapp = "https://wa.me/5573991681630?text=Ol%C3%A1!%20Gostaria%20de%20conhecer%20as%20parcerias%20da%20Nativos%20Experiences.";
-const mark = "/manus-storage/nativos-trancoso-mark_396fc119.png";
+const mark = "https://files.manuscdn.com/user_upload_by_module/session_file/310419663029716923/usTPVzSokKzdeTWC.png";
 
 export function Brand() { return <a className="brand" href="/"><img src={mark} alt="" /><span><b>nativos</b><small>experiences</small></span></a>; }
 export function Header() { return <header className="nav-wrap"><div className="nav-inner"><Brand /><nav className="nav-links" aria-label="Navegação principal"><a href="/transfer-aeroporto">Transfer aeroporto</a><a href="/concierge">Concierge</a><a href="/casamentos-e-eventos">Eventos</a><a href="/destinos">Destinos</a><a href="/parcerias">Parcerias</a></nav><a className="nav-cta" href={whatsapp} target="_blank" rel="noreferrer">Falar com concierge <span aria-hidden="true">↗</span></a></div></header>; }

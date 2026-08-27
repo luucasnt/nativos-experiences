@@ -46,3 +46,18 @@
 - [x] Criar página `/parcerias` com CTA B2B separado e link discreto no menu.
 - [x] Não alterar layout ou CSS.
 - [x] Validar build e gerar lista de alterações por arquivo.
+
+## Correção do preview
+
+- [x] Verificar se o servidor Next está respondendo na porta gerenciada.
+- [x] Confirmar o endereço público atual do preview.
+- [x] Reiniciar ou corrigir o servidor se necessário.
+- [x] Testar a Home e uma rota interna antes de reenviar o link.
+
+## Falha reportada no preview
+
+- [ ] Reproduzir a falha na Home e nas rotas internas.
+- [ ] Verificar erros do servidor Next, console e rede.
+- [ ] Confirmar se os assets e links respondem corretamente.
+- [ ] Corrigir sem apagar as alterações de conteúdo aprovadas.
+- [x] Validar desktop, mobile e build antes de reenviar o preview.
