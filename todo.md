@@ -247,3 +247,11 @@
 - [x] Incluir funcionamento dos passeios no corpo, items e FAQ.
 - [x] Atualizar sitemap e links PT/EN.
 - [x] Rodar build, validar HTML e capturar as cinco provas solicitadas.
+
+## Reordenação da jornada do cliente
+
+- [x] Definir a sequência de navegação pela jornada B2C, não pela ordem interna dos serviços.
+- [x] Reordenar os itens do header e do submenu mantendo todos os destinos acessíveis.
+- [x] Espelhar a mesma lógica no drawer mobile e no footer.
+- [x] Validar clareza, densidade e links em desktop/mobile.
+- [ ] Salvar checkpoint atualizado.
