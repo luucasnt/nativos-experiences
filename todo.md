@@ -85,3 +85,21 @@
 - [x] Refinar Header, Footer, cards, frota, FAQs e botões para luxo rústico.
 - [x] Verificar a experiência mobile e desktop após a revisão.
 - [x] Salvar checkpoint somente depois da validação visual completa.
+
+## Enriquecimento SEO solicitado em Pasted_content_02.txt
+
+- [x] Criar conteúdo aprofundado para `/transfer-blindado` com abertura direta, público, reserva, região e FAQ mínimo de 4 perguntas.
+- [x] Adicionar Schema Service + FAQPage específico ao transfer blindado.
+- [x] Marcar com `[CONFIRMAR]` afirmações adicionadas sem base explícita nos dados fornecidos.
+- [x] Enriquecer `/casamentos-e-eventos` para casais, cerimonialistas, produtoras e agências.
+- [x] Criar CTA de evento com mensagem de WhatsApp específica.
+- [x] Criar componente reutilizável de diferenciais com iconografia distinta por item.
+- [x] Aplicar diferenciais na Home e em todas as páginas de serviço.
+- [x] Padronizar ícones e estados dos botões sem reintroduzir setas genéricas.
+- [x] Criar `/motorista-a-disposicao` como página SEO aprofundada.
+- [x] Criar `/transfer-porto-seguro-trancoso` como página SEO específica da rota.
+- [x] Aplicar abertura autoexplicativa, Service schema, FAQ schema e dois links internos por página.
+- [x] Não inventar avaliações, quantidades, percentuais ou números sem confirmação.
+- [x] Validar build, HTML SSR, schemas, CTAs, links e responsividade.
+- [x] Entregar alterações por página e lista de afirmações `[CONFIRMAR]`.
+- [ ] Salvar checkpoint atualizado.

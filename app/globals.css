@@ -88,3 +88,30 @@ a { color:inherit; text-decoration:none; }
   .service-faqs details summary:after { font-size:18px; }
   .hero-action, .text-link, .dark-button, .form-submit { letter-spacing:.13em; }
 }
+
+/* Diferenciais: cada benefício tem um marcador próprio, sem checkmarks repetidos. */
+.differentiators { padding:125px 11vw 120px; background:#f8f5ee; color:var(--ink); display:grid; grid-template-columns:.7fr 1.3fr; gap:10vw; align-items:start; }
+.differentials-intro h2 { font:500 clamp(44px,5vw,70px)/.92 'Cormorant Garamond'; letter-spacing:-.05em; margin:0; }
+.differentials-intro h2 em { font-style:italic; }
+.differentials-grid { display:grid; grid-template-columns:repeat(2,1fr); border-top:1px solid #d4cbbb; }
+.differential { min-height:132px; border-bottom:1px solid #d4cbbb; padding:22px 24px 18px 0; display:flex; gap:18px; align-items:flex-start; }
+.differential:nth-child(even) { border-left:1px solid #d4cbbb; padding-left:24px; }
+.differential p { margin:3px 0 0; color:#64736b; font-size:13px; line-height:1.45; max-width:190px; }
+.differential-mark { width:44px; height:44px; flex:none; display:grid; place-items:center; border:1px solid #bfa77d; color:#92754a; font:600 9px 'DM Sans'; letter-spacing:.07em; }
+.differential-mark--water { border-radius:50%; }
+.differential-mark--coconut { border-radius:50% 50% 45% 45%; transform:rotate(-8deg); }
+.differential-mark--snacks { border-radius:2px; border-style:dashed; }
+.differential-mark--signal { border-radius:50%; border-width:1px 1px 3px; }
+.differential-mark--family { border-radius:50% 2px 50% 2px; }
+.differentiators--compact { padding-top:90px; padding-bottom:90px; }
+@media (max-width:800px) { .differentiators { padding:95px 8vw 85px; display:block; }.differentials-grid { margin-top:48px; grid-template-columns:1fr; }.differential,.differential:nth-child(even) { border-left:0; padding:20px 0; }.differential:nth-child(even) { padding-left:0; }.differential p { max-width:240px; } }
+
+/* Conteúdo SEO: abertura e navegação contextual com acabamento editorial. */
+.service-opening { color:#294039 !important; font-weight:500; }
+.service-related { max-width:1060px; margin:95px auto 0; border-top:1px solid #d4cbbb; padding-top:20px; }
+.service-related > div { display:grid; grid-template-columns:repeat(3,1fr); gap:22px; margin-top:22px; }
+.service-related a { display:block; padding:22px 18px 24px 0; border-bottom:1px solid #d4cbbb; color:var(--ink); transition:color .2s var(--ease), padding-left .2s var(--ease); }
+.service-related a:hover { color:#96774b; padding-left:7px; }
+.service-related a span { display:block; color:#9b855f; font:600 9px 'DM Sans'; text-transform:uppercase; letter-spacing:.13em; margin-bottom:12px; }
+.service-related a strong { display:block; font:500 24px/1 'Cormorant Garamond'; letter-spacing:-.03em; }
+@media (max-width:800px) { .service-related { margin-top:65px; }.service-related > div { grid-template-columns:1fr; gap:0; }.service-related a { padding:19px 0; }.service-related a strong { font-size:22px; } }
