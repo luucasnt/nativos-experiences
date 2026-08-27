@@ -199,3 +199,13 @@
 - [x] Garantir espaçamento e leitura do header em viewport de 1440px.
 - [x] Capturar screenshots em zoom individual dos ícones e do header desktop em 1440px.
 - [x] Build, HTML bruto e checkpoint final.
+
+## Nova correção — Coconut oficial e submenu Serviços
+
+- [x] Verificar se a dependência instalada exporta `Coconut` e confirmar a versão atual.
+- [x] Se disponível, usar `Coconut` oficial somente no diferencial de água de coco; não alterar os outros cinco ícones.
+- [x] Se indisponível, parar antes de desenhar SVG customizado e informar o usuário.
+- [x] Criar submenu desktop de Serviços com os 7 serviços especificados.
+- [x] Manter Parcerias, Sobre, English e CTA fora do submenu, na ordem solicitada.
+- [x] Capturar submenu aberto em 1440px e coco em zoom individual.
+- [x] Build, type-check e checkpoint final.

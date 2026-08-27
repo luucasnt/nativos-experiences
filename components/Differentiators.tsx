@@ -1,6 +1,8 @@
 // Casa de Areia: seis diferenciais com ícones SVG inline, renderização SSR segura e conteúdo editorial parametrizado por página.
 import type { Differentiator, DifferentiatorContent } from "@/lib/data";
 import type { SVGProps } from "react";
+import { Icon } from "lucide-react";
+import { coconut } from "@lucide/lab";
 
 type IconProps = SVGProps<SVGSVGElement> & { size?: number; strokeWidth?: number };
 type IconComponent = (props: IconProps) => JSX.Element;
@@ -10,7 +12,7 @@ function IconBase({ children, size = 25, strokeWidth = 1.35, ...props }: IconPro
 }
 
 function BottleIcon({ ...props }: IconProps) { return <IconBase {...props}><path d="M9 3h6" /><path d="M10 3v3.2c0 .6-.2 1.1-.6 1.6A5.8 5.8 0 0 0 8 11.5V20a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-8.5a5.8 5.8 0 0 0-1.4-3.7 2.6 2.6 0 0 1-.6-1.6V3" /><path d="M8 11h8" /></IconBase>; }
-function CoconutIcon({ ...props }: IconProps) { return <IconBase {...props}><ellipse cx="12" cy="14" rx="6.5" ry="7.5"/><circle cx="10" cy="11" r=".6" fill="currentColor"/><circle cx="13.5" cy="10.5" r=".6" fill="currentColor"/><circle cx="11.5" cy="14" r=".6" fill="currentColor"/><path d="M14 8 L19 3"/><path d="M17.5 3.5 L19 3 L19.5 4.5"/></IconBase>; }
+function CoconutIcon({ size = 25, strokeWidth = 1.35, ...props }: IconProps) { return <Icon iconNode={coconut} size={size} strokeWidth={strokeWidth} aria-hidden="true" {...props} />; }
 function SnackIcon({ ...props }: IconProps) { return <IconBase {...props}><path d="M7 8 Q6 5 8 4 Q9 3 10 4 Q11 3 12 4 Q13 3 14 4 Q16 5 15 8"/><path d="M6.5 8 L6 19 Q6 20 7 20 L15.5 20 Q16.5 20 16.5 19 L16 8 Z"/><path d="M8 12 L14 12"/></IconBase>; }
 function WipeIcon({ ...props }: IconProps) { return <IconBase {...props}><rect x="5" y="9" width="14" height="12" rx="1.5"/><ellipse cx="12" cy="9" rx="4" ry="1.3"/><path d="M9.5 8.3 Q11 5 13.5 7.5"/></IconBase>; }
 function SanitizerIcon({ ...props }: IconProps) { return <IconBase {...props}><path d="M9 7h6v13H9z" /><path d="M10 7V4h4v3M12 4V2h3" /><path d="M15 3h3M11 11h2M11 15h2" /><path d="M18 9c1.2.9 1.6 2.1 1.2 3.3" /></IconBase>; }

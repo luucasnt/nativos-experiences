@@ -23,3 +23,7 @@ A imagem original do header mede 1284×143 e confirma que os nove links, seletor
 A implementação agora tem um único mapa de ícones em `components/Differentiators.tsx`; os cinco SVGs fornecidos foram aplicados literalmente nos componentes correspondentes. `lib/data.ts` contém exatamente seis diferenciais PT/EN, com higiene unificada em “Álcool em gel e lenço umedecido disponíveis a bordo”. `SiteChrome.tsx` contém cinco links principais — Transfer, Frota, Concierge, Casamentos e Eventos e Parcerias — enquanto English e o CTA permanecem separados. O build passou com 41 rotas, e a prévia atualizada foi capturada em viewport desktop de 1440 px e em zoom individual dos ícones.
 
 A captura anterior à reinicialização mostrou o chrome antigo; ela foi descartada. A captura válida é a feita após o reinício e o build limpo, na qual o header exibe os cinco destinos e o bloco de diferenciais exibe seis itens.
+
+## Provas finais — Coconut oficial e submenu
+
+A fonte oficial do Lucide confirma que `Coconut` não é exportado pelo pacote principal `lucide-react`; ele pertence ao pacote oficial separado `@lucide/lab` e é renderizado via `Icon iconNode={coconut}`. A dependência `@lucide/lab@0.2.0` foi adicionada e o build SSR passou. A captura em zoom mostra um coco tridimensional reconhecível, com casca, abertura e canudo. A captura desktop em 1440 px mostra o submenu Serviços aberto com Transfer Aeroporto, Transfer Blindado, Motorista à Disposição, Concierge, Casamentos e Eventos, Frota e Destinos; Parcerias, Sobre, English e o CTA permanecem fora do submenu.
