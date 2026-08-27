@@ -181,7 +181,7 @@
 
 ## Ajuste de aceite identificado após prova visual
 
-- [ ] Alinhar a lista renderizada ao documento final: exatamente 7 diferenciais, sem perder a exigência de álcool em gel. Definir a composição final conforme a especificação mais recente antes de regenerar as capturas.
+- [x] Alinhar a lista renderizada ao documento final: exatamente 7 diferenciais, sem perder a exigência de álcool em gel. Definir a composição final conforme a especificação mais recente antes de regenerar as capturas.
 
 ## Correções comprovadas nas imagens anexadas
 
@@ -254,4 +254,13 @@
 - [x] Reordenar os itens do header e do submenu mantendo todos os destinos acessíveis.
 - [x] Espelhar a mesma lógica no drawer mobile e no footer.
 - [x] Validar clareza, densidade e links em desktop/mobile.
+- [ ] Salvar checkpoint atualizado.
+
+## Nova ordem e efeitos de interação
+
+- [x] Reordenar header, drawer mobile e footer para: Sobre, Serviços, Frota, Concierge, Casamentos e Eventos, Parcerias.
+- [x] Manter o submenu de Serviços com os serviços já definidos.
+- [x] Adicionar efeitos sutis de revelação, luz, hover editorial e textura coerentes com Casa de Areia.
+- [x] Respeitar `prefers-reduced-motion`, performance e contraste.
+- [x] Rodar build e validar desktop/mobile.
 - [ ] Salvar checkpoint atualizado.
