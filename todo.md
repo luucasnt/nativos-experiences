@@ -61,3 +61,18 @@
 - [ ] Confirmar se os assets e links respondem corretamente.
 - [ ] Corrigir sem apagar as alterações de conteúdo aprovadas.
 - [x] Validar desktop, mobile e build antes de reenviar o preview.
+
+## Preview ainda não localizado pelo usuário
+
+- [ ] Confirmar o endereço de preview que está ativo no painel.
+- [ ] Verificar se o servidor gerenciado está respondendo no endereço público.
+- [ ] Testar a prévia em uma janela nova antes de reenviar.
+- [ ] Entregar somente o acesso confirmado ou explicar claramente o bloqueio.
+
+## Falha de CSS/JS no preview mobile
+
+- [x] Reproduzir 404 dos chunks `_next/static` e do CSS.
+- [x] Verificar se o preview está servindo um build antigo ou inconsistente.
+- [x] Corrigir a inicialização/limpeza do Next sem remover conteúdo aprovado.
+- [x] Testar layout real em desktop e mobile.
+- [x] Criar checkpoint somente após a prévia estar visualmente correta.
