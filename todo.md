@@ -114,3 +114,15 @@
 - [x] Validar que Parcerias não exibe headline de chegada.
 - [x] Validar desktop, mobile e build após a refatoração.
 - [x] Entregar resumo de alterações por página e confirmar explicitamente a parametrização do componente.
+
+## Correção final dos diferenciais
+
+- [x] Substituir o ícone de gota por uma garrafinha de água reconhecível.
+- [x] Substituir o copo por um ícone de coco reconhecível, com formato/casca.
+- [x] Garantir a lista final exata com 7 itens, na ordem fornecida.
+- [x] Adicionar ícone próprio para lenço umedecido.
+- [x] Adicionar ícone próprio para carregadores eletrônicos.
+- [x] Alterar toda ocorrência solta de Água para Água mineral.
+- [x] Corrigir o item infantil para Bebê conforto, cadeirinha e assento elevado sem custo adicional.
+- [x] Confirmar os 7 itens e ícones na Home e em todas as páginas de serviço.
+- [x] Validar build, HTML, responsividade e salvar checkpoint.
