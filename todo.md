@@ -209,3 +209,12 @@
 - [x] Manter Parcerias, Sobre, English e CTA fora do submenu, na ordem solicitada.
 - [x] Capturar submenu aberto em 1440px e coco em zoom individual.
 - [x] Build, type-check e checkpoint final.
+
+## Nova referência visual — diferenciais editoriais
+
+- [x] Usar a referência anexada como padrão visual do bloco.
+- [x] Renderizar exatamente 6 cards: Starlink; água e água de coco; snacks; lenços umedecidos; álcool em gel; carregadores.
+- [x] Remover molduras, círculos, caixas e ícones excessivamente grandes.
+- [x] Usar ícones pequenos, finos, abstratos e visualmente consistentes.
+- [x] Escrever títulos editoriais e descrições completas conforme o padrão da referência.
+- [x] Validar desktop/mobile e salvar checkpoint.

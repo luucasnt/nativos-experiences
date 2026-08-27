@@ -27,3 +27,13 @@ A captura anterior à reinicialização mostrou o chrome antigo; ela foi descart
 ## Provas finais — Coconut oficial e submenu
 
 A fonte oficial do Lucide confirma que `Coconut` não é exportado pelo pacote principal `lucide-react`; ele pertence ao pacote oficial separado `@lucide/lab` e é renderizado via `Icon iconNode={coconut}`. A dependência `@lucide/lab@0.2.0` foi adicionada e o build SSR passou. A captura em zoom mostra um coco tridimensional reconhecível, com casca, abertura e canudo. A captura desktop em 1440 px mostra o submenu Serviços aberto com Transfer Aeroporto, Transfer Blindado, Motorista à Disposição, Concierge, Casamentos e Eventos, Frota e Destinos; Parcerias, Sobre, English e o CTA permanecem fora do submenu.
+
+## Fonte oficial consultada
+
+- Lucide Coconut: https://lucide.dev/icons/lab/coconut — página oficial mostra `coconut` no segmento Lab e o uso React com `Icon` e `@lucide/lab`.
+- Lucide React — With Lucide Lab: https://lucide.dev/guide/react/advanced/with-lucide-lab — documenta que Lucide Lab reúne ícones que não fazem parte da biblioteca principal e mostra `import { coconut } from '@lucide/lab'`.
+- NPM @lucide/lab: https://www.npmjs.com/package/@lucide/lab — pacote oficial, versão consultada 0.2.0, sem dependências, usado com `lucide-react`.
+
+## Revisão visual da referência editorial
+
+A captura após o build final mostra o bloco de diferenciais com a composição corrigida: headline introdutório acima, seis cards em grade 3×2, ícones pequenos e finos, sem círculos ou molduras, títulos editoriais e descrições completas. A largura dos cards foi liberada para evitar a compressão anterior; no mobile a grade colapsa para uma coluna com o mesmo espaçamento e hierarquia. HTML bruto confirma os seis conteúdos: Internet Starlink; Água e água de coco; Snacks a bordo; Lenços umedecidos; Álcool em gel; Carregadores para eletrônicos.
