@@ -1,84 +1,65 @@
-# Direção criativa — Nativos Experiences
+# Direção criativa — Nativos Experiences B2C
 
-## Três abordagens iniciais
+## Contexto corrigido
 
-### Abordagem 1
-**Theme Name:** Atlas Vivo
+O site é voltado ao cliente final que busca **transfer privativo, motorista à disposição e concierge em Trancoso e região**. O portfólio de parceiros é apenas fonte de informações operacionais; não define a linguagem comercial da página.
 
-**Very Brief Intro:** Uma estética editorial-expedicionária que transforma cada destino em uma descoberta tátil, combinando cartografia contemporânea, matéria natural e tipografia de revista de viagem. A marca parece premium, humana e impossível de confundir com um catálogo turístico.
-
-**Probability:** 0.037
-
-### Abordagem 2
-**Theme Name:** Horizonte Sintético
-
-**Very Brief Intro:** Uma direção futurista e imersiva que trata experiências como portais: superfícies escuras, topografia luminosa, transições orbitais e microinterações precisas. A sensação é de tecnologia a serviço do desejo de partir.
-
-**Probability:** 0.083
-
-### Abordagem 3
-**Theme Name:** Sol de Origem
-
-**Very Brief Intro:** Um sistema solar, caloroso e sofisticado, baseado em terracota, areia, azul profundo e imagens com luz natural. A experiência comunica brasilidade, curadoria e confiança sem cair no visual rústico convencional.
-
-**Probability:** 0.014
-
-## Abordagem escolhida: Horizonte Sintético
+## Direção escolhida: Casa de Areia
 
 ### Design Movement
-**Neo-futurismo editorial**, com influência de interfaces de exploração espacial, direção de arte de documentários de território e design de luxo contemporâneo. O futuro aqui não é frio: é uma lente para revelar experiências reais, raras e bem cuidadas.
+**Luxo rústico contemporâneo**, inspirado na arquitetura essencial de Trancoso, na luz da Bahia, na textura da areia, na madeira natural, no linho e na hospitalidade de pousadas autorais. A sofisticação vem da curadoria, do espaço e do cuidado — nunca de excesso visual.
 
 ### Core Principles
-1. **Desejo antes da explicação:** o primeiro impacto deve provocar vontade de viver a experiência; detalhes entram depois para reduzir fricção.
-2. **Contraste de escalas:** grandes frases e imagens atmosféricas convivem com microcopy objetiva, dados de prova e CTAs muito claros.
-3. **Profundidade sem peso:** usar camadas, brilho controlado, ruído sutil e movimento responsivo sem sacrificar velocidade ou legibilidade.
-4. **Conversão como orientação:** cada seção conduz naturalmente ao próximo passo — descobrir, confiar, escolher e conversar.
+1. **Chegada como ritual:** a experiência começa antes do destino, no primeiro contato, na recepção e no conforto do trajeto.
+2. **Luxo sem ostentação:** materiais naturais, composição calma, proporção generosa e detalhes bem resolvidos.
+3. **Trancoso como protagonista:** litoral, caminhos, arquitetura, luz e ritmo local aparecem no conteúdo e no visual.
+4. **Conversão acolhedora:** CTAs claros e humanos, levando para reserva ou concierge sem linguagem agressiva de venda.
 
 ### Color Philosophy
-A base é um **azul-noite mineral**, escolhido para criar sensação de profundidade, exclusividade e foco. O acento proprietário é um **laranja solar elétrico**, usado apenas para ação, direção e momentos de descoberta. Tons de névoa azulada sustentam leitura e respiro, enquanto branco quente evita a aparência clínica de uma interface tecnológica genérica.
+A base usa **branco quente** e **areia clara** para transmitir luz, descanso e sofisticação costeira. O **champanhe** sinaliza cuidado, exclusividade e acabamento. Um verde-folha profundo cria contraste orgânico e ancora a marca na vegetação de Trancoso. O dourado é detalhe, nunca brilho chamativo.
 
 ### Layout Paradigm
-Uma composição de **trajetória vertical**, não de blocos centralizados: o conteúdo entra pela esquerda, a prova aparece em trilhas laterais e os visuais atravessam a página em recortes assimétricos. A navegação funciona como um sistema de coordenadas; âncoras, números de seção e linhas de percurso ajudam o leitor a sentir avanço.
+A página funciona como uma **casa aberta para o destino**: hero amplo e luminoso, blocos assimétricos, imagens emolduradas como janelas, muito respiro e transições suaves. A navegação acompanha a lógica da viagem: chegar, escolher o conforto, descobrir a região e reservar.
 
 ### Signature Elements
-- **Linha de órbita:** filetes finos e animados que conectam seções e destacam o caminho da decisão.
-- **Coordenadas de experiência:** pequenos marcadores com número, região, duração e tipo de vivência.
-- **Molduras de portal:** imagens recortadas em formas angulares, com bordas de luz e hover que revela contexto adicional.
+- Linhas finas inspiradas em caminhos de areia e mapas costeiros.
+- Molduras orgânicas, cantos recortados e texturas de linho/papel em imagens e cards.
+- Marcadores discretos em champanhe com origem, rota e categoria do serviço.
 
 ### Interaction Philosophy
-Interações devem parecer instrumentos de exploração, não decoração. Hover revela profundidade e contexto; cliques levam diretamente a uma ação útil; scroll apresenta a narrativa em camadas. O usuário nunca deve se perguntar “o que faço agora?” — a interface sempre aponta o próximo movimento.
+Interações são silenciosas e táteis: imagens ganham profundidade no hover, menus deslizam com suavidade e CTAs respondem com leveza. Nada deve parecer painel de controle ou sistema logístico; a interface deve transmitir a calma de quem já resolveu tudo.
 
 ### Animation
-Entradas com fade + deslocamento curto em eixo vertical, entre 180 e 280 ms, com easing de saída firme. Imagens podem deslocar-se poucos pixels em scroll para criar parallax discreto. Linhas de órbita usam desenho progressivo apenas em momentos de entrada. CTAs respondem ao toque com escala de 0.97 e brilho breve. Toda animação não essencial deve respeitar `prefers-reduced-motion`.
+Entradas com fade e deslocamento curto entre 180 e 280 ms. Imagens podem ter zoom mínimo e lento no hover. Linhas de rota aparecem gradualmente apenas ao entrar no viewport. Respeitar `prefers-reduced-motion` e manter toda animação não essencial desativável.
 
 ### Typography System
-- **Display:** Space Grotesk, pesos 500–700, para headlines, números e frases de impacto.
-- **Editorial accent:** Cormorant Garamond, itálico, apenas em palavras-chave ou frases de atmosfera.
-- **Body/UI:** DM Sans, pesos 400–600, para leitura, botões, labels e informações práticas.
-- Hierarquia: headlines curtas em caixa baixa ou sentence case; labels em maiúsculas com tracking amplo; corpo em linhas de 55–70 caracteres.
+- **Display:** Cormorant Garamond, para headlines sensoriais e expressões de destino.
+- **Interface:** DM Sans, para navegação, CTAs e informações objetivas.
+- **Apoio:** Space Grotesk em pequenos marcadores e dados de frota.
+- Headlines com sentence case, corpo curto e direto, sem jargão B2B.
 
 ### Brand Essence
-**Nativos Experiences cria acesso curado a experiências brasileiras que mudam a forma de lembrar um lugar — para viajantes e marcas que preferem profundidade a roteiro pronto.**
+**Nativos Experiences é a forma mais cuidadosa de chegar a Trancoso — transfer privativo, conforto e concierge para quem quer viver a Bahia no próprio ritmo.**
 
-**Personalidade:** magnética, criteriosa, inquieta.
+**Personalidade:** acolhedora, elegante, local.
 
 ### Brand Voice
-Headlines são provocativas e sensoriais, CTAs são verbos específicos e microcopy remove objeções com precisão. O texto fala como quem conhece o território, mas nunca como um vendedor insistente.
+A voz é calorosa, segura e sensorial. Fala com o viajante, não com uma operação. Os CTAs usam verbos simples: “Reservar meu transfer”, “Falar com um concierge”, “Planejar minha chegada”.
 
-Exemplo de headline: **“O Brasil que não aparece no caminho mais fácil.”**
+Exemplo de headline: **“A viagem começa quando você é recebido.”**
 
-Exemplo de CTA: **“Desenhar minha experiência”**
+Exemplo de microcopy: **“Você informa o voo. A gente cuida do resto.”**
 
 ### Wordmark & Logo
-O símbolo é um **N modular formado por duas órbitas interrompidas**, sugerindo caminhos que se encontram e uma bússola em movimento. O wordmark deve usar “nativos” em minúsculas, com espaçamento customizado e um corte diagonal sutil no “v”, acompanhado de “experiences” em escala menor e tracking amplo.
+O símbolo é uma marca solar orgânica: dois arcos formam uma estrada e um horizonte, com um gesto manual inspirado em cerâmica e fibras naturais. O wordmark permanece em minúsculas, com desenho discreto e espaçamento amplo.
 
 ### Signature Brand Color
-**Solar Signal — `#FF6B35`**. Um laranja queimado luminoso, próprio para ação e descoberta, com presença suficiente para ser reconhecido mesmo em pequenos detalhes.
+**Champagne Sand — `#C9A978`**, usado em filetes, marcadores, bordas e CTAs de destaque.
 
 ## Regras de aplicação
 
-- Nenhuma seção deve parecer um template genérico de turismo.
-- Nenhum CTA primário deve competir com dois CTAs equivalentes na mesma dobra.
-- Imagens hero devem ter área segura para texto e usar contraste garantido por sobreposição, nunca por esperança.
-- O site deve funcionar bem sem animação, sem fontes carregadas e em conexões móveis lentas.
-- Cada decisão deve responder à pergunta: **isso reforça ou dilui a sensação de estar prestes a descobrir algo raro?**
+- Nenhuma seção deve parecer transporte de carga, logística industrial ou dashboard operacional.
+- O foco principal é B2C: chegada, conforto, segurança, beleza, tempo e concierge.
+- A linguagem B2B fica fora da home; qualquer parceria deve ser uma rota secundária futura.
+- O portfólio só deve fornecer fatos: desde 2015, Trancoso, rotas, frota e serviços confirmados.
+- Não usar depoimentos ou avaliações sem confirmação explícita e origem verificável.
