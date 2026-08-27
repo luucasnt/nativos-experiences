@@ -76,3 +76,12 @@
 - [x] Corrigir a inicialização/limpeza do Next sem remover conteúdo aprovado.
 - [x] Testar layout real em desktop e mobile.
 - [x] Criar checkpoint somente após a prévia estar visualmente correta.
+
+## Revisão de alto luxo
+
+- [x] Remover setas Unicode, triângulos e emojis decorativos dos CTAs e listas.
+- [x] Substituir indicadores genéricos por microinterações discretas e ícones consistentes.
+- [x] Auditar espaçamentos, cortes de texto, alinhamentos e hierarquia tipográfica.
+- [x] Refinar Header, Footer, cards, frota, FAQs e botões para luxo rústico.
+- [x] Verificar a experiência mobile e desktop após a revisão.
+- [x] Salvar checkpoint somente depois da validação visual completa.
