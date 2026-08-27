@@ -1,116 +1,53 @@
-// Direção visual: Horizonte Sintético — conteúdo em trajetória vertical, portais assimétricos, tipografia editorial e CTAs orientados à ação.
+// Direção visual: Horizonte Sintético aplicado à hospitalidade premium — Trancoso, Bahia, frota discreta, rotas claras e conversão direta para reserva.
 import { useEffect, useState } from "react";
-import { ArrowDownRight, ArrowUpRight, Check, Compass, Instagram, Menu, MoveRight, Sparkles, X } from "lucide-react";
+import { ArrowDownRight, ArrowUpRight, Check, ChevronDown, Instagram, Menu, MoveRight, X } from "lucide-react";
 
-const heroImage = "/manus-storage/nativos-hero_9f65d1d5.jpg";
-const markImage = "/manus-storage/nativos-mark-symbol_c3c49ab2.png";
-const experienceImages = [
-  "/manus-storage/nativos-experience-01_c1d06b7a.jpg",
-  "/manus-storage/nativos-experience-02_6336aaa1.jpg",
-  "/manus-storage/nativos-experience-03_255ffbb6.jpg",
+const whatsapp = "https://wa.me/5573991681630?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20transfer%20privativo%20com%20a%20Nativos%20Experiences.";
+const carImage = "/manus-storage/page-000_e937104f.jpg";
+const onboardImage = "/manus-storage/page-001_5008aded.jpg";
+const serviceImage = "/manus-storage/page-003_9da43469.jpg";
+const eventImage = "/manus-storage/page-005_26375150.jpg";
+
+const services = [
+  { number: "01", label: "Transfer privativo", title: "Do aeroporto ao Quadrado, sem espera.", text: "Monitoramos seu voo, organizamos a recepção e levamos você com discrição até sua hospedagem em Trancoso e região.", image: carImage },
+  { number: "02", label: "Motorista à disposição", title: "Seu tempo, no ritmo do destino.", text: "Um veículo privativo para circular entre praias, restaurantes, villas e compromissos com liberdade e segurança.", image: onboardImage },
+  { number: "03", label: "Casamentos & eventos", title: "Logística para o dia mais importante.", text: "Transporte de convidados, artistas e staff com dimensionamento de frota, múltiplos embarques e um contato único.", image: eventImage },
 ];
-
-const experiences = [
-  { number: "01", region: "Litoral nordestino", title: "Mesa de origem", type: "Gastronomia · Cultura", image: experienceImages[0], description: "Sabores, histórias e encontros desenhados com quem faz o território acontecer." },
-  { number: "02", region: "Cerrado brasileiro", title: "O caminho secreto", type: "Natureza · Expedição", image: experienceImages[1], description: "Uma travessia fora do óbvio, entre água, silêncio e paisagens que pedem presença." },
-  { number: "03", region: "Ateliê brasileiro", title: "Matéria viva", type: "Arte · Imersão", image: experienceImages[2], description: "O gesto de criar como porta de entrada para uma cultura que ainda está em movimento." },
+const fleet = [
+  ["Convencional", "Jeep Renegade ou similar", "Até 4"], ["Executiva", "Jeep Compass ou similar", "Até 4"], ["Luxo", "GWM Haval H6 ou similar", "Até 4"], ["Premium", "CAOA Chery Tiggo 8 Pro ou similar", "Até 6"], ["Elite", "Toyota SW4, GWM H9 ou similar", "Até 6"], ["Exclusive", "BMW iX1 · 100% elétrica", "Até 4"], ["Van Executiva", "Mercedes-Benz Sprinter", "9 ou 15"], ["Blindado", "Mercedes-Benz GLE 400d", "Até 4"],
+];
+const faqs = [
+  ["Como funciona o transfer do aeroporto de Porto Seguro para Trancoso?", "Monitoramos seu voo e mantemos o veículo preparado para a chegada. O transfer é privativo, com motorista local e padrão de bordo Nativos."],
+  ["Vocês atendem o Aeroporto Terravista?", "Sim. Atendemos passageiros de aviação particular no Aeroporto Terravista, com receptivo e mobilidade privativa. Valores sob consulta."],
+  ["Quais destinos vocês atendem?", "Trancoso, Arraial d’Ajuda, Praia do Espelho, Caraíva, Santo André, Corumbau, Itacaré e rotas especiais planejadas conforme a operação."],
+  ["É possível reservar vans ou veículos especiais?", "Sim. Temos Van Executiva para 9 ou 15 passageiros, Van Longa para até 19 e Blindado Mercedes-Benz GLE 400d, sujeito à disponibilidade."],
 ];
 
 const scrollTo = (id: string) => document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
-
-function Logo({ compact = false }: { compact?: boolean }) {
-  return (
-    <button className={`brand ${compact ? "brand--compact" : ""}`} onClick={() => scrollTo("top")} aria-label="Voltar ao início">
-      <img src={markImage} alt="" />
-      <span><b>nativos</b><small>experiences</small></span>
-    </button>
-  );
-}
+function Logo() { return <a className="brand" href="#top" aria-label="Nativos Experiences"><span className="brand-mark">N</span><span><b>nativos</b><small>experiences</small></span></a>; }
 
 export default function Home() {
-  const [menuOpen, setMenuOpen] = useState(false);
-  const [sent, setSent] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false); const [openFaq, setOpenFaq] = useState<number | null>(null);
+  useEffect(() => { const observer = new IntersectionObserver((entries) => entries.forEach((e) => e.isIntersecting && e.target.classList.add("is-visible")), { threshold: .12 }); document.querySelectorAll(".reveal").forEach((el) => observer.observe(el)); return () => observer.disconnect(); }, []);
+  return <main id="top" className="site-shell">
+    <header className="nav-wrap"><div className="nav-inner"><Logo /><nav className={`nav-links ${menuOpen ? "nav-links--open" : ""}`} aria-label="Navegação principal"><a href="#servicos" onClick={() => setMenuOpen(false)}>Serviços <span>01</span></a><a href="#frota" onClick={() => setMenuOpen(false)}>Frota <span>02</span></a><a href="#parceiros" onClick={() => setMenuOpen(false)}>Parceiros <span>03</span></a><a href="#contato" onClick={() => setMenuOpen(false)}>Contato <span>04</span></a></nav><a className="nav-cta" href={whatsapp} target="_blank" rel="noreferrer">Reservar transfer <ArrowUpRight size={15} /></a><button className="menu-toggle" onClick={() => setMenuOpen((v) => !v)} aria-label="Menu">{menuOpen ? <X /> : <Menu />}</button></div></header>
 
-  useEffect(() => {
-    const reveal = new IntersectionObserver((entries) => entries.forEach((entry) => entry.isIntersecting && entry.target.classList.add("is-visible")), { threshold: 0.12 });
-    document.querySelectorAll(".reveal").forEach((el) => reveal.observe(el));
-    return () => reveal.disconnect();
-  }, []);
+    <section className="hero" aria-labelledby="hero-title"><img className="hero-image" src={carImage} alt="SUV executivo da Nativos Experiences em uma estrada da Bahia" /><div className="hero-shade" /><div className="hero-orbit orbit-one" /><div className="hero-orbit orbit-two" /><div className="hero-content"><p className="eyebrow light"><span className="eyebrow-dot" /> Trancoso · Bahia · desde 2015</p><h1 id="hero-title">Chegar bem<br />é parte da <em>viagem.</em></h1><div className="hero-bottom"><p className="hero-intro">Transfer privativo, motorista à disposição e concierge para quem vive Trancoso com tempo, discrição e padrão.</p><a className="hero-action" href={whatsapp} target="_blank" rel="noreferrer">Reservar meu transfer <MoveRight size={18} /></a></div></div><div className="hero-meta"><span>TRANCOSO / BAHIA</span><span className="meta-line" /><span>PRIVATE MOBILITY</span></div><div className="scroll-cue"><ArrowDownRight size={17} /><span>deslize para descobrir</span></div></section>
 
-  return (
-    <main id="top" className="site-shell">
-      <header className="nav-wrap">
-        <div className="nav-inner">
-          <Logo />
-          <nav className={`nav-links ${menuOpen ? "nav-links--open" : ""}`} aria-label="Navegação principal">
-            <a href="#experiencias" onClick={() => setMenuOpen(false)}>Experiências <span>01</span></a>
-            <a href="#metodo" onClick={() => setMenuOpen(false)}>Como fazemos <span>02</span></a>
-            <a href="#contato" onClick={() => setMenuOpen(false)}>Fale com a gente <span>03</span></a>
-          </nav>
-          <a className="nav-cta" href="#contato">Começar uma conversa <ArrowUpRight size={15} /></a>
-          <button className="menu-toggle" onClick={() => setMenuOpen((v) => !v)} aria-label={menuOpen ? "Fechar menu" : "Abrir menu"}>{menuOpen ? <X /> : <Menu />}</button>
-        </div>
-      </header>
+    <section className="manifesto section-dark" aria-labelledby="manifesto-title"><div className="section-index">N / 00</div><div className="manifesto-grid"><div className="manifesto-title reveal"><p className="eyebrow"><span className="eyebrow-dot" /> O destino começa antes</p><h2 id="manifesto-title">A primeira impressão<br />do seu hóspede<br /><em>começa no carro.</em></h2></div><div className="manifesto-copy reveal"><p>A Nativos nasceu em Trancoso. Conhece os acessos, a sazonalidade, os horários e as particularidades que não aparecem em um mapa.</p><p>Do Aeroporto de Porto Seguro ao Quadrado, cada deslocamento é pensado para que você chegue bem — e para que a sua única preocupação seja aproveitar o destino.</p><a className="text-link" href={whatsapp} target="_blank" rel="noreferrer">Falar com um concierge <ArrowUpRight size={17} /></a></div></div><div className="orbit-line" /></section>
 
-      <section className="hero" aria-labelledby="hero-title">
-        <img className="hero-image" src={heroImage} alt="Canoa atravessando um rio amazônico ao entardecer" />
-        <div className="hero-shade" />
-        <div className="hero-orbit orbit-one" /><div className="hero-orbit orbit-two" />
-        <div className="hero-content">
-          <p className="eyebrow light"><span className="eyebrow-dot" /> Curadoria de experiências brasileiras</p>
-          <h1 id="hero-title">O Brasil que não aparece no caminho <em>mais fácil.</em></h1>
-          <div className="hero-bottom">
-            <p className="hero-intro">A gente abre portas para encontros que não cabem em um roteiro pronto — e desenha cada detalhe para você chegar mais perto do que importa.</p>
-            <button className="hero-action" onClick={() => scrollTo("experiencias")}>Explorar possibilidades <MoveRight size={18} /></button>
-          </div>
-        </div>
-        <div className="hero-meta"><span>03° 14' S</span><span className="meta-line" /><span>Experiências com origem</span></div>
-        <div className="scroll-cue"><ArrowDownRight size={17} /><span>deslize para descobrir</span></div>
-      </section>
+    <section id="servicos" className="experiences section-light portal-field" aria-labelledby="services-title"><div className="section-head reveal"><div className="trajectory-label">TRILHA / 01 <span /> MOBILIDADE</div><div><p className="eyebrow dark"><span className="eyebrow-dot" /> Uma operação, vários caminhos</p><h2 id="services-title">Tudo o que você<br /><em>precisa no destino.</em></h2></div><p className="section-note">Transfer, motorista à disposição, concierge e eventos coordenados por uma equipe que é daqui.</p></div><div className="experience-list">{services.map((item) => <article className="experience-card reveal" key={item.number}><div className="experience-image-wrap"><span className="portal-line" /><img src={item.image} alt={item.title} /><span className="card-number">{item.number}</span><span className="card-arrow"><ArrowUpRight size={18} /></span></div><div className="experience-info"><div><p className="card-region">{item.label}</p><h3>{item.title}</h3></div><p className="card-description">{item.text}</p></div></article>)}</div><div className="experience-footer"><span>Precisa de uma solução sob medida?</span><a className="text-link" href={whatsapp} target="_blank" rel="noreferrer">Falar com a Nativos <ArrowUpRight size={17} /></a></div></section>
 
-      <section className="manifesto section-dark" aria-labelledby="manifesto-title">
-        <div className="section-index">N / 00</div>
-        <div className="manifesto-grid">
-          <div className="manifesto-title reveal"><p className="eyebrow"><span className="eyebrow-dot" /> Não é sobre ir mais longe</p><h2 id="manifesto-title">É sobre <em>sentir</em> mais fundo.</h2></div>
-          <div className="manifesto-copy reveal"><p>O Brasil é imenso demais para ser resumido a uma lista de pontos turísticos. Por isso, a Nativos aproxima você de pessoas, paisagens e saberes que revelam um lugar por dentro.</p><p>Experiências autorais para quem quer voltar com mais do que fotos: com uma nova referência de mundo.</p><button className="text-link" onClick={() => scrollTo("metodo")}>Entender nosso olhar <ArrowUpRight size={17} /></button></div>
-        </div>
-        <div className="orbit-line" />
-      </section>
+    <section id="frota" className="method section-dark" aria-labelledby="fleet-title"><div className="section-index">N / 02</div><div className="method-top reveal"><p className="eyebrow light"><span className="eyebrow-dot" /> Categoria garantida · modelo conforme disponibilidade</p><h2 id="fleet-title">A frota certa<br /><em>para cada chegada.</em></h2><p className="method-lead">Do Jeep Renegade ao BMW iX1 elétrico, do GLE 400d blindado às vans Mercedes-Benz Sprinter. Veículos privativos, motoristas locais e uma operação dimensionada para passageiros e bagagens.</p></div><div className="fleet-grid">{fleet.map(([name, model, pax], i) => <div className="fleet-item reveal" key={name}><span className="step-no">0{i + 1}</span><div><h3>{name}</h3><p>{model}</p></div><span className="fleet-pax">{pax}<small> passageiros</small></span></div>)}</div><div className="method-foot"><Check size={16} /><span>Blindado disponível de pronta entrega · vans com reboque para bagagem mediante solicitação.</span></div></section>
 
-      <section id="experiencias" className="experiences section-light portal-field" aria-labelledby="experiences-title">
-        <div className="section-head reveal"><div className="trajectory-label">TRILHA / 01 <span /> ABRIR UM PORTAL</div><div><p className="eyebrow dark"><span className="eyebrow-dot" /> Portais de descoberta</p><h2 id="experiences-title">Escolha por onde<br /><em>começar.</em></h2></div><p className="section-note">Cada experiência nasce de uma escuta. A gente seleciona o que é raro, constrói o acesso e deixa espaço para o inesperado.</p></div>
-        <div className="experience-list">
-          {experiences.map((item) => <article className="experience-card reveal" key={item.number}>
-            <div className="experience-image-wrap"><span className="portal-line" /><img src={item.image} alt={item.title} /><span className="card-number">{item.number}</span><span className="card-arrow"><ArrowUpRight size={18} /></span></div>
-            <div className="experience-info"><div><p className="card-region">{item.region}</p><h3>{item.title}</h3><p className="card-type">{item.type}</p></div><p className="card-description">{item.description}</p></div>
-          </article>)}
-        </div>
-        <div className="experience-footer"><span>Não encontrou o que imaginava?</span><button className="text-link" onClick={() => scrollTo("contato")}>Conte o que você procura <ArrowUpRight size={17} /></button></div>
-      </section>
+    <section className="proof section-light" aria-labelledby="proof-title"><div className="proof-aside"><span className="proof-code">ROTA / 03</span><span>A Costa do<br />Descobrimento</span></div><div className="proof-content reveal"><p className="eyebrow dark"><span className="eyebrow-dot" /> De onde você parte?</p><h2 id="proof-title">Trancoso é a base.<br /><em>A Bahia é o caminho.</em></h2><p>Atendemos o Aeroporto de Porto Seguro — BPS, o Aeroporto Terravista e os principais deslocamentos da costa sul da Bahia. Rotas especiais para Itacaré, Corumbau, Santo André e outros destinos são planejadas sob consulta.</p><div className="route-strip"><span>Porto Seguro</span><i /> <span>Trancoso</span><i /> <span>Espelho</span><i /> <span>Caraíva</span></div><a className="dark-button" href={whatsapp} target="_blank" rel="noreferrer">Consultar minha rota <ArrowUpRight size={17} /></a></div></section>
 
-      <section id="metodo" className="method section-dark" aria-labelledby="method-title">
-        <div className="section-index">N / 02</div>
-        <div className="method-top reveal"><p className="eyebrow light"><span className="eyebrow-dot" /> Do primeiro mapa ao último detalhe</p><h2 id="method-title">Curadoria não é<br /><em>complicar.</em> É saber escolher.</h2></div>
-        <div className="method-steps">
-          {["Escutar", "Conectar", "Desenhar"].map((step, i) => <div className="method-step reveal" key={step}><span className="step-no">0{i + 1}</span><h3>{step}</h3><p>{["Entendemos o que você busca, mesmo quando ainda não tem nome para isso.", "Aproximamos você de quem conhece o território por dentro e cria com verdade.", "Transformamos intenção em uma experiência com ritmo, cuidado e espaço para surpresa."][i]}</p></div>)}
-        </div>
-        <div className="method-foot"><Sparkles size={16} /><span>O extraordinário começa no detalhe que ninguém vê.</span></div>
-      </section>
+    <section id="parceiros" className="partner-band section-dark" aria-labelledby="partner-title"><div className="section-index">N / 03</div><div className="partner-grid"><div className="reveal"><p className="eyebrow light"><span className="eyebrow-dot" /> Para hotéis, villas, agências e DMCs</p><h2 id="partner-title">Sua marca vende.<br /><em>A Nativos faz<br />o destino acontecer.</em></h2></div><div className="partner-copy reveal"><p>Operação white-label para parceiros que precisam de mobilidade, grupos, concierge e experiências em um único contato — com discrição, controle e suporte humano.</p><div className="partner-points"><span><Check size={15} /> Veículos sem adesivos</span><span><Check size={15} /> Tarifa NET para parceiros</span><span><Check size={15} /> Comunicação alinhada</span><span><Check size={15} /> Portal e acompanhamento operacional</span></div><a className="text-link" href={whatsapp} target="_blank" rel="noreferrer">Construir uma parceria <ArrowUpRight size={17} /></a></div></div></section>
 
-      <section className="proof section-light" aria-labelledby="proof-title">
-        <div className="proof-aside"><Compass size={20} /><span>Para viajantes<br />e marcas</span></div>
-        <div className="proof-content reveal"><p className="eyebrow dark"><span className="eyebrow-dot" /> O que nos move</p><h2 id="proof-title">Menos roteiro.<br /><em>Mais presença.</em></h2><p>Para uma viagem especial, uma celebração, uma produção ou uma marca que quer criar conexão de verdade: a Nativos desenha experiências com origem, intenção e beleza.</p><button className="dark-button" onClick={() => scrollTo("contato")}>Desenhar minha experiência <ArrowUpRight size={17} /></button></div>
-      </section>
+    <section className="faq section-light" aria-labelledby="faq-title"><div className="section-head reveal"><div><p className="eyebrow dark"><span className="eyebrow-dot" /> Antes de embarcar</p><h2 id="faq-title">Perguntas<br /><em>frequentes.</em></h2></div><p className="section-note">Se a sua dúvida não estiver aqui, nosso concierge responde diretamente pelo WhatsApp.</p></div><div className="faq-list">{faqs.map(([question, answer], i) => <div className={`faq-item ${openFaq === i ? "faq-item--open" : ""}`} key={question}><button onClick={() => setOpenFaq(openFaq === i ? null : i)} aria-expanded={openFaq === i}><span>0{i + 1}</span><strong>{question}</strong><ChevronDown size={18} /></button>{openFaq === i && <p>{answer}</p>}</div>)}</div></section>
 
-      <section id="contato" className="contact section-dark contact-signal" aria-labelledby="contact-title">
-        <div className="contact-orbit" />
-        <div className="section-index dark-index">N / 03</div>
-        <div className="contact-grid"><div className="contact-copy reveal"><p className="eyebrow dark"><span className="eyebrow-dot" /> O próximo passo é uma conversa</p><h2 id="contact-title">Tem um lugar<br />na cabeça?</h2><p>Conta para a gente. Pode ser uma viagem, um projeto ou só uma vontade ainda sem forma. A primeira resposta começa aqui.</p><div className="contact-details"><span><Check size={15} /> Resposta humana, não automática</span><span><Check size={15} /> Ideias sob medida para o seu momento</span></div></div><form className="contact-form reveal" onSubmit={(e) => { e.preventDefault(); setSent(true); }}>
-          {sent ? <div className="form-success"><Sparkles size={26} /><h3>Recebemos seu sinal.</h3><p>Obrigado por abrir essa conversa. Em breve, a gente continua daqui.</p><button type="button" className="form-reset" onClick={() => setSent(false)}>Enviar outra mensagem</button></div> : <><label>Seu nome<input required name="name" placeholder="Como podemos chamar você?" /></label><label>Seu melhor contato<input required type="email" name="email" placeholder="voce@email.com" /></label><label>O que você quer criar?<textarea required name="message" placeholder="Uma viagem, um projeto, uma ideia..." rows={3} /></label><button className="form-submit" type="submit">Enviar meu sinal <ArrowUpRight size={18} /></button><small>Ao enviar, você inicia uma conversa — sem compromisso.</small></>}
-        </form></div>
-      </section>
+    <section id="contato" className="contact section-dark contact-signal" aria-labelledby="contact-title"><div className="contact-orbit" /><div className="section-index dark-index">N / 04</div><div className="contact-grid"><div className="contact-copy reveal"><p className="eyebrow dark"><span className="eyebrow-dot" /> O próximo passo é simples</p><h2 id="contact-title">Sua chegada<br />começa <em>aqui.</em></h2><p>Envie as informações da sua viagem ou fale direto com o nosso concierge. A gente confirma rota, categoria e disponibilidade sem formulários intermináveis.</p><div className="contact-details"><span><Check size={15} /> Atendimento humano em Trancoso</span><span><Check size={15} /> Transfer privativo e sob medida</span><span><Check size={15} /> WhatsApp +55 73 99168-1630</span></div></div><div className="contact-card reveal"><p className="card-region">RESERVA DIRETA</p><h3>Fale com a Nativos</h3><p>Para reservar seu transfer, consultar uma rota ou desenhar uma operação para seu hotel, villa ou evento.</p><a className="form-submit" href={whatsapp} target="_blank" rel="noreferrer">Abrir conversa no WhatsApp <ArrowUpRight size={18} /></a><a className="contact-email" href="mailto:contato@nativosexperiences.com">ou envie um e-mail para contato@nativosexperiences.com</a></div></div></section>
 
-      <footer className="footer section-dark"><Logo compact /><div className="footer-center"><span>Experiências com origem.</span><span>Brasil, de dentro para fora.</span></div><div className="footer-right"><a href="#top">Voltar ao topo <ArrowUpRight size={15} /></a><a href="https://instagram.com" target="_blank" rel="noreferrer"><Instagram size={16} /> Instagram</a></div><div className="footer-bottom"><span>© {new Date().getFullYear()} Nativos Experiences</span><span>Feito para quem escolhe sentir.</span></div></footer>
-    </main>
-  );
+    <footer className="footer section-dark"><Logo /><div className="footer-center"><span>Transfer privativo e concierge.</span><span>Trancoso, de dentro para fora.</span></div><div className="footer-right"><a href={whatsapp} target="_blank" rel="noreferrer">WhatsApp <ArrowUpRight size={15} /></a><a href="https://instagram.com/nativosexperiences" target="_blank" rel="noreferrer"><Instagram size={16} /> Instagram</a></div><div className="footer-bottom"><span>© {new Date().getFullYear()} Nativos Experiences · Trancoso, Bahia</span><span>Discrição. Pontualidade. Origem.</span></div></footer>
+  </main>;
 }
