@@ -1,0 +1,3 @@
+# Nativos Experiences — orientação de rastreamento
+User-agent: *
+Allow: /
