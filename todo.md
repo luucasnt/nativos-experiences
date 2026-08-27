@@ -164,3 +164,17 @@
 - [x] Validar visualmente `/transfer-blindado`, `/frota` e `/en/transfer-blindado` em mobile.
 - [x] Validar HTML bruto: `10` na frota, ausência de `010`, e-mail completo, álcool em gel, diferenciais condicionais e metadata SEO.
 - [ ] Salvar checkpoint atualizado.
+
+## Especificação final Pasted_content_04
+
+- [x] Auditar toda numeração e garantir `String(i + 1).padStart(2, "0")` ou equivalente em todas as listas.
+- [x] Corrigir os sete ícones: garrafa, coco, pacote de snack, lenço com folha, álcool em gel, carregador e cadeirinha infantil.
+- [x] Padronizar tamanho, stroke, cor e estilo de todos os ícones em todas as páginas.
+- [x] Implementar header completo com 9 links na ordem especificada e CTA separado.
+- [x] Implementar menu hambúrguer/drawer mobile com os mesmos 9 links.
+- [x] Implementar footer com colunas Serviços e Empresa, além de contatos, CNPJ e idioma.
+- [x] Rodar build e validar rotas.
+- [x] Capturar prova visual dos diferenciais.
+- [x] Capturar prova visual da frota 01–10.
+- [x] Capturar prova visual do header desktop e mobile.
+- [x] Capturar prova visual do footer com colunas.
