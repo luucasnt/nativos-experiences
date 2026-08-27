@@ -264,3 +264,10 @@
 - [x] Respeitar `prefers-reduced-motion`, performance e contraste.
 - [x] Rodar build e validar desktop/mobile.
 - [ ] Salvar checkpoint atualizado.
+
+## Ajuste do menu mobile
+
+- [x] Confirmar a sequência do drawer mobile: Sobre, Serviços, Frota, Concierge, Casamentos e Eventos, Parcerias.
+- [x] Garantir que o submenu/agrupamento de Serviços permaneça claro no celular.
+- [x] Validar abertura, fechamento, foco e links em viewport mobile.
+- [ ] Rodar build e salvar checkpoint atualizado.
