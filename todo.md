@@ -126,3 +126,13 @@
 - [x] Corrigir o item infantil para Bebê conforto, cadeirinha e assento elevado sem custo adicional.
 - [x] Confirmar os 7 itens e ícones na Home e em todas as páginas de serviço.
 - [x] Validar build, HTML, responsividade e salvar checkpoint.
+
+## Correção de títulos duplicados
+
+- [x] Auditar `app/layout.tsx`, `app/[slug]/page.tsx` e títulos SEO em `lib/data.ts`.
+- [x] Remover o sufixo manual `| Nativos Experiences` dos títulos específicos.
+- [x] Manter o template global como única fonte do sufixo.
+- [x] Rodar `npm run build` e servir localmente.
+- [x] Validar via curl o `<title>` de `/transfer-blindado`, `/parcerias` e `/frota`.
+- [x] Confirmar uma única ocorrência de “Nativos Experiences” por título.
+- [ ] Salvar checkpoint atualizado.

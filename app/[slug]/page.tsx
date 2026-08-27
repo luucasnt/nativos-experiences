@@ -13,10 +13,10 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const page = getServiceBySlug(slug);
   if (!page) return {};
   return {
-    title: page.seoTitle ?? `${page.title} | Nativos Experiences`,
+    title: page.seoTitle?.replace(/\s*\|\s*Nativos Experiences\s*$/i, "") ?? page.title,
     description: page.seoDescription ?? page.intro,
     alternates: { canonical: `/${page.slug}` },
-    openGraph: { title: page.seoTitle ?? page.title, description: page.seoDescription ?? page.intro, url: `${siteUrl}/${page.slug}`, images: [{ url: page.image, alt: page.imageAlt }] },
+    openGraph: { title: page.seoTitle?.replace(/\s*\|\s*Nativos Experiences\s*$/i, "") ?? page.title, description: page.seoDescription ?? page.intro, url: `${siteUrl}/${page.slug}`, images: [{ url: page.image, alt: page.imageAlt }] },
   };
 }
 
