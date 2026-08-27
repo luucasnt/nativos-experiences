@@ -124,3 +124,15 @@ a { color:inherit; text-decoration:none; }
 .footer-right { flex-wrap:wrap; align-items:flex-start; }
 .footer-right a[href^="mailto:"] { text-transform:none; letter-spacing:.02em; font-size:10px; }
 @media (max-width:800px) { .footer-right { align-items:flex-end; max-width:220px; }.footer-right a[href^="mailto:"] { overflow-wrap:anywhere; text-align:right; } }
+
+/* Correções finais: legibilidade mobile e sistema único de ícones lineares para os diferenciais. */
+.differential-mark { width:34px; height:34px; min-width:34px; min-height:34px; padding:0; border:0; border-radius:0; color:#a18150; background:transparent; }
+.differential-mark svg { width:25px; height:25px; stroke-width:1.35; overflow:visible; }
+.footer-right a { min-width:0; max-width:100%; overflow-wrap:anywhere; word-break:normal; }
+.footer-right a[href^="mailto:"] { white-space:normal; }
+@media (max-width:800px) {
+  .footer-right { grid-column:1/-1; grid-row:2; width:100%; max-width:none; align-items:flex-start; justify-self:stretch; }
+  .footer-center { grid-column:1/-1; grid-row:3; }
+  .footer-bottom { grid-row:4; }
+  .footer-right a[href^="mailto:"] { max-width:100%; text-align:left; }
+}

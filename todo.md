@@ -150,3 +150,17 @@
 - [x] Validar HTML puro de pelo menos 3 páginas em cada idioma.
 - [x] Confirmar sitemap com URLs `/en/*`.
 - [ ] Salvar checkpoint e gerar ZIP atualizado.
+
+## Correções de interface, diferenciais e SEO — agosto de 2026
+
+- [x] Corrigir numeração da frota para exibir `10` sem prefixo `0` na décima categoria blindada.
+- [x] Corrigir quebra do e-mail no rodapé mobile com coluna responsiva e quebra de linha segura.
+- [x] Redesenhar o ícone de coco em SVG de linha com silhueta e marcas naturais reconhecíveis.
+- [x] Adicionar álcool em gel aos diferenciais PT/EN.
+- [x] Uniformizar todos os ícones pelo mesmo sistema SVG, tamanho e traço.
+- [x] Exibir diferenciais de bordo apenas nas páginas de transfer, motorista, eventos e reserva onde são contextuais; manter frota, concierge, destinos, sobre e parcerias sem o bloco.
+- [x] Enriquecer SEO local com title, description, abertura, FAQs e links relacionados em páginas de aeroporto, transfer, frota, concierge, destinos, sobre, reserva e parcerias.
+- [x] Rodar `npm run build` e `npm run check` sem erros, com 41 páginas estáticas.
+- [x] Validar visualmente `/transfer-blindado`, `/frota` e `/en/transfer-blindado` em mobile.
+- [x] Validar HTML bruto: `10` na frota, ausência de `010`, e-mail completo, álcool em gel, diferenciais condicionais e metadata SEO.
+- [ ] Salvar checkpoint atualizado.
