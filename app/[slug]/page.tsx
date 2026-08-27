@@ -30,6 +30,7 @@ export default async function ServiceRoute({ params }: { params: Promise<{ slug:
   const faqSchema = page.faqs.length ? { "@context":"https://schema.org", "@type":"FAQPage", mainEntity:page.faqs.map((faq) => ({ "@type":"Question", name:faq.question, acceptedAnswer:{"@type":"Answer", text:faq.answer} })) } : null;
   const ctaHref = page.type === "partnerships" ? partnershipWhatsapp : page.type === "events" ? eventWhatsapp : whatsapp;
   const pageDifferentials = page.type === "partnerships" ? differentiators.slice(0, 3) : differentiators;
+  const isPrivateRoute = ["airport", "transfer", "portoSeguro", "armored", "tours"].includes(page.type);
 
   return <main className="service-page sand-theme">
     <Header />
@@ -53,7 +54,7 @@ export default async function ServiceRoute({ params }: { params: Promise<{ slug:
           <h2>{page.heading.split("\n").map((line, index) => <span key={line}>{line}{index === 0 && <br />}</span>)}</h2>
           <p className="service-opening">{page.opening ?? page.intro}</p>
           <p>{page.body}</p>
-          <WhatsAppButton label={page.cta} href={ctaHref} />
+          <WhatsAppButton label={page.cta} href={ctaHref} />{isPrivateRoute && <p className="service-private-note"><strong>Todos os transfers são privativos.</strong> As rotas acima são as mais solicitadas — se o seu trajeto não estiver na lista, fale com a gente para montarmos uma rota personalizada.</p>}
         </div>
         <div className="service-facts"><span className="facts-label">O que você pode esperar</span>{page.items.map((item, index) => <div className="service-fact" key={item}><span>{String(index + 1).padStart(2, "0")}</span><strong>{item}</strong></div>)}</div>
       </div>

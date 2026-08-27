@@ -235,3 +235,15 @@
 - [x] Preservar `/en`, canonical, hreflang, sitemap e robots.
 - [x] Validar build e aparência desktop/mobile.
 - [ ] Salvar checkpoint atualizado.
+
+## Correções finais e página de passeios — Pasted_content_2
+
+- [x] Reorganizar menu: apenas 4 itens no submenu Serviços, incluindo Passeios.
+- [x] Mover Concierge, Casamentos e Eventos, Frota e Destinos para a barra principal.
+- [x] Ajustar submenu para verde profundo translúcido, hover dourado e bordas sutis.
+- [x] Confirmar e incluir Corumbau, Santo André e Itacaré nos destinos onde a lista aparece.
+- [x] Reforçar em todas as páginas de transfer que o serviço é 100% privativo e aceita rotas personalizadas sob consulta.
+- [x] Criar página indexável de passeios com rotas, duração de até 8 horas, saída da hospedagem, motorista aguardando e retorno no mesmo veículo.
+- [x] Incluir funcionamento dos passeios no corpo, items e FAQ.
+- [x] Atualizar sitemap e links PT/EN.
+- [x] Rodar build, validar HTML e capturar as cinco provas solicitadas.
