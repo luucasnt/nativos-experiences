@@ -27,3 +27,7 @@ A captura anterior à reinicialização mostrou o chrome antigo; ela foi descart
 ## Provas finais — Coconut oficial e submenu
 
 A fonte oficial do Lucide confirma que `Coconut` não é exportado pelo pacote principal `lucide-react`; ele pertence ao pacote oficial separado `@lucide/lab` e é renderizado via `Icon iconNode={coconut}`. A dependência `@lucide/lab@0.2.0` foi adicionada e o build SSR passou. A captura em zoom mostra um coco tridimensional reconhecível, com casca, abertura e canudo. A captura desktop em 1440 px mostra o submenu Serviços aberto com Transfer Aeroporto, Transfer Blindado, Motorista à Disposição, Concierge, Casamentos e Eventos, Frota e Destinos; Parcerias, Sobre, English e o CTA permanecem fora do submenu.
+
+## Reversão da referência de conteúdo
+
+A composição copiada da imagem foi revertida para o checkpoint anterior. A referência agora é tratada somente como inspiração visual de ícones, não como fonte de títulos, descrições, quantidade de cards ou oferta universal. O build atual concluiu com 41 rotas, o type-check passou e a checagem do HTML de `/transfer-blindado` não encontrou os textos indevidamente copiados “Internet Starlink”, “Água e água de coco” ou “Snacks a bordo”.
