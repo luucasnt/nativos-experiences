@@ -13,3 +13,36 @@
 - [x] Implementar páginas e componentes B2C na nova identidade Casa de Areia.
 - [x] Validar links, metadados, dados estruturados, responsividade, acessibilidade e conversão.
 - [ ] Salvar checkpoint e entregar a versão final revisada.
+
+## Novo conteúdo enviado
+
+- [ ] Ler integralmente `pasted_content.txt`.
+- [ ] Separar fatos, ofertas, diferenciais e textos que exigem confirmação.
+- [ ] Mapear cada informação para a página B2C mais adequada.
+- [ ] Incorporar o conteúdo com redação original e intenção de busca clara.
+- [ ] Validar o novo conteúdo no preview e no build.
+- [ ] Gerar novo ZIP e checkpoint atualizado.
+
+## Migração SSR solicitada
+
+- [ ] Avaliar compatibilidade da migração Next.js com o ambiente gerenciado atual.
+- [ ] Migrar rotas para App Router sem perder os slugs existentes.
+- [ ] Criar `lib/data.ts` como fonte única tipada de conteúdo.
+- [ ] Extrair Header, Footer e WhatsApp para componentes compartilhados.
+- [ ] Implementar `generateMetadata` por rota com canonical, Open Graph e imagens.
+- [ ] Adicionar JSON-LD de TravelAgency, LocalBusiness e Service quando aplicável.
+- [ ] Gerar sitemap e robots automaticamente a partir das rotas de dados.
+- [ ] Validar build e presença de title, description e og:title no HTML bruto de pelo menos três rotas.
+
+## Correções de conteúdo — pasted_content_2.txt
+
+- [x] Completar as 10 categorias da frota na fonte central e nas referências legadas.
+- [x] Expandir a descrição do Aeroporto Outeiro das Brisas/SNEC.
+- [x] Adicionar tempos concretos de Porto Seguro–Trancoso e Terravista–Trancoso.
+- [x] Criar alt text específico por serviço.
+- [x] Adicionar CNPJ e foundingDate ao rodapé e JSON-LD.
+- [x] Contextualizar Itacaré como extensão da viagem, não bate-volta.
+- [x] Adicionar 2–3 FAQs específicas por página de serviço.
+- [x] Criar página `/parcerias` com CTA B2B separado e link discreto no menu.
+- [x] Não alterar layout ou CSS.
+- [x] Validar build e gerar lista de alterações por arquivo.
