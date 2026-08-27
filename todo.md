@@ -227,3 +227,11 @@
 - [x] Validar `/transfer-blindado` e `/frota` em 1440×700, 1440×900 e 1440×1200.
 - [x] Confirmar visualmente que “Voltar à Nativos” não encosta nem sobrepõe o header.
 - [x] Salvar checkpoint e entregar screenshots 1440×900.
+
+## Remoção do seletor visível de idioma
+
+- [x] Remover o link/botão de idioma do header desktop e mobile.
+- [x] Remover o seletor de idioma do footer e da Home.
+- [x] Preservar `/en`, canonical, hreflang, sitemap e robots.
+- [x] Validar build e aparência desktop/mobile.
+- [ ] Salvar checkpoint atualizado.
