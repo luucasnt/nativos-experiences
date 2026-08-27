@@ -13,3 +13,7 @@ A prévia final confirmou o drawer mobile aberto com os nove links na ordem espe
 ## Ajuste definitivo de aceite
 
 A lista final foi reduzida para exatamente sete diferenciais, conforme o documento Pasted_content_04: água mineral, água de coco, snacks, lenço umedecido, álcool em gel, carregadores e cadeirinha infantil. Starlink permanece disponível apenas como componente gráfico não renderizado, pois não faz parte da lista final de sete itens do documento. O build passou novamente com 41 páginas. A captura mobile do drawer aberto mostra os nove links na ordem solicitada; as capturas finais mostram os sete ícones, a frota 01–10 e o footer com colunas.
+
+## Auditoria das imagens do usuário
+
+A imagem original do header mede 1284×143 e confirma que os nove links, seletor de idioma e CTA estão comprimidos em uma única linha, reduzindo a legibilidade. A imagem original da frota confirma visualmente `010` antes de `Blindado`, portanto a correção precisa cobrir a fonte efetivamente renderizada nessa seção, não apenas uma ocorrência de template encontrada por busca.

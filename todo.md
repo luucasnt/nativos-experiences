@@ -182,3 +182,10 @@
 ## Ajuste de aceite identificado após prova visual
 
 - [ ] Alinhar a lista renderizada ao documento final: exatamente 7 diferenciais, sem perder a exigência de álcool em gel. Definir a composição final conforme a especificação mais recente antes de regenerar as capturas.
+
+## Correções comprovadas nas imagens anexadas
+
+- [x] Rastrear e remover o `010` da frota em toda fonte, renderização e cache, confirmando `01`–`10` no HTML final.
+- [x] Reorganizar o header desktop para o menu completo caber com leitura clara, sem esmagar links nem CTA.
+- [x] Redesenhar os ícones para que garrafa, coco, pacote de snack, lenço com folha, álcool em gel, carregador e cadeirinha sejam reconhecíveis à primeira vista.
+- [x] Recompilar, reiniciar a prévia e anexar novas provas visuais dos três pontos.
