@@ -178,3 +178,7 @@
 - [x] Capturar prova visual da frota 01–10.
 - [x] Capturar prova visual do header desktop e mobile.
 - [x] Capturar prova visual do footer com colunas.
+
+## Ajuste de aceite identificado após prova visual
+
+- [ ] Alinhar a lista renderizada ao documento final: exatamente 7 diferenciais, sem perder a exigência de álcool em gel. Definir a composição final conforme a especificação mais recente antes de regenerar as capturas.

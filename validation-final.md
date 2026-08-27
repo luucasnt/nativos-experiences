@@ -9,3 +9,7 @@ As capturas desktop confirmaram o header com navegação, a seção de diferenci
 ## Provas visuais finais
 
 A prévia final confirmou o drawer mobile aberto com os nove links na ordem especificada e CTA separado. A página de blindado mostrou os ícones de garrafa, coco com textura e canudo, pacote de snack, lenço com folha, álcool em gel, carregador, Starlink e cadeirinha infantil, todos no mesmo sistema de linha. A página de frota mostrou a sequência 01 a 10, com Blindado como 10 e sem `010`. O footer exibiu as colunas Serviços e Empresa, além de WhatsApp, Instagram, e-mail, idioma e CNPJ.
+
+## Ajuste definitivo de aceite
+
+A lista final foi reduzida para exatamente sete diferenciais, conforme o documento Pasted_content_04: água mineral, água de coco, snacks, lenço umedecido, álcool em gel, carregadores e cadeirinha infantil. Starlink permanece disponível apenas como componente gráfico não renderizado, pois não faz parte da lista final de sete itens do documento. O build passou novamente com 41 páginas. A captura mobile do drawer aberto mostra os nove links na ordem solicitada; as capturas finais mostram os sete ícones, a frota 01–10 e o footer com colunas.
