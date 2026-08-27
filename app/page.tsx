@@ -1,4 +1,7 @@
 // Casa de Areia: Home B2C SSR, com sinais claros de Trancoso, transfer premium e caminhos de conversão.
+import type { Metadata } from "next";
+
+export const metadata: Metadata = { title: "Transfer de luxo e concierge em Trancoso", description: "Transfer privativo de luxo, motorista à disposição e concierge local em Trancoso, Bahia, para uma chegada tranquila e uma estadia bem cuidada.", alternates: { canonical: "/", languages: { "pt-BR": "https://nativosexperiences.com/", en: "https://nativosexperiences.com/en", "x-default": "https://nativosexperiences.com/" } }, openGraph: { title: "Transfer de luxo e concierge em Trancoso", description: "Transfer privativo e concierge local em Trancoso, Bahia.", url: "https://nativosexperiences.com/" } };
 import { Header, Footer, WhatsAppButton, whatsapp } from "@/components/SiteChrome";
 import { differentiatorContent, differentiators, serviceData } from "@/lib/data";
 import { Differentiators } from "@/components/Differentiators";

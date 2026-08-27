@@ -136,3 +136,17 @@
 - [x] Validar via curl o `<title>` de `/transfer-blindado`, `/parcerias` e `/frota`.
 - [x] Confirmar uma única ocorrência de “Nativos Experiences” por título.
 - [ ] Salvar checkpoint atualizado.
+
+## Versão inglesa com SEO internacional
+
+- [x] Auditar arquitetura atual, dados, rotas e metadados.
+- [x] Estruturar traduções dentro da mesma fonte central `lib/data.ts`.
+- [x] Criar rotas próprias `/en/*` com SSR/SSG independente.
+- [x] Traduzir conteúdo, CTAs, FAQs, diferenciais e navegação para inglês natural.
+- [x] Implementar hreflang específico por caminho em PT e EN.
+- [x] Atualizar sitemap para incluir URLs PT/EN e alternates.
+- [x] Manter robots permitindo crawlers.
+- [x] Rodar `npm run build` com as novas rotas.
+- [x] Validar HTML puro de pelo menos 3 páginas em cada idioma.
+- [x] Confirmar sitemap com URLs `/en/*`.
+- [ ] Salvar checkpoint e gerar ZIP atualizado.

@@ -15,8 +15,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return {
     title: page.seoTitle?.replace(/\s*\|\s*Nativos Experiences\s*$/i, "") ?? page.title,
     description: page.seoDescription ?? page.intro,
-    alternates: { canonical: `/${page.slug}` },
-    openGraph: { title: page.seoTitle?.replace(/\s*\|\s*Nativos Experiences\s*$/i, "") ?? page.title, description: page.seoDescription ?? page.intro, url: `${siteUrl}/${page.slug}`, images: [{ url: page.image, alt: page.imageAlt }] },
+    alternates: { canonical: `/${slug}`, languages: { "pt-BR": `${siteUrl}/${slug}`, en: `${siteUrl}/en/${slug}`, "x-default": `${siteUrl}/${slug}` } },
+    openGraph: { title: page.seoTitle?.replace(/\s*\|\s*Nativos Experiences\s*$/i, "") ?? page.title, description: page.seoDescription ?? page.intro, url: `${siteUrl}/${slug}`, images: [{ url: page.image, alt: page.imageAlt }] },
   };
 }
 
