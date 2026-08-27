@@ -209,3 +209,13 @@
 - [x] Manter Parcerias, Sobre, English e CTA fora do submenu, na ordem solicitada.
 - [x] Capturar submenu aberto em 1440px e coco em zoom individual.
 - [x] Build, type-check e checkpoint final.
+
+## Seção Diferenciais — especificação exata do usuário
+
+- [x] Água mineral e água de coco — “Água mineral e água de coco a bordo.” — ícone de gota d’água.
+- [x] Snacks a bordo — “Snacks selecionados para o trajeto.” — ícone de biscoito.
+- [x] Álcool em gel e lenços — “Álcool em gel e lenço umedecido disponíveis a bordo.” — escudo com check.
+- [x] Internet Starlink — “Conexão via satélite em veículos e rotas compatíveis.” — sinal de wifi.
+- [x] Carregadores — “Carregadores para eletrônicos disponíveis a bordo.” — raio.
+- [x] Conforto para crianças — copy fornecida — ícone de cadeirinha/criança.
+- [x] Screenshot completo desktop e mobile da seção com os seis itens.
