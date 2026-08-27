@@ -219,3 +219,11 @@
 - [x] Carregadores — “Carregadores para eletrônicos disponíveis a bordo.” — raio.
 - [x] Conforto para crianças — copy fornecida — ícone de cadeirinha/criança.
 - [x] Screenshot completo desktop e mobile da seção com os seis itens.
+
+## Correção do espaçamento do hero de serviço
+
+- [x] Auditar `service-hero`, `service-hero-content`, header fixo e `back-link`.
+- [x] Garantir respiro mínimo equivalente ao header + margem extra em todas as páginas de serviço.
+- [x] Validar `/transfer-blindado` e `/frota` em 1440×700, 1440×900 e 1440×1200.
+- [x] Confirmar visualmente que “Voltar à Nativos” não encosta nem sobrepõe o header.
+- [x] Salvar checkpoint e entregar screenshots 1440×900.
