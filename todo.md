@@ -447,3 +447,17 @@
 - [x] Usar a mesma foto exclusivamente em `/transfer-blindado` e `/en/transfer-blindado`.
 - [x] Não reutilizar a foto em Home, Frota ou outras páginas.
 - [x] Validar desktop, mobile, build e salvar checkpoint.
+
+## Revisão composicional da foto do Blindado
+
+- [ ] Afastar visualmente o veículo para reduzir a sensação de close frontal.
+- [ ] Posicionar o veículo mais à direita e preservar área de respiro à esquerda para o texto.
+- [ ] Manter placa borrada, veículo real, cenário e proporção 16:9.
+- [ ] Apresentar nova versão para aprovação antes de alterar o site.
+
+## Aplicação da composição aprovada — Blindado
+
+- [x] Hospedar a composição aprovada com veículo afastado e à direita.
+- [x] Atualizar somente o registro do Transfer Blindado PT/EN.
+- [x] Validar desktop e mobile, sem alterar Home, Frota ou outras páginas.
+- [x] Salvar checkpoint da versão aprovada.
