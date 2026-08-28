@@ -411,3 +411,26 @@
 - [x] Substituir referências somente em `/frota` e `/en/frota`, sem alterar outras páginas ou conteúdo.
 - [x] Validar HTML 200 e presença das quatro URLs em PT/EN; capturas desktop/mobile realizadas. A captura EN mobile exibiu placeholders por carregamento lazy do capturador, enquanto as URLs e o HTML estão corretos.
 - [ ] Usuário aprovar a Frota antes da Etapa 3.
+
+## Correção da Frota — fidelidade às fotos originais
+
+- [ ] Remover a galeria adicionada indevidamente e restaurar a composição anterior da página Frota.
+- [ ] Restaurar a referência de capa anterior sem usar imagem gerada ou veículo inexistente.
+- [ ] Tratar apenas as quatro fotos originais enviadas, sem adicionar elementos, veículos ou cenários.
+- [ ] Aplicar somente fotos originais na Frota, sem reutilizar em outras páginas.
+- [ ] Validar fidelidade visual, build e mobile antes de criar checkpoint.
+
+## Correção do crop mobile da Frota
+
+- [ ] Ajustar somente `object-position`/altura do hero mobile para preservar o veículo real.
+- [ ] Manter a imagem original tratada, sem geração ou reconstrução.
+- [ ] Validar que o carro e o título continuam visíveis em mobile e desktop.
+- [ ] Salvar checkpoint somente após confirmar o enquadramento.
+
+## Correção global do crop mobile — todas as páginas
+
+- [x] Mapear todos os heróis de Home, serviços e páginas institucionais PT/EN.
+- [x] Identificar regras compartilhadas e variações por página.
+- [x] Aplicar enquadramento mobile global que preserve o conteúdo principal de cada foto.
+- [x] Validar Home, Frota, Blindado, Aeroporto, Concierge, Eventos, Sobre, Destinos e Reserva em PT/EN.
+- [x] Confirmar que nenhuma foto foi gerada ou reconstruída e salvar checkpoint após validação.
