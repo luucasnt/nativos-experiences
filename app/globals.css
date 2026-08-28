@@ -75,7 +75,7 @@ a { color:inherit; text-decoration:none; }
 
 /* Acabamento Casa de Areia: orientação por tipografia e ritmo, nunca por setas ou marcadores nativos. */
 .card-arrow { display:none; }
-.nav-cta, .footer-right a, .back-link { gap:0; }
+.nav-cta, .back-link { gap:0; }
 .form-submit:hover, .dark-button:hover { gap:0; }
 .service-faqs details summary { list-style:none; cursor:pointer; }
 .service-faqs details summary::-webkit-details-marker { display:none; }

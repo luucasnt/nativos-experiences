@@ -327,3 +327,12 @@
 - [x] Aplicar `gap: 9px` de forma consistente em WhatsApp, Instagram e e-mail.
 - [x] Não alterar posição do bloco, tamanho dos ícones ou espaçamento vertical.
 - [x] Validar build e preparar captura ampliada exclusivamente do rodapé.
+
+## Diagnóstico obrigatório — gap do rodapé
+
+- [x] Inspecionar HTML renderizado dos três links de contato.
+- [x] Listar todas as regras CSS efetivas e verificar sobrescritas.
+- [x] Confirmar componentes e arquivos de estilo únicos em uso.
+- [x] Responder o diagnóstico antes de editar CSS.
+- [x] Corrigir a causa raiz (`.footer-right a { gap: 0; }`), validar build, preview reiniciado e screenshot ampliado.
+- [x] Entregar HTML/CSS final e documentar a cascata corrigida.
