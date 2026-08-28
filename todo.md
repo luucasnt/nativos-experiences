@@ -293,3 +293,9 @@
 - [x] Validar Home e rota interna em viewport mobile, incluindo hero, CTA e navegação.
 - [x] Confirmar HTML SSR com status 200 nas rotas válidas e 404 real em slug inexistente.
 - [ ] Salvar checkpoint estável após a correção.
+
+## Ícones de contato no rodapé
+
+- [x] Adicionar ícones finos e consistentes para WhatsApp, Instagram e e-mail nos rodapés PT/EN.
+- [x] Preservar texto completo, links funcionais, labels acessíveis e boa leitura no celular.
+- [x] Validar build, type-check e capturas mobile PT/EN; salvar checkpoint.

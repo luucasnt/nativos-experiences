@@ -228,3 +228,12 @@ a { color:inherit; text-decoration:none; }
   .mobile-nav-group a { transition: color .2s var(--ease), padding-left .2s var(--ease); }
   .mobile-nav-group a:hover, .mobile-nav-group a:focus-visible { padding-left: .35rem; color: #fff; }
 }
+
+/* Casa de Areia: contatos do rodapé com linha fina, leitura imediata e respiro editorial. */
+.footer-contact-link { display: inline-flex; align-items: center; gap: 0.55rem; color: inherit; text-decoration: none; transition: color 180ms ease, transform 180ms ease; }
+.footer-contact-link svg { flex: 0 0 auto; color: var(--orange-soft); }
+.footer-contact-link:hover, .footer-contact-link:focus-visible { color: var(--orange-soft); transform: translateX(3px); }
+.footer-contact-link:focus-visible { outline: 1px solid var(--orange-soft); outline-offset: 5px; }
+.footer-email-link { overflow-wrap: anywhere; word-break: break-word; }
+@media (max-width: 640px) { .footer-right { align-items: flex-start; gap: 0.8rem; } .footer-contact-link { min-height: 2rem; } .footer-email-link { max-width: 100%; } }
+@media (prefers-reduced-motion: reduce) { .footer-contact-link { transition: color 180ms ease; } .footer-contact-link:hover, .footer-contact-link:focus-visible { transform: none; } }
