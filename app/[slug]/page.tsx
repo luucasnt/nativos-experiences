@@ -3,11 +3,11 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { Differentiators } from "@/components/Differentiators";
 import { Footer, Header, eventWhatsapp, partnershipWhatsapp, whatsapp, WhatsAppButton } from "@/components/SiteChrome";
-import { allSlugs, differentiatorContent, differentiators, getServiceBySlug, onboardDifferentiatorTypes } from "@/lib/data";
+import { canonicalSlugs, differentiatorContent, differentiators, getServiceBySlug, onboardDifferentiatorTypes } from "@/lib/data";
 
 const siteUrl = "https://nativosexperiences.com";
 
-export function generateStaticParams() { return allSlugs.map((slug) => ({ slug })); }
+export function generateStaticParams() { return canonicalSlugs.map((slug) => ({ slug })); }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
@@ -16,8 +16,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return {
     title: page.seoTitle?.replace(/\s*\|\s*Nativos Experiences\s*$/i, "") ?? page.title,
     description: page.seoDescription ?? page.intro,
-    alternates: { canonical: `/${slug}`, languages: { "pt-BR": `${siteUrl}/${slug}`, en: `${siteUrl}/en/${slug}`, "x-default": `${siteUrl}/${slug}` } },
-    openGraph: { type: "website", siteName: "Nativos Experiences", locale: "pt_BR", title: page.seoTitle?.replace(/\s*\|\s*Nativos Experiences\s*$/i, "") ?? page.title, description: page.seoDescription ?? page.intro, url: `${siteUrl}/${slug}`, images: [{ url: page.image, alt: page.imageAlt }] }, twitter: { card: "summary_large_image", title: page.seoTitle?.replace(/\s*\|\s*Nativos Experiences\s*$/i, "") ?? page.title, description: page.seoDescription ?? page.intro, images: [page.image] },
+    alternates: { canonical: `/${page.slug}`, languages: { "pt-BR": `${siteUrl}/${page.slug}`, en: `${siteUrl}/en/${page.slug}`, "x-default": `${siteUrl}/${page.slug}` } },
+    openGraph: { type: "website", siteName: "Nativos Experiences", locale: "pt_BR", title: page.seoTitle?.replace(/\s*\|\s*Nativos Experiences\s*$/i, "") ?? page.title, description: page.seoDescription ?? page.intro, url: `${siteUrl}/${page.slug}`, images: [{ url: page.image, alt: page.imageAlt }] }, twitter: { card: "summary_large_image", title: page.seoTitle?.replace(/\s*\|\s*Nativos Experiences\s*$/i, "") ?? page.title, description: page.seoDescription ?? page.intro, images: [page.image] },
   };
 }
 

@@ -84,6 +84,7 @@ const seoEnhancements: Partial<Record<ServiceType, Partial<ServiceData>>> = {
 };
 
 export const allSlugs = Object.values(serviceData).flatMap((item) => [item.slug, ...item.aliases]);
+export const canonicalSlugs = Object.values(serviceData).map((item) => item.slug);
 export function getServiceBySlug(slug: string) { const item = Object.values(serviceData).find((entry) => entry.slug === slug || entry.aliases.includes(slug)); return item ? { ...item, ...pageOverrides[item.type], ...seoEnhancements[item.type] } : undefined; }
 
 
@@ -121,4 +122,4 @@ export function getLocalizedServiceBySlug(slug: string, locale: Locale = "pt-BR"
   const copy = englishCopy[base.type];
   return { ...base, ...copy, aliases: [], relatedSlugs: base.relatedSlugs, locale };
 }
-export function getLocalizedSlugs(locale: Locale = "pt-BR") { return allSlugs.map((slug) => locale === "en" ? `/en/${slug}` : `/${slug}`); }
+export function getLocalizedSlugs(locale: Locale = "pt-BR") { return canonicalSlugs.map((slug) => locale === "en" ? `/en/${slug}` : `/${slug}`); }

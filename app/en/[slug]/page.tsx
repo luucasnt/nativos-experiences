@@ -3,10 +3,10 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { Differentiators } from "@/components/Differentiators";
 import { Footer, Header, WhatsAppButton, eventWhatsapp, partnershipWhatsapp, whatsapp } from "@/components/SiteChrome";
-import { allSlugs, englishDifferentiators, englishDifferentiatorContent, getLocalizedServiceBySlug, onboardDifferentiatorTypes } from "@/lib/data";
+import { canonicalSlugs, englishDifferentiators, englishDifferentiatorContent, getLocalizedServiceBySlug, onboardDifferentiatorTypes } from "@/lib/data";
 
 const siteUrl = "https://nativosexperiences.com";
-export function generateStaticParams() { return allSlugs.map((slug) => ({ slug })); }
+export function generateStaticParams() { return canonicalSlugs.map((slug) => ({ slug })); }
 function cleanTitle(title: string) { return title.replace(/\s*\|\s*Nativos Experiences\s*$/i, ""); }
 function languageAlternates(slug: string) { return { "pt-BR": `${siteUrl}/${slug}`, en: `${siteUrl}/en/${slug}`, "x-default": `${siteUrl}/${slug}` }; }
 

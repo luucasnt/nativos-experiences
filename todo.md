@@ -372,3 +372,24 @@
 - [x] Validar build com 45 páginas, type-check, manifest e redirects 308.
 - [ ] Migrar imagens atuais para `next/image` junto com os arquivos reais enviados pelo usuário.
 - [ ] Documentar pendências externas: imagens reais, GBP, reviews reais, Search Console, Bing e backlinks.
+
+## Correção de aliases canônicos concluída
+
+- [x] Criar `canonicalSlugs` somente com slugs principais.
+- [x] Usar `canonicalSlugs` em sitemap e geração estática PT/EN.
+- [x] Corrigir metadata PT para usar `page.slug` canônico; EN já estava correto.
+- [x] Confirmar redirects permanentes dos cinco aliases em PT/EN; Next entrega 308 permanente.
+- [x] Revisar links internos e confirmar ausência de hrefs para aliases.
+- [x] Rodar `npm install` (após limpar node_modules), `npm run check` e `npm run build`, todos aprovados.
+- [x] Inspecionar sitemap, contagem antes/depois, HTML, redirects, canonicals e hreflang.
+
+## Correções consolidadas das duas auditorias
+
+- [x] Consolidar achados e separar correções de código das dependências externas.
+- [x] Criar `next.config.mjs` com otimização futura de imagens remotas e redirects permanentes dos aliases confirmados.
+- [x] Fortalecer E-E-A-T técnico com entidade, contactPoint, CNPJ, foundingDate, área de atuação e sameAs oficial confirmado, sem fabricar provas.
+- [x] Confirmar cobertura atual de rotas PT/EN, hreflang, schemas, sitemap, robots e 404 real.
+- [x] Revisar conversão, acessibilidade e instrumentação já existente.
+- [x] Validar build com 35 páginas após remoção dos aliases da geração estática e redirects 308.
+- [ ] Migrar imagens atuais para `next/image` junto com os arquivos reais enviados pelo usuário.
+- [ ] Documentar pendências externas: imagens reais, GBP, reviews reais, Search Console, Bing e backlinks.
