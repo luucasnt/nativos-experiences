@@ -313,3 +313,10 @@
 - [x] Refazer a coluna de contatos com ícones pequenos, linhas compactas e espaçamento controlado.
 - [x] Garantir que a alteração seja claramente visível, não apenas uma regra CSS marginal.
 - [x] Validar build e a versão reiniciada em mobile; desktop permanece validado no checkpoint anterior.
+
+## Correção pontual — distância ícone/texto
+
+- [x] Remover o deslocamento estrutural introduzido no bloco de contatos.
+- [x] Manter tamanho, posição e espaçamento vertical; aumentar somente o gap horizontal ícone/texto.
+- [x] Validar a alteração sem mover o bloco para o centro da página.
+- [ ] Rodar build e salvar checkpoint.
