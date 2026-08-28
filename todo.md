@@ -299,3 +299,10 @@
 - [x] Adicionar ícones finos e consistentes para WhatsApp, Instagram e e-mail nos rodapés PT/EN.
 - [x] Preservar texto completo, links funcionais, labels acessíveis e boa leitura no celular.
 - [x] Validar build, type-check e capturas mobile PT/EN; salvar checkpoint.
+
+## Refinamento de escala dos contatos do rodapé
+
+- [x] Reduzir os ícones para uma escala proporcional ao texto.
+- [x] Compactar o espaçamento vertical e equalizar o alinhamento dos três contatos.
+- [x] Manter o e-mail completo, foco acessível e boa leitura no celular.
+- [x] Validar desktop/mobile, build e salvar checkpoint.

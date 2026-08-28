@@ -237,3 +237,13 @@ a { color:inherit; text-decoration:none; }
 .footer-email-link { overflow-wrap: anywhere; word-break: break-word; }
 @media (max-width: 640px) { .footer-right { align-items: flex-start; gap: 0.8rem; } .footer-contact-link { min-height: 2rem; } .footer-email-link { max-width: 100%; } }
 @media (prefers-reduced-motion: reduce) { .footer-contact-link { transition: color 180ms ease; } .footer-contact-link:hover, .footer-contact-link:focus-visible { transform: none; } }
+
+/* Casa de Areia: refinamento de proporção dos contatos — compacto, preciso e sem peso visual. */
+.footer-right { gap: 14px; }
+.footer-contact-link { gap: 0.42rem; line-height: 1.25; }
+.footer-contact-link svg { width: 14px; height: 14px; stroke-width: 1.35; }
+@media (max-width: 800px) {
+  .footer-right { gap: 7px; }
+  .footer-contact-link { min-height: 0; gap: 0.42rem; font-size: 9px; letter-spacing: .08em; }
+  .footer-contact-link svg { width: 14px; height: 14px; }
+}
