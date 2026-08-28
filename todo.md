@@ -434,3 +434,16 @@
 - [x] Aplicar enquadramento mobile global que preserve o conteúdo principal de cada foto.
 - [x] Validar Home, Frota, Blindado, Aeroporto, Concierge, Eventos, Sobre, Destinos e Reserva em PT/EN.
 - [x] Confirmar que nenhuma foto foi gerada ou reconstruída e salvar checkpoint após validação.
+
+## Edição da foto do Transfer Blindado
+
+- [ ] Borrar somente a placa da foto original enviada pelo usuário.
+- [ ] Preservar veículo, cenário, iluminação, perspectiva e composição.
+- [ ] Verificar a imagem editada antes de incorporá-la ao site.
+
+## Aplicação da foto aprovada — Transfer Blindado
+
+- [x] Substituir a imagem do Blindado pela foto aprovada com a placa borrada.
+- [x] Usar a mesma foto exclusivamente em `/transfer-blindado` e `/en/transfer-blindado`.
+- [x] Não reutilizar a foto em Home, Frota ou outras páginas.
+- [x] Validar desktop, mobile, build e salvar checkpoint.
