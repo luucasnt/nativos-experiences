@@ -60,6 +60,7 @@ export default async function ServiceRoute({ params }: { params: Promise<{ slug:
         <div className="service-facts"><span className="facts-label">O que você pode esperar</span>{page.items.map((item, index) => <div className="service-fact" key={item}><span>{String(index + 1).padStart(2, "0")}</span><strong>{item}</strong></div>)}</div>
       </div>
       {onboardDifferentiatorTypes.includes(page.type) && <Differentiators items={pageDifferentials} content={differentiatorContent[page.type]} compact />}
+      {page.type === "fleet" && page.gallery && <section className="fleet-gallery" aria-label="Detalhes da frota">{page.gallery.map((item) => <figure key={item.image}><img src={item.image} alt={item.imageAlt} loading="lazy" decoding="async" /></figure>)}</section>}
       <div className="service-faqs"><span className="facts-label">Perguntas frequentes</span>{page.faqs.map((faq) => <details key={faq.question}><summary>{faq.question}</summary><p>{faq.answer}</p></details>)}</div>
       {related.length > 0 && <nav className="service-related" aria-label="Serviços relacionados"><span className="facts-label">Continue a planejar</span><div>{related.map((item) => item && <a key={item.slug} href={`/${item.slug}`}><span>{item.kicker}</span><strong>{item.title}</strong></a>)}</div></nav>}
     </section>

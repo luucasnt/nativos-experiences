@@ -262,3 +262,19 @@ a { color:inherit; text-decoration:none; }
   .footer-contact-link svg { width: 13px !important; height: 13px !important; flex-basis: 13px; }
   .footer-email-link span { font-size: 9px; }
 }
+
+/* Casa de Areia · Frota: galeria editorial exclusiva com imagens reais da frota. */
+.fleet-gallery { max-width:1060px; margin:120px auto 0; display:grid; grid-template-columns:1.16fr .84fr; grid-template-rows:auto auto; gap:18px; }
+.fleet-gallery figure { margin:0; overflow:hidden; background:#e8e1d5; }
+.fleet-gallery figure:first-child { grid-row:span 2; min-height:620px; }
+.fleet-gallery figure:not(:first-child) { min-height:300px; }
+.fleet-gallery img { display:block; width:100%; height:100%; object-fit:cover; filter:saturate(.86) sepia(.05); transition:transform .7s cubic-bezier(.23,1,.32,1), filter .7s ease; }
+.fleet-gallery figure:hover img { transform:scale(1.025); filter:saturate(.96) sepia(.04); }
+@media (max-width:800px) {
+  .fleet-gallery { margin-top:82px; grid-template-columns:1fr; grid-template-rows:auto; gap:12px; }
+  .fleet-gallery figure:first-child, .fleet-gallery figure:not(:first-child) { grid-row:auto; min-height:0; aspect-ratio:4 / 3; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .fleet-gallery img { transition:none; }
+  .fleet-gallery figure:hover img { transform:none; }
+}

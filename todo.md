@@ -393,3 +393,21 @@
 - [x] Validar build com 35 páginas após remoção dos aliases da geração estática e redirects 308.
 - [ ] Migrar imagens atuais para `next/image` junto com os arquivos reais enviados pelo usuário.
 - [ ] Documentar pendências externas: imagens reais, GBP, reviews reais, Search Console, Bing e backlinks.
+
+## Substituição de fotos reais — Etapa 1: hero da Home
+
+- [x] Tratar a foto enviada do GWM Wey 07 com crop hero 16:9, cor quente levemente dessaturada e área de leitura à esquerda.
+- [x] Exportar a versão otimizada em WebP real, 2560 × 1440 px.
+- [x] Substituir somente `img.hero` em `/` e `/en`, sem alterar outras páginas ou textos.
+- [x] Validar Home desktop 1440×900 e mobile 390×844, recorte do veículo e contraste do título.
+- [ ] Usuário aprovar o hero antes da Etapa 2.
+
+## Substituição de fotos reais — Etapa 2: frota
+
+- [x] Extrair o `Downloads.zip` e inventariar nomes, formatos, dimensões e tamanhos.
+- [x] Separar imagens principais, complementares, interiores e fotos reservadas para etapas futuras.
+- [x] Confirmar com o usuário: `Wey_07__37_.jpg` como principal; as outras três como apoio da Frota.
+- [x] Tratar, otimizar e hospedar as quatro imagens aprovadas em WebP real.
+- [x] Substituir referências somente em `/frota` e `/en/frota`, sem alterar outras páginas ou conteúdo.
+- [x] Validar HTML 200 e presença das quatro URLs em PT/EN; capturas desktop/mobile realizadas. A captura EN mobile exibiu placeholders por carregamento lazy do capturador, enquanto as URLs e o HTML estão corretos.
+- [ ] Usuário aprovar a Frota antes da Etapa 3.
