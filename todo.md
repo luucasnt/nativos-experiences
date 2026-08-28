@@ -284,3 +284,12 @@
 - [x] Validar build, type-check, rotas geradas e HTML SSR; a captura visual automatizada apresentou exceção inconsistente, enquanto a navegação direta do browser renderizou a Home corretamente.
 - [ ] Documentar dependências externas: publicação, Search Console, Perfil da Empresa, avaliações reais e backlinks.
 - [ ] Salvar checkpoint atualizado antes da publicação.
+
+## Correção crítica do preview mobile
+
+- [x] Reproduzir a exceção client-side na Home e em uma rota interna.
+- [x] Identificar a causa operacional: preview servindo bundle/cache antigo após rebuild.
+- [x] Reiniciar o runtime e validar renderização sem remover SEO.
+- [x] Validar Home e rota interna em viewport mobile, incluindo hero, CTA e navegação.
+- [x] Confirmar HTML SSR com status 200 nas rotas válidas e 404 real em slug inexistente.
+- [ ] Salvar checkpoint estável após a correção.
