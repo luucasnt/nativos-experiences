@@ -320,3 +320,10 @@
 - [x] Manter tamanho, posição e espaçamento vertical; aumentar somente o gap horizontal ícone/texto.
 - [x] Validar a alteração sem mover o bloco para o centro da página.
 - [ ] Rodar build e salvar checkpoint.
+
+## Gap ícone/texto no rodapé — correção objetiva
+
+- [x] Auditar os gaps atuais dos três contatos e dos demais pares ícone+texto.
+- [x] Aplicar `gap: 9px` de forma consistente em WhatsApp, Instagram e e-mail.
+- [x] Não alterar posição do bloco, tamanho dos ícones ou espaçamento vertical.
+- [x] Validar build e preparar captura ampliada exclusivamente do rodapé.
