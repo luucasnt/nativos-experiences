@@ -336,3 +336,11 @@
 - [x] Responder o diagnóstico antes de editar CSS.
 - [x] Corrigir a causa raiz (`.footer-right a { gap: 0; }`), validar build, preview reiniciado e screenshot ampliado.
 - [x] Entregar HTML/CSS final e documentar a cascata corrigida.
+
+## Ícones oficiais de Instagram e WhatsApp no rodapé
+
+- [x] Auditar imports e markup atuais dos três contatos.
+- [x] Usar Instagram reconhecível no formato quadrado arredondado, lente e ponto superior.
+- [x] Criar WhatsApp outline com balão, rabinho e fone interno.
+- [x] Preservar tamanho, cor âmbar e `gap: 9px` dos contatos.
+- [x] Validar build, preview reiniciado e captura ampliada dos três ícones lado a lado.
