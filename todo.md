@@ -306,3 +306,10 @@
 - [x] Compactar o espaçamento vertical e equalizar o alinhamento dos três contatos.
 - [x] Manter o e-mail completo, foco acessível e boa leitura no celular.
 - [x] Validar desktop/mobile, build e salvar checkpoint.
+
+## Correção estrutural do bloco de contatos — nova rodada
+
+- [x] Reproduzir o rodapé em recorte aproximado para avaliar escala real.
+- [x] Refazer a coluna de contatos com ícones pequenos, linhas compactas e espaçamento controlado.
+- [x] Garantir que a alteração seja claramente visível, não apenas uma regra CSS marginal.
+- [x] Validar build e a versão reiniciada em mobile; desktop permanece validado no checkpoint anterior.
