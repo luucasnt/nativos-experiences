@@ -38,6 +38,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         image: heroImage,
         logo: "https://files.manuscdn.com/user_upload_by_module/session_file/310419663029716923/usTPVzSokKzdeTWC.png",
         sameAs: ["https://instagram.com/nativosexperiences"],
+        contactPoint: [{ "@type": "ContactPoint", telephone: "+55 73 99168-1630", contactType: "customer service", availableLanguage: ["Portuguese", "English"] }],
         address: { "@type": "PostalAddress", addressLocality: "Trancoso", addressRegion: "BA", addressCountry: "BR" },
         areaServed: ["Trancoso", "Porto Seguro", "Arraial d’Ajuda", "Praia do Espelho", "Caraíva", "Santo André", "Corumbau", "Itacaré"],
         knowsAbout: ["transfer privativo", "transfer aeroporto Porto Seguro Trancoso", "concierge em Trancoso", "transfer blindado", "motorista particular", "casamentos e eventos"],

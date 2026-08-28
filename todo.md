@@ -344,3 +344,31 @@
 - [x] Criar WhatsApp outline com balão, rabinho e fone interno.
 - [x] Preservar tamanho, cor âmbar e `gap: 9px` dos contatos.
 - [x] Validar build, preview reiniciado e captura ampliada dos três ícones lado a lado.
+
+## Auditoria externa — comparação e priorização
+
+- [ ] Confrontar rotas e recomendações de SEO com a estrutura atual.
+- [ ] Verificar cobertura real de páginas em inglês e hreflang.
+- [ ] Avaliar imagens, Core Web Vitals e uso de next/image.
+- [ ] Avaliar E-E-A-T, Sobre, prova institucional e sameAs.
+- [ ] Definir páginas de rotas/destinos e conteúdos editoriais sem duplicação.
+- [ ] Separar ações externas: GBP, reviews reais, Search Console, Bing e backlinks.
+
+## Verificação do parecer do Claude
+
+- [ ] Contar referências de imagem e identificar seus domínios/formatos.
+- [ ] Confirmar se existe configuração `next.config.*` e se `next/image` está em uso.
+- [ ] Mapear slugs atuais e comparar com possíveis URLs legadas.
+- [ ] Verificar se redirects são necessários ou apenas recomendáveis.
+- [ ] Entregar parecer factual antes de implementar qualquer migração.
+
+## Correções consolidadas das duas auditorias
+
+- [x] Consolidar achados e separar correções de código das dependências externas.
+- [x] Criar `next.config.mjs` com otimização futura de imagens remotas e redirects permanentes dos aliases confirmados.
+- [x] Fortalecer E-E-A-T técnico com entidade, contactPoint, CNPJ, foundingDate, área de atuação e sameAs oficial confirmado, sem fabricar provas.
+- [x] Confirmar cobertura atual de rotas PT/EN, hreflang, schemas, sitemap, robots e 404 real.
+- [x] Revisar conversão, acessibilidade e instrumentação já existente.
+- [x] Validar build com 45 páginas, type-check, manifest e redirects 308.
+- [ ] Migrar imagens atuais para `next/image` junto com os arquivos reais enviados pelo usuário.
+- [ ] Documentar pendências externas: imagens reais, GBP, reviews reais, Search Console, Bing e backlinks.
