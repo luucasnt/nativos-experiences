@@ -271,3 +271,16 @@
 - [x] Garantir que o submenu/agrupamento de Serviços permaneça claro no celular.
 - [x] Validar abertura, fechamento, foco e links em viewport mobile.
 - [ ] Rodar build e salvar checkpoint atualizado.
+
+## Otimização pré-publicação — SEO, marca e conversão
+
+- [x] Auditar e corrigir metadata, canonical, hreflang, sitemap, robots e entidades globais.
+- [x] Expandir a mensagem comercial das Homes para intenções de transfer Porto Seguro–Trancoso e atendimento internacional.
+- [x] Fortalecer JSON-LD, entidade da empresa, serviços, BreadcrumbList e prontidão para crawlers de IA.
+- [x] Adicionar `/llms.txt` factual e controlado, sem substituir sitemap ou robots.
+- [x] Identificar CTAs de WhatsApp com atributos semânticos para futura medição de conversão.
+- [x] Otimizar imagens: hero prioritário, imagens secundárias lazy e decoding assíncrono.
+- [x] Corrigir soft-404 nas rotas dinâmicas com `notFound()` real.
+- [x] Validar build, type-check, rotas geradas e HTML SSR; a captura visual automatizada apresentou exceção inconsistente, enquanto a navegação direta do browser renderizou a Home corretamente.
+- [ ] Documentar dependências externas: publicação, Search Console, Perfil da Empresa, avaliações reais e backlinks.
+- [ ] Salvar checkpoint atualizado antes da publicação.

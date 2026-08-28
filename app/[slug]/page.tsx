@@ -1,5 +1,6 @@
 // Casa de Areia: páginas internas SSR para buscas específicas, com resposta direta, prova operacional e caminhos de conversão.
 import type { Metadata } from "next";
+import { notFound } from "next/navigation";
 import { Differentiators } from "@/components/Differentiators";
 import { Footer, Header, eventWhatsapp, partnershipWhatsapp, whatsapp, WhatsAppButton } from "@/components/SiteChrome";
 import { allSlugs, differentiatorContent, differentiators, getServiceBySlug, onboardDifferentiatorTypes } from "@/lib/data";
@@ -16,28 +17,28 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     title: page.seoTitle?.replace(/\s*\|\s*Nativos Experiences\s*$/i, "") ?? page.title,
     description: page.seoDescription ?? page.intro,
     alternates: { canonical: `/${slug}`, languages: { "pt-BR": `${siteUrl}/${slug}`, en: `${siteUrl}/en/${slug}`, "x-default": `${siteUrl}/${slug}` } },
-    openGraph: { title: page.seoTitle?.replace(/\s*\|\s*Nativos Experiences\s*$/i, "") ?? page.title, description: page.seoDescription ?? page.intro, url: `${siteUrl}/${slug}`, images: [{ url: page.image, alt: page.imageAlt }] },
+    openGraph: { type: "website", siteName: "Nativos Experiences", locale: "pt_BR", title: page.seoTitle?.replace(/\s*\|\s*Nativos Experiences\s*$/i, "") ?? page.title, description: page.seoDescription ?? page.intro, url: `${siteUrl}/${slug}`, images: [{ url: page.image, alt: page.imageAlt }] }, twitter: { card: "summary_large_image", title: page.seoTitle?.replace(/\s*\|\s*Nativos Experiences\s*$/i, "") ?? page.title, description: page.seoDescription ?? page.intro, images: [page.image] },
   };
 }
 
 export default async function ServiceRoute({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const page = getServiceBySlug(slug);
-  if (!page) return <main className="section-light" style={{ minHeight: "100vh", padding: "12vw" }}><h1>Página não encontrada</h1><a className="dark-button" href="/">Voltar para Trancoso</a></main>;
+  if (!page) notFound();
 
   const related = (page.relatedSlugs ?? ["transfer-aeroporto", "concierge-trancoso"]).map(getServiceBySlug).filter(Boolean).filter((item) => item!.slug !== page.slug).slice(0, 3);
-  const serviceSchema = { "@context":"https://schema.org", "@type":"Service", name:page.title, description:page.opening ?? page.intro, provider:{"@type":"TravelAgency",name:"Nativos Experiences",url:siteUrl}, areaServed:{"@type":"Place",name:"Trancoso, Bahia"}, url:`${siteUrl}/${page.slug}` };
+  const serviceSchema = { "@context":"https://schema.org", "@type":"Service", "@id":`${siteUrl}/${page.slug}#service`, name:page.title, description:page.opening ?? page.intro, provider:{"@id":`${siteUrl}/#business`}, areaServed:{"@type":"Place",name:"Trancoso, Bahia"}, url:`${siteUrl}/${page.slug}`, inLanguage:"pt-BR" }; const breadcrumbSchema = { "@context":"https://schema.org", "@type":"BreadcrumbList", itemListElement:[{"@type":"ListItem",position:1,name:"Nativos Experiences",item:`${siteUrl}/`},{"@type":"ListItem",position:2,name:page.title,item:`${siteUrl}/${page.slug}`}] };
   const faqSchema = page.faqs.length ? { "@context":"https://schema.org", "@type":"FAQPage", mainEntity:page.faqs.map((faq) => ({ "@type":"Question", name:faq.question, acceptedAnswer:{"@type":"Answer", text:faq.answer} })) } : null;
   const ctaHref = page.type === "partnerships" ? partnershipWhatsapp : page.type === "events" ? eventWhatsapp : whatsapp;
   const pageDifferentials = page.type === "partnerships" ? differentiators.slice(0, 3) : differentiators;
   const isPrivateRoute = ["airport", "transfer", "portoSeguro", "armored", "tours"].includes(page.type);
 
-  return <main className="service-page sand-theme">
+  return <main className="service-page sand-theme" lang="pt-BR">
     <Header />
-    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} /><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
     {faqSchema && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />}
     <section className="service-hero">
-      <img src={page.image} alt={page.imageAlt} />
+      <img src={page.image} alt={page.imageAlt} loading="eager" fetchPriority="high" decoding="async" />
       <div className="service-hero-shade" />
       <div className="service-hero-content">
         <a href="/" className="back-link">Voltar à Nativos</a>
