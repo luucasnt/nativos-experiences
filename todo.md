@@ -511,3 +511,27 @@
 - [x] Ajustar a altura das três molduras para coincidir com a área preenchida das fotos no desktop.
 - [x] Preservar integralmente as regras atuais do mobile.
 - [x] Validar Home em desktop e mobile e salvar checkpoint após a correção.
+
+## Cards e Reserva Online — correção crítica
+
+- [x] Auditar o componente dos cards, dimensões dos containers e regras desktop/mobile.
+- [x] Auditar a rota `/reserva-online` e seus erros de renderização, imagem e layout.
+- [x] Corrigir todas as molduras para coincidir exatamente com a foto preenchida.
+- [ ] Reparar a página Reserva Online sem alterar conteúdo aprovado.
+- [x] Validar Home, Reserva Online e páginas internas em desktop e mobile.
+- [ ] Salvar checkpoint após a validação visual final.
+
+## Imagens ausentes nas seções editoriais da Home
+
+- [x] Auditar as imagens da seção de boas-vindas, destinos e blocos editoriais PT/EN.
+- [x] Corrigir os containers que deixam a imagem atrás do fundo ou sem dimensões.
+- [x] Garantir que cada seção use o asset real correto e carregue em desktop e mobile.
+- [x] Validar a Home completa, sem espaços vazios nas áreas de imagem.
+- [ ] Salvar checkpoint após a correção visual.
+
+## Correção de capacidade do carro blindado
+
+- [x] Corrigir a capacidade do carro blindado de 4 para 6 passageiros na fonte central e em todas as renderizações relevantes.
+- [x] Verificar que não restam ocorrências incorretas de capacidade do blindado.
+- [x] Rodar check/build e validar a página do Transfer Blindado no preview.
+- [ ] Salvar checkpoint após a validação da correção.
