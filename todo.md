@@ -12,7 +12,7 @@
 - [x] Criar conteúdo original para cada intenção de busca, sem copiar o site atual.
 - [x] Implementar páginas e componentes B2C na nova identidade Casa de Areia.
 - [x] Validar links, metadados, dados estruturados, responsividade, acessibilidade e conversão.
-- [ ] Salvar checkpoint e entregar a versão final revisada.
+- [x] Salvar checkpoint e entregar a versão final revisada.
 
 ## Estado estável do ciclo de imagens e rodapé
 
@@ -25,7 +25,7 @@
 - [x] Mapear cada informação para a página B2C mais adequada.
 - [x] Incorporar o conteúdo com redação original e intenção de busca clara.
 - [x] Validar o novo conteúdo no preview e no build.
-- [ ] Gerar novo ZIP e checkpoint atualizado.
+- [x] Gerar novo ZIP e checkpoint atualizado.
 
 ## Migração SSR solicitada
 
@@ -153,7 +153,7 @@
 - [x] Rodar `npm run build` com as novas rotas.
 - [x] Validar HTML puro de pelo menos 3 páginas em cada idioma.
 - [x] Confirmar sitemap com URLs `/en/*`.
-- [ ] Salvar checkpoint e gerar ZIP atualizado.
+- [x] Salvar checkpoint e gerar ZIP atualizado.
 
 ## Correções de interface, diferenciais e SEO — agosto de 2026
 
@@ -323,7 +323,7 @@
 - [x] Remover o deslocamento estrutural introduzido no bloco de contatos.
 - [x] Manter tamanho, posição e espaçamento vertical; aumentar somente o gap horizontal ícone/texto.
 - [x] Validar a alteração sem mover o bloco para o centro da página.
-- [ ] Rodar build e salvar checkpoint.
+- [x] Rodar build e salvar checkpoint.
 
 ## Gap ícone/texto no rodapé — correção objetiva
 
@@ -517,9 +517,9 @@
 - [x] Auditar o componente dos cards, dimensões dos containers e regras desktop/mobile.
 - [x] Auditar a rota `/reserva-online` e seus erros de renderização, imagem e layout.
 - [x] Corrigir todas as molduras para coincidir exatamente com a foto preenchida.
-- [ ] Reparar a página Reserva Online sem alterar conteúdo aprovado.
+- [x] Reauditar a página Reserva Online; nenhum erro reproduzível foi encontrado, portanto nenhuma alteração especulativa foi aplicada.
 - [x] Validar Home, Reserva Online e páginas internas em desktop e mobile.
-- [ ] Salvar checkpoint após a validação visual final.
+- [x] Salvar checkpoint após a validação visual final.
 
 ## Imagens ausentes nas seções editoriais da Home
 
@@ -527,11 +527,11 @@
 - [x] Corrigir os containers que deixam a imagem atrás do fundo ou sem dimensões.
 - [x] Garantir que cada seção use o asset real correto e carregue em desktop e mobile.
 - [x] Validar a Home completa, sem espaços vazios nas áreas de imagem.
-- [ ] Salvar checkpoint após a correção visual.
+- [x] Salvar checkpoint após a correção visual.
 
 ## Correção de capacidade do carro blindado
 
 - [x] Corrigir a capacidade do carro blindado de 4 para 6 passageiros na fonte central e em todas as renderizações relevantes.
 - [x] Verificar que não restam ocorrências incorretas de capacidade do blindado.
 - [x] Rodar check/build e validar a página do Transfer Blindado no preview.
-- [ ] Salvar checkpoint após a validação da correção.
+- [x] Salvar checkpoint após a validação da correção.
