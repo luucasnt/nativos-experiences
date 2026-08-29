@@ -528,4 +528,4 @@
 - [x] Remover dependências de `object-position` e masks para crop por página/breakpoint.
 - [x] Garantir que o texto do hero permaneça legível e não seja cortado.
 - [x] Validar visualmente 375px, 768px e 1440px em Home e páginas de serviço.
-- [ ] Salvar checkpoint somente após confirmar 100% de visibilidade das imagens.
+- [x] Salvar checkpoint somente após confirmar 100% de visibilidade das imagens.
