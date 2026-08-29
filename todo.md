@@ -505,3 +505,11 @@
 - [x] Tratar e aplicar `01.webp`, `02.webp` e `03.webp` nos três cards da Home na ordem exata recebida.
 - [x] Adicionar `Reserva Online` ao rodapé PT/EN em todas as páginas.
 - [x] Validar build, rotas PT/EN, carregamento dos assets e comportamento em desktop/mobile em um único ciclo.
+
+## Correção estrutural de imagens no desktop
+
+- [x] Diagnosticar por que a imagem do hero invade o texto e por que algumas imagens somem.
+- [x] Corrigir o container do hero para garantir que a imagem ocupe 100% da área sem sobrepor o conteúdo.
+- [x] Corrigir a proporção das molduras dos cards para que não fiquem maiores que as fotos.
+- [x] Validar todas as páginas em desktop e mobile após a correção.
+- [ ] Salvar checkpoint da versão corrigida.

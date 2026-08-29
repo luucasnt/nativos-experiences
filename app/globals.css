@@ -311,3 +311,24 @@ a { color:inherit; text-decoration:none; }
   .experience-image-wrap img { object-fit: var(--img-fit-mobile, contain); object-position: var(--img-focus-mobile, var(--img-focus, right center)); }
   .service-hero > picture img { object-fit: var(--img-fit-mobile, contain); object-position: var(--img-focus-mobile, var(--img-focus, right center)); }
 }
+
+/* Final structural image correction: every fill image is bounded by its own editorial frame. */
+.welcome-image,
+.destination-image,
+.hospitality-image,
+.experience-image-wrap { position: relative; overflow: hidden; }
+.welcome-image { min-height: 590px; }
+.destination-image { min-height: 590px; }
+.experience-image-wrap { height: 440px; aspect-ratio: 3 / 2; }
+.experience-image-wrap img { object-fit: cover; object-position: var(--img-focus, 78% center); }
+.hero-image,
+.service-hero > picture img { width: 110%; max-width: none; left: 7%; right: auto; transform: none; object-position: var(--img-focus, 78% center); }
+@media (max-width: 800px) {
+  .welcome-image,
+  .destination-image,
+  .hospitality-image { min-height: 290px; }
+  .experience-image-wrap { height: auto; aspect-ratio: 3 / 2; }
+  .experience-image-wrap img { object-fit: var(--img-fit-mobile, contain); object-position: var(--img-focus-mobile, var(--img-focus, right center)); }
+  .hero-image,
+  .service-hero > picture img { width: 100%; max-width: none; left: 0; right: auto; transform: none; object-fit: var(--img-fit-mobile, contain); object-position: var(--img-focus-mobile, var(--img-focus, right center)); }
+}
