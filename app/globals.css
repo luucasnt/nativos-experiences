@@ -274,3 +274,38 @@ a { color:inherit; text-decoration:none; }
   .destination-image img,
   .hospitality-image img { height: 290px; object-position: center center; }
 }
+
+/* Casa de Areia — composição editorial por página: fotos reais com foco próprio, respiro para texto e sem crop global. */
+.service-hero > picture { position:absolute; inset:0; display:block; z-index:0; }
+.service-hero > picture img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; filter:saturate(.7) sepia(.08); }
+.service-hero > .service-hero-shade, .service-hero > .service-hero-content { z-index:1; }
+.service-hero[data-service="about"] > picture img { display:none; }
+.service-hero[data-service="about"] > .service-hero-shade { display:none; }
+.fleet-section, .welcome, .contact { position:relative; }
+.fleet-grid { position:relative; column-gap:70px; }
+.fleet-grid::after { content:''; position:absolute; top:0; bottom:0; left:50%; width:1px; background:var(--line); pointer-events:none; }
+.fleet-item, .fleet-item:nth-child(even) { margin-left:0; margin-right:0; border-left:0; padding-left:0; }
+.fleet-item:nth-child(odd) { padding-right:35px; }
+@media (max-width:800px) {
+  .service-hero > picture img { object-position:50% center; }
+  .service-hero[data-service="airport"] > picture img,
+  .service-hero[data-service="portoSeguro"] > picture img,
+  .service-hero[data-service="chauffeur"] > picture img { object-position:72% center; }
+  .service-hero[data-service="transfer"] > picture img,
+  .service-hero[data-service="tours"] > picture img,
+  .service-hero[data-service="destinations"] > picture img { object-position:62% center; }
+  .service-hero[data-service="armored"] > picture img { object-position:76% center; }
+  .service-hero[data-service="events"] > picture img { object-position:79% center; }
+  .service-hero[data-service="partnerships"] > picture img { object-position:80% center; }
+  .service-hero[data-service="booking"] > picture img { object-position:72% center; }
+  .service-hero[data-service="about"] { background:var(--navy); }
+  .fleet-grid { column-gap:0; }
+  .fleet-grid::after { display:none; }
+  .fleet-item:nth-child(odd) { padding-right:0; }
+}
+
+/* Casa de Areia — navegação interna clara sobre heroes escuros, sem alterar a Home. */
+.service-page .nav-wrap { position:absolute; color:var(--mist); }
+.service-page .nav-links a,
+.service-page .services-trigger,
+.service-page .nav-cta { color:var(--mist); }

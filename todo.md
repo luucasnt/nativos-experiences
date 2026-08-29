@@ -436,10 +436,9 @@
 - [x] Confirmar que nenhuma foto foi gerada ou reconstruída e salvar checkpoint após validação.
 
 ## Edição da foto do Transfer Blindado
-
-- [ ] Borrar somente a placa da foto original enviada pelo usuário.
-- [ ] Preservar veículo, cenário, iluminação, perspectiva e composição.
-- [ ] Verificar a imagem editada antes de incorporá-la ao site.
+- [x] Borrar somente a placa da foto original enviada pelo usuário.
+- [x] Preservar veículo, cenário, iluminação, perspectiva e composição.
+- [x] Verificar a imagem editada antes de incorporá-la ao site.
 
 ## Aplicação da foto aprovada — Transfer Blindado
 
@@ -449,11 +448,10 @@
 - [x] Validar desktop, mobile, build e salvar checkpoint.
 
 ## Revisão composicional da foto do Blindado
-
-- [ ] Afastar visualmente o veículo para reduzir a sensação de close frontal.
-- [ ] Posicionar o veículo mais à direita e preservar área de respiro à esquerda para o texto.
-- [ ] Manter placa borrada, veículo real, cenário e proporção 16:9.
-- [ ] Apresentar nova versão para aprovação antes de alterar o site.
+- [x] Afastar visualmente o veículo para reduzir a sensação de close frontal.
+- [x] Posicionar o veículo mais à direita e preservar área de respiro à esquerda para o texto.
+- [x] Manter placa borrada, veículo real, cenário e proporção 16:9.
+- [x] Apresentar nova versão para aprovação antes de alterar o site.
 
 ## Aplicação da composição aprovada — Blindado
 
@@ -461,3 +459,19 @@
 - [x] Atualizar somente o registro do Transfer Blindado PT/EN.
 - [x] Validar desktop e mobile, sem alterar Home, Frota ou outras páginas.
 - [x] Salvar checkpoint da versão aprovada.
+
+## Atualizações recebidas em Downloads.rar
+- [x] Extrair o pacote recebido sem executar arquivos automaticamente.
+- [x] Inventariar todos os arquivos e comandos contidos no pacote.
+- [x] Ler cada atualização integralmente e ordenar a execução.
+- [x] Comparar cada pedido com o estado atual do projeto.
+- [x] Executar todas as correções dentro dos arquivos, sem pular etapas.
+- [x] Validar build, rotas, imagens e comportamento responsivo após as alterações.
+- [ ] Salvar checkpoint e entregar a versão final após a auditoria completa.
+
+## Frota — substituição aprovada
+- [x] Substituir `img.fleetOriginal` pela nova foto tratada e aprovada da Frota.
+- [x] Confirmar uso exclusivo nas rotas `/frota` e `/en/frota`.
+- [x] Validar as nove páginas com assets exclusivos, mobile e desktop.
+- [x] Conferir placas aplicáveis, linha central da grade e `N / 03`.
+- [ ] Salvar checkpoint final da rodada e entregar relatório sem incluir arquivos internos de auditoria no ZIP.

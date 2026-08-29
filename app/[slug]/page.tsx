@@ -37,8 +37,8 @@ export default async function ServiceRoute({ params }: { params: Promise<{ slug:
     <Header />
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} /><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
     {faqSchema && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />}
-    <section className="service-hero">
-      <img src={page.image} alt={page.imageAlt} loading="eager" fetchPriority="high" decoding="async" />
+    <section className="service-hero" data-service={page.type}>
+      <picture>{page.imageMobile && <source media="(max-width: 800px)" srcSet={page.imageMobile} />}<img src={page.image} alt={page.imageAlt} loading="eager" fetchPriority="high" decoding="async" /></picture>
       <div className="service-hero-shade" />
       <div className="service-hero-content">
         <a href="/" className="back-link">Voltar à Nativos</a>
