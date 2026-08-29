@@ -311,3 +311,12 @@ a { color:inherit; text-decoration:none; }
   .experience-image-wrap img { object-fit: var(--img-fit-mobile, contain); object-position: var(--img-focus-mobile, var(--img-focus, right center)); }
   .service-hero > picture img { object-fit: var(--img-fit-mobile, contain); object-position: var(--img-focus-mobile, var(--img-focus, right center)); }
 }
+
+/* Cards editoriais: no desktop, a moldura acompanha exatamente a proporção horizontal da foto. O mobile mantém a altura já aprovada. */
+@media (min-width: 801px) {
+  .experience-image-wrap {
+    height: auto;
+    min-height: 0;
+    aspect-ratio: 16 / 9;
+  }
+}

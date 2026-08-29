@@ -505,3 +505,9 @@
 - [x] Tratar e aplicar `01.webp`, `02.webp` e `03.webp` nos três cards da Home na ordem exata recebida.
 - [x] Adicionar `Reserva Online` ao rodapé PT/EN em todas as páginas.
 - [x] Validar build, rotas PT/EN, carregamento dos assets e comportamento em desktop/mobile em um único ciclo.
+
+## Molduras dos cards — somente desktop
+
+- [x] Ajustar a altura das três molduras para coincidir com a área preenchida das fotos no desktop.
+- [x] Preservar integralmente as regras atuais do mobile.
+- [x] Validar Home em desktop e mobile e salvar checkpoint após a correção.
