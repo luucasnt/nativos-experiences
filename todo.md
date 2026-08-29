@@ -512,4 +512,11 @@
 - [x] Corrigir o container do hero para garantir que a imagem ocupe 100% da área sem sobrepor o conteúdo.
 - [x] Corrigir a proporção das molduras dos cards para que não fiquem maiores que as fotos.
 - [x] Validar todas as páginas em desktop e mobile após a correção.
-- [ ] Salvar checkpoint da versão corrigida.
+- [x] Salvar checkpoint da versão corrigida.
+
+## Ajuste final do hero da Home no desktop
+
+- [x] Criar respiro horizontal real entre o texto e o Wey 07 no hero desktop.
+- [x] Preservar a foto real e o enquadramento mobile já validado.
+- [x] Validar Home e páginas internas sem regressão visual.
+- [x] Marcar a pendência e salvar o checkpoint final após a correção.
