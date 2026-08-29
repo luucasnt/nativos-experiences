@@ -535,3 +535,10 @@
 - [x] Verificar que não restam ocorrências incorretas de capacidade do blindado.
 - [x] Rodar check/build e validar a página do Transfer Blindado no preview.
 - [x] Salvar checkpoint após a validação da correção.
+
+## Correção das faixas laterais na seção editorial
+
+- [x] Identificar a regra estrutural que expõe o fundo azul-marinho nas laterais de “Trancoso é a base”.
+- [x] Fazer o fundo areia ocupar toda a largura da seção sem alterar conteúdo, imagem ou tipografia.
+- [x] Validar Home em desktop e mobile e confirmar ausência das faixas laterais indevidas.
+- [x] Salvar checkpoint após a validação visual.
