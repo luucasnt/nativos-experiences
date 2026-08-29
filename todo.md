@@ -274,7 +274,7 @@
 - [x] Confirmar a sequência do drawer mobile: Sobre, Serviços, Frota, Concierge, Casamentos e Eventos, Parcerias.
 - [x] Garantir que o submenu/agrupamento de Serviços permaneça claro no celular.
 - [x] Validar abertura, fechamento, foco e links em viewport mobile.
-- [ ] Rodar build e salvar checkpoint atualizado.
+- [x] Rodar build e salvar checkpoint atualizado.
 
 ## Otimização pré-publicação — SEO, marca e conversão
 
@@ -286,8 +286,8 @@
 - [x] Otimizar imagens: hero prioritário, imagens secundárias lazy e decoding assíncrono.
 - [x] Corrigir soft-404 nas rotas dinâmicas com `notFound()` real.
 - [x] Validar build, type-check, rotas geradas e HTML SSR; a captura visual automatizada apresentou exceção inconsistente, enquanto a navegação direta do browser renderizou a Home corretamente.
-- [ ] Documentar dependências externas: publicação, Search Console, Perfil da Empresa, avaliações reais e backlinks.
-- [ ] Salvar checkpoint atualizado antes da publicação.
+- [x] Documentar dependências externas: publicação, Search Console, Perfil da Empresa, avaliações reais e backlinks.
+- [x] Salvar checkpoint atualizado antes da publicação.
 
 ## Correção crítica do preview mobile
 
@@ -296,7 +296,7 @@
 - [x] Reiniciar o runtime e validar renderização sem remover SEO.
 - [x] Validar Home e rota interna em viewport mobile, incluindo hero, CTA e navegação.
 - [x] Confirmar HTML SSR com status 200 nas rotas válidas e 404 real em slug inexistente.
-- [ ] Salvar checkpoint estável após a correção.
+- [x] Salvar checkpoint estável após a correção.
 
 ## Ícones de contato no rodapé
 
@@ -351,20 +351,20 @@
 
 ## Auditoria externa — comparação e priorização
 
-- [ ] Confrontar rotas e recomendações de SEO com a estrutura atual.
-- [ ] Verificar cobertura real de páginas em inglês e hreflang.
-- [ ] Avaliar imagens, Core Web Vitals e uso de next/image.
-- [ ] Avaliar E-E-A-T, Sobre, prova institucional e sameAs.
-- [ ] Definir páginas de rotas/destinos e conteúdos editoriais sem duplicação.
-- [ ] Separar ações externas: GBP, reviews reais, Search Console, Bing e backlinks.
+- [x] Confrontar rotas e recomendações de SEO com a estrutura atual.
+- [x] Verificar cobertura real de páginas em inglês e hreflang.
+- [x] Avaliar imagens, Core Web Vitals e uso de next/image.
+- [x] Avaliar E-E-A-T, Sobre, prova institucional e sameAs.
+- [x] Definir páginas de rotas/destinos e conteúdos editoriais sem duplicação.
+- [x] Separar ações externas: GBP, reviews reais, Search Console, Bing e backlinks.
 
 ## Verificação do parecer do Claude
 
-- [ ] Contar referências de imagem e identificar seus domínios/formatos.
-- [ ] Confirmar se existe configuração `next.config.*` e se `next/image` está em uso.
-- [ ] Mapear slugs atuais e comparar com possíveis URLs legadas.
-- [ ] Verificar se redirects são necessários ou apenas recomendáveis.
-- [ ] Entregar parecer factual antes de implementar qualquer migração.
+- [x] Contar referências de imagem e identificar seus domínios/formatos.
+- [x] Confirmar se existe configuração `next.config.*` e se `next/image` está em uso.
+- [x] Mapear slugs atuais e comparar com possíveis URLs legadas.
+- [x] Verificar se redirects são necessários ou apenas recomendáveis.
+- [x] Entregar parecer factual antes de implementar qualquer migração.
 
 ## Correções consolidadas das duas auditorias
 
@@ -374,8 +374,8 @@
 - [x] Confirmar cobertura atual de rotas PT/EN, hreflang, schemas, sitemap, robots e 404 real.
 - [x] Revisar conversão, acessibilidade e instrumentação já existente.
 - [x] Validar build com 45 páginas, type-check, manifest e redirects 308.
-- [ ] Migrar imagens atuais para `next/image` junto com os arquivos reais enviados pelo usuário.
-- [ ] Documentar pendências externas: imagens reais, GBP, reviews reais, Search Console, Bing e backlinks.
+- [x] Migrar imagens atuais para `next/image` junto com os arquivos reais enviados pelo usuário.
+- [x] Documentar pendências externas: imagens reais, GBP, reviews reais, Search Console, Bing e backlinks.
 
 ## Correção de aliases canônicos concluída
 
@@ -395,8 +395,8 @@
 - [x] Confirmar cobertura atual de rotas PT/EN, hreflang, schemas, sitemap, robots e 404 real.
 - [x] Revisar conversão, acessibilidade e instrumentação já existente.
 - [x] Validar build com 35 páginas após remoção dos aliases da geração estática e redirects 308.
-- [ ] Migrar imagens atuais para `next/image` junto com os arquivos reais enviados pelo usuário.
-- [ ] Documentar pendências externas: imagens reais, GBP, reviews reais, Search Console, Bing e backlinks.
+- [x] Migrar imagens atuais para `next/image` junto com os arquivos reais enviados pelo usuário.
+- [x] Documentar pendências externas: imagens reais, GBP, reviews reais, Search Console, Bing e backlinks.
 
 ## Substituição de fotos reais — Etapa 1: hero da Home
 

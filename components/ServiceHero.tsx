@@ -1,4 +1,5 @@
 /* Casa de Areia — hero compartilhado: texto à esquerda, assunto visual à direita e enquadramento configurado pela fonte central. */
+import Image from "next/image";
 import type { CSSProperties } from "react";
 import type { ServiceData } from "@/lib/data";
 
@@ -31,7 +32,7 @@ export function ServiceHero({ page, ctaHref, locale = "pt-BR" }: ServiceHeroProp
     <section className="service-hero" data-service={page.type} style={style}>
       <picture>
         {page.imageMobile && <source media="(max-width: 800px)" srcSet={page.imageMobile} />}
-        <img src={page.image} alt={page.imageAlt} loading="eager" fetchPriority="high" decoding="async" />
+        <Image src={page.image} alt={page.imageAlt} fill priority sizes="100vw" />
       </picture>
       <div className="service-hero-shade" />
       <div className="service-hero-content">

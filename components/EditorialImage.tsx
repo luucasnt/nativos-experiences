@@ -1,4 +1,5 @@
 /* Casa de Areia — moldura editorial reutilizável: preserva a foto e recebe foco/encaixe da fonte central. */
+import Image from "next/image";
 import type { CSSProperties, ReactNode } from "react";
 import type { ImagePresentation } from "@/lib/data";
 
@@ -26,5 +27,5 @@ export function EditorialImage({ src, alt, className, children, imageFocus = "ri
     "--img-bg": imageBackground,
   };
 
-  return <div className={className} style={style}><img src={src} alt={alt} loading="eager" decoding="async" />{children}</div>;
+  return <div className={className} style={style}><Image src={src} alt={alt} fill sizes="(max-width: 800px) 100vw, 50vw" priority />{children}</div>;
 }
