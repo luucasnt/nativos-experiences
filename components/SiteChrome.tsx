@@ -7,7 +7,7 @@ import { Mail } from "lucide-react";
 export const whatsapp = "https://wa.me/5573991681630?text=Ol%C3%A1!%20Gostaria%20de%20falar%20com%20um%20concierge%20da%20Nativos%20Experiences.";
 export const partnershipWhatsapp = "https://wa.me/5573991681630?text=Ol%C3%A1!%20Gostaria%20de%20conhecer%20as%20parcerias%20da%20Nativos%20Experiences.";
 export const eventWhatsapp = "https://wa.me/5573991681630?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20de%20evento.%20Data%3A%20%7C%20N%C3%BAmero%20de%20convidados%3A%20%7C%20Tipo%20de%20evento%3A%20";
-const mark = "https://files.manuscdn.com/user_upload_by_module/session_file/310419663029716923/usTPVzSokKzdeTWC.png";
+const mark = "/images/usTPVzSokKzdeTWC.png";
 
 type Locale = "pt-BR" | "en";
 type NavItem = { label: string; path: string };

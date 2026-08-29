@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 const siteUrl = "https://nativosexperiences.com";
-const heroImage = "https://files.manuscdn.com/user_upload_by_module/session_file/310419663029716923/VtQimewDJyvHxHBP.jpg";
+const heroImage = "/images/VtQimewDJyvHxHBP.jpg";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1, "max-video-preview": -1 } },
   openGraph: { type: "website", locale: "pt_BR", alternateLocale: ["en_US"], siteName: "Nativos Experiences", title: "Transfer de luxo e concierge em Trancoso | Nativos Experiences", description: "Chegue a Trancoso com conforto, discrição e um concierge local cuidando do caminho.", url: siteUrl, images: [{ url: heroImage, width: 1600, height: 1000, alt: "SUV premium em estrada costeira de Trancoso" }] },
   twitter: { card: "summary_large_image", title: "Transfer de luxo e concierge em Trancoso | Nativos Experiences", description: "Transfer privativo, motorista à disposição e concierge em Trancoso e região.", images: [heroImage] },
-  icons: { icon: "https://files.manuscdn.com/user_upload_by_module/session_file/310419663029716923/usTPVzSokKzdeTWC.png", apple: "https://files.manuscdn.com/user_upload_by_module/session_file/310419663029716923/usTPVzSokKzdeTWC.png" },
+  icons: { icon: "/images/usTPVzSokKzdeTWC.png", apple: "/images/usTPVzSokKzdeTWC.png" },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
@@ -36,7 +36,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         telephone: "+55 73 99168-1630",
         email: "contato@nativosexperiences.com",
         image: heroImage,
-        logo: "https://files.manuscdn.com/user_upload_by_module/session_file/310419663029716923/usTPVzSokKzdeTWC.png",
+        logo: "/images/usTPVzSokKzdeTWC.png",
         sameAs: ["https://instagram.com/nativosexperiences"],
         contactPoint: [{ "@type": "ContactPoint", telephone: "+55 73 99168-1630", contactType: "customer service", availableLanguage: ["Portuguese", "English"] }],
         address: { "@type": "PostalAddress", addressLocality: "Trancoso", addressRegion: "BA", addressCountry: "BR" },
