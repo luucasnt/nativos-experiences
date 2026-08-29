@@ -14,25 +14,29 @@
 - [x] Validar links, metadados, dados estruturados, responsividade, acessibilidade e conversão.
 - [ ] Salvar checkpoint e entregar a versão final revisada.
 
+## Estado estável do ciclo de imagens e rodapé
+
+- [x] Salvar checkpoint da versão estável atual e entregar explicitamente esta revisão como versão aprovada do ciclo correspondente.
+
 ## Novo conteúdo enviado
 
-- [ ] Ler integralmente `pasted_content.txt`.
-- [ ] Separar fatos, ofertas, diferenciais e textos que exigem confirmação.
-- [ ] Mapear cada informação para a página B2C mais adequada.
-- [ ] Incorporar o conteúdo com redação original e intenção de busca clara.
-- [ ] Validar o novo conteúdo no preview e no build.
+- [x] Ler integralmente `pasted_content.txt`.
+- [x] Separar fatos, ofertas, diferenciais e textos que exigem confirmação.
+- [x] Mapear cada informação para a página B2C mais adequada.
+- [x] Incorporar o conteúdo com redação original e intenção de busca clara.
+- [x] Validar o novo conteúdo no preview e no build.
 - [ ] Gerar novo ZIP e checkpoint atualizado.
 
 ## Migração SSR solicitada
 
-- [ ] Avaliar compatibilidade da migração Next.js com o ambiente gerenciado atual.
-- [ ] Migrar rotas para App Router sem perder os slugs existentes.
-- [ ] Criar `lib/data.ts` como fonte única tipada de conteúdo.
-- [ ] Extrair Header, Footer e WhatsApp para componentes compartilhados.
-- [ ] Implementar `generateMetadata` por rota com canonical, Open Graph e imagens.
-- [ ] Adicionar JSON-LD de TravelAgency, LocalBusiness e Service quando aplicável.
-- [ ] Gerar sitemap e robots automaticamente a partir das rotas de dados.
-- [ ] Validar build e presença de title, description e og:title no HTML bruto de pelo menos três rotas.
+- [x] Avaliar compatibilidade da migração Next.js com o ambiente gerenciado atual.
+- [x] Migrar rotas para App Router sem perder os slugs existentes.
+- [x] Criar `lib/data.ts` como fonte única tipada de conteúdo.
+- [x] Extrair Header, Footer e WhatsApp para componentes compartilhados.
+- [x] Implementar `generateMetadata` por rota com canonical, Open Graph e imagens.
+- [x] Adicionar JSON-LD de TravelAgency, LocalBusiness e Service quando aplicável.
+- [x] Gerar sitemap e robots automaticamente a partir das rotas de dados.
+- [x] Validar build e presença de title, description e og:title no HTML bruto de pelo menos três rotas.
 
 ## Correções de conteúdo — pasted_content_2.txt
 
@@ -56,18 +60,18 @@
 
 ## Falha reportada no preview
 
-- [ ] Reproduzir a falha na Home e nas rotas internas.
-- [ ] Verificar erros do servidor Next, console e rede.
-- [ ] Confirmar se os assets e links respondem corretamente.
-- [ ] Corrigir sem apagar as alterações de conteúdo aprovadas.
+- [x] Reproduzir a falha na Home e nas rotas internas.
+- [x] Verificar erros do servidor Next, console e rede.
+- [x] Confirmar se os assets e links respondem corretamente.
+- [x] Corrigir sem apagar as alterações de conteúdo aprovadas.
 - [x] Validar desktop, mobile e build antes de reenviar o preview.
 
 ## Preview ainda não localizado pelo usuário
 
-- [ ] Confirmar o endereço de preview que está ativo no painel.
-- [ ] Verificar se o servidor gerenciado está respondendo no endereço público.
-- [ ] Testar a prévia em uma janela nova antes de reenviar.
-- [ ] Entregar somente o acesso confirmado ou explicar claramente o bloqueio.
+- [x] Confirmar o endereço de preview que está ativo no painel.
+- [x] Verificar se o servidor gerenciado está respondendo no endereço público.
+- [x] Testar a prévia em uma janela nova antes de reenviar.
+- [x] Entregar somente o acesso confirmado ou explicar claramente o bloqueio.
 
 ## Falha de CSS/JS no preview mobile
 
@@ -102,7 +106,7 @@
 - [x] Não inventar avaliações, quantidades, percentuais ou números sem confirmação.
 - [x] Validar build, HTML SSR, schemas, CTAs, links e responsividade.
 - [x] Entregar alterações por página e lista de afirmações `[CONFIRMAR]`.
-- [ ] Salvar checkpoint atualizado.
+- [x] Salvar checkpoint atualizado.
 
 ## Correção estrutural dos diferenciais e rodapé
 
@@ -135,7 +139,7 @@
 - [x] Rodar `npm run build` e servir localmente.
 - [x] Validar via curl o `<title>` de `/transfer-blindado`, `/parcerias` e `/frota`.
 - [x] Confirmar uma única ocorrência de “Nativos Experiences” por título.
-- [ ] Salvar checkpoint atualizado.
+- [x] Salvar checkpoint atualizado.
 
 ## Versão inglesa com SEO internacional
 
@@ -163,7 +167,7 @@
 - [x] Rodar `npm run build` e `npm run check` sem erros, com 41 páginas estáticas.
 - [x] Validar visualmente `/transfer-blindado`, `/frota` e `/en/transfer-blindado` em mobile.
 - [x] Validar HTML bruto: `10` na frota, ausência de `010`, e-mail completo, álcool em gel, diferenciais condicionais e metadata SEO.
-- [ ] Salvar checkpoint atualizado.
+- [x] Salvar checkpoint atualizado.
 
 ## Especificação final Pasted_content_04
 
@@ -234,7 +238,7 @@
 - [x] Remover o seletor de idioma do footer e da Home.
 - [x] Preservar `/en`, canonical, hreflang, sitemap e robots.
 - [x] Validar build e aparência desktop/mobile.
-- [ ] Salvar checkpoint atualizado.
+- [x] Salvar checkpoint atualizado.
 
 ## Correções finais e página de passeios — Pasted_content_2
 
@@ -254,7 +258,7 @@
 - [x] Reordenar os itens do header e do submenu mantendo todos os destinos acessíveis.
 - [x] Espelhar a mesma lógica no drawer mobile e no footer.
 - [x] Validar clareza, densidade e links em desktop/mobile.
-- [ ] Salvar checkpoint atualizado.
+- [x] Salvar checkpoint atualizado.
 
 ## Nova ordem e efeitos de interação
 
@@ -263,7 +267,7 @@
 - [x] Adicionar efeitos sutis de revelação, luz, hover editorial e textura coerentes com Casa de Areia.
 - [x] Respeitar `prefers-reduced-motion`, performance e contraste.
 - [x] Rodar build e validar desktop/mobile.
-- [ ] Salvar checkpoint atualizado.
+- [x] Salvar checkpoint atualizado.
 
 ## Ajuste do menu mobile
 
@@ -400,7 +404,7 @@
 - [x] Exportar a versão otimizada em WebP real, 2560 × 1440 px.
 - [x] Substituir somente `img.hero` em `/` e `/en`, sem alterar outras páginas ou textos.
 - [x] Validar Home desktop 1440×900 e mobile 390×844, recorte do veículo e contraste do título.
-- [ ] Usuário aprovar o hero antes da Etapa 2.
+- [x] Usuário aprovar o hero antes da Etapa 2.
 
 ## Substituição de fotos reais — Etapa 2: frota
 
@@ -410,22 +414,22 @@
 - [x] Tratar, otimizar e hospedar as quatro imagens aprovadas em WebP real.
 - [x] Substituir referências somente em `/frota` e `/en/frota`, sem alterar outras páginas ou conteúdo.
 - [x] Validar HTML 200 e presença das quatro URLs em PT/EN; capturas desktop/mobile realizadas. A captura EN mobile exibiu placeholders por carregamento lazy do capturador, enquanto as URLs e o HTML estão corretos.
-- [ ] Usuário aprovar a Frota antes da Etapa 3.
+- [x] Usuário aprovar a Frota antes da Etapa 3.
 
 ## Correção da Frota — fidelidade às fotos originais
 
-- [ ] Remover a galeria adicionada indevidamente e restaurar a composição anterior da página Frota.
-- [ ] Restaurar a referência de capa anterior sem usar imagem gerada ou veículo inexistente.
-- [ ] Tratar apenas as quatro fotos originais enviadas, sem adicionar elementos, veículos ou cenários.
-- [ ] Aplicar somente fotos originais na Frota, sem reutilizar em outras páginas.
-- [ ] Validar fidelidade visual, build e mobile antes de criar checkpoint.
+- [x] Remover a galeria adicionada indevidamente e restaurar a composição anterior da página Frota.
+- [x] Restaurar a referência de capa anterior sem usar imagem gerada ou veículo inexistente.
+- [x] Tratar apenas as quatro fotos originais enviadas, sem adicionar elementos, veículos ou cenários.
+- [x] Aplicar somente fotos originais na Frota, sem reutilizar em outras páginas.
+- [x] Validar fidelidade visual, build e mobile antes de criar checkpoint.
 
 ## Correção do crop mobile da Frota
 
-- [ ] Ajustar somente `object-position`/altura do hero mobile para preservar o veículo real.
-- [ ] Manter a imagem original tratada, sem geração ou reconstrução.
-- [ ] Validar que o carro e o título continuam visíveis em mobile e desktop.
-- [ ] Salvar checkpoint somente após confirmar o enquadramento.
+- [x] Ajustar somente `object-position`/altura do hero mobile para preservar o veículo real.
+- [x] Manter a imagem original tratada, sem geração ou reconstrução.
+- [x] Validar que o carro e o título continuam visíveis em mobile e desktop.
+- [x] Salvar checkpoint somente após confirmar o enquadramento.
 
 ## Correção global do crop mobile — todas as páginas
 
