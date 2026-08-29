@@ -467,19 +467,19 @@
 - [x] Comparar cada pedido com o estado atual do projeto.
 - [x] Executar todas as correções dentro dos arquivos, sem pular etapas.
 - [x] Validar build, rotas, imagens e comportamento responsivo após as alterações.
-- [ ] Salvar checkpoint e entregar a versão final após a auditoria completa.
+- [x] Salvar checkpoint e entregar a versão final após a auditoria completa.
 
 ## Frota — substituição aprovada
 - [x] Substituir `img.fleetOriginal` pela nova foto tratada e aprovada da Frota.
 - [x] Confirmar uso exclusivo nas rotas `/frota` e `/en/frota`.
 - [x] Validar as nove páginas com assets exclusivos, mobile e desktop.
 - [x] Conferir placas aplicáveis, linha central da grade e `N / 03`.
-- [ ] Salvar checkpoint final da rodada e entregar relatório sem incluir arquivos internos de auditoria no ZIP.
+- [x] Salvar checkpoint final da rodada e entregar relatório sem incluir arquivos internos de auditoria no ZIP.
 
 ## Pasted_content_12.txt — correções pendentes
 
-- [ ] Corrigir proporção e suavidade dos desfoques em todas as placas visíveis.
-- [ ] Recompor e clarear a foto de Motorista à Disposição, mantendo o veículo majoritariamente visível.
-- [ ] Revisar o recuo à direita e o espaço de texto de todas as fotos tratadas.
-- [ ] Eliminar a repetição visual da foto de Transfer Aeroporto na Home usando crop diferente ou segundo asset real.
-- [ ] Validar Transfer Aeroporto, Motorista à Disposição e Home completa com zoom de placas antes da aprovação.
+- [x] Corrigir proporção e suavidade dos desfoques em todas as placas visíveis.
+- [x] Recompor e clarear a foto de Motorista à Disposição, mantendo o veículo majoritariamente visível.
+- [x] Revisar o recuo à direita e o espaço de texto de todas as fotos tratadas.
+- [x] Eliminar a repetição visual da foto de Transfer Aeroporto na Home usando crop diferente ou segundo asset real.
+- [x] Validar Transfer Aeroporto, Motorista à Disposição e Home completa com zoom de placas antes da aprovação.
