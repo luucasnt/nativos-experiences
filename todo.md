@@ -12,7 +12,7 @@
 - [x] Criar conteúdo original para cada intenção de busca, sem copiar o site atual.
 - [x] Implementar páginas e componentes B2C na nova identidade Casa de Areia.
 - [x] Validar links, metadados, dados estruturados, responsividade, acessibilidade e conversão.
-- [x] Salvar checkpoint e entregar a versão estável desta rodada.
+- [ ] Salvar checkpoint e entregar a versão final revisada.
 
 ## Estado estável do ciclo de imagens e rodapé
 
@@ -25,7 +25,7 @@
 - [x] Mapear cada informação para a página B2C mais adequada.
 - [x] Incorporar o conteúdo com redação original e intenção de busca clara.
 - [x] Validar o novo conteúdo no preview e no build.
-- [x] Gerar novo ZIP e checkpoint atualizado.
+- [ ] Gerar novo ZIP e checkpoint atualizado.
 
 ## Migração SSR solicitada
 
@@ -153,7 +153,7 @@
 - [x] Rodar `npm run build` com as novas rotas.
 - [x] Validar HTML puro de pelo menos 3 páginas em cada idioma.
 - [x] Confirmar sitemap com URLs `/en/*`.
-- [x] Salvar checkpoint e gerar ZIP atualizado.
+- [ ] Salvar checkpoint e gerar ZIP atualizado.
 
 ## Correções de interface, diferenciais e SEO — agosto de 2026
 
@@ -323,7 +323,7 @@
 - [x] Remover o deslocamento estrutural introduzido no bloco de contatos.
 - [x] Manter tamanho, posição e espaçamento vertical; aumentar somente o gap horizontal ícone/texto.
 - [x] Validar a alteração sem mover o bloco para o centro da página.
-- [x] Rodar build e salvar checkpoint.
+- [ ] Rodar build e salvar checkpoint.
 
 ## Gap ícone/texto no rodapé — correção objetiva
 
@@ -505,18 +505,3 @@
 - [x] Tratar e aplicar `01.webp`, `02.webp` e `03.webp` nos três cards da Home na ordem exata recebida.
 - [x] Adicionar `Reserva Online` ao rodapé PT/EN em todas as páginas.
 - [x] Validar build, rotas PT/EN, carregamento dos assets e comportamento em desktop/mobile em um único ciclo.
-
-## Correção estrutural de imagens no desktop
-
-- [x] Diagnosticar por que a imagem do hero invade o texto e por que algumas imagens somem.
-- [x] Corrigir o container do hero para garantir que a imagem ocupe 100% da área sem sobrepor o conteúdo.
-- [x] Corrigir a proporção das molduras dos cards para que não fiquem maiores que as fotos.
-- [x] Validar todas as páginas em desktop e mobile após a correção.
-- [x] Salvar checkpoint da versão corrigida.
-
-## Ajuste final do hero da Home no desktop
-
-- [x] Criar respiro horizontal real entre o texto e o Wey 07 no hero desktop.
-- [x] Preservar a foto real e o enquadramento mobile já validado.
-- [x] Validar Home e páginas internas sem regressão visual.
-- [x] Marcar a pendência e salvar o checkpoint final após a correção.
