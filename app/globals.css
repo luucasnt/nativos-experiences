@@ -264,84 +264,123 @@ a { color:inherit; text-decoration:none; }
 }
 
 
-/* Casa de Areia — image system: full visibility without crop. */
-.hero,
-.service-hero { background:var(--navy); }
-.hero-media,
-.service-hero-media { position:absolute; inset:0; background:var(--navy); overflow:hidden; }
-.hero-media img,
-.service-hero-media picture,
-.service-hero-media picture img { position:absolute; inset:0; width:100%; height:100%; }
-.hero-media img,
-.service-hero-media picture img { object-fit:contain; object-position:center; background:var(--navy); filter:saturate(.7) sepia(.08); }
-.service-hero > picture { display:none; }
-.service-hero[data-service="about"] .service-hero-media img { display:none; }
-.service-hero[data-service="about"] .service-hero-shade { display:none; }
-.hero-shade,
-.service-hero-shade { z-index:1; }
-.hero-content,
-.service-hero-content { z-index:2; }
+/* Casa de Areia — enquadramento mobile global: preservar a leitura da foto real, sem crop agressivo ou substituição de imagem. */
+@media (max-width: 800px) {
+  .service-hero { min-height: 610px; }
+  .service-hero > img { object-position: center center; }
+  .hero-image { object-position: center center; }
+  .experience-image-wrap { height: 290px; }
+  .welcome-image img,
+  .destination-image img,
+  .hospitality-image img { height: 290px; object-position: center center; }
+}
 
-/* Editorial cards keep independent proportions and never stretch their frames. */
-.welcome-image,
-.destination-image,
-.hospitality-image,
-.experience-image-wrap { position:relative; overflow:hidden; }
-.welcome-image { min-height:590px; }
-.destination-image { min-height:590px; }
-.experience-image-wrap { height:440px; aspect-ratio:3 / 2; background:var(--img-bg, var(--navy)); }
-.experience-image-wrap img { object-fit:var(--img-fit, cover); object-position:var(--img-focus, center); }
-
+/* Casa de Areia — composição editorial por página: fotos reais com foco próprio, respiro para texto e sem crop global. */
+.service-hero > picture { position:absolute; inset:0; display:block; z-index:0; }
+.service-hero > picture img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; filter:saturate(.7) sepia(.08); }
+.service-hero > .service-hero-shade, .service-hero > .service-hero-content { z-index:1; }
+.service-hero[data-service="about"] > picture img { display:none; }
+.service-hero[data-service="about"] > .service-hero-shade { display:none; }
 .fleet-section, .welcome, .contact { position:relative; }
 .fleet-grid { position:relative; column-gap:70px; }
 .fleet-grid::after { content:''; position:absolute; top:0; bottom:0; left:50%; width:1px; background:var(--line); pointer-events:none; }
 .fleet-item, .fleet-item:nth-child(even) { margin-left:0; margin-right:0; border-left:0; padding-left:0; }
 .fleet-item:nth-child(odd) { padding-right:35px; }
-.service-page .nav-wrap { position:absolute; color:var(--mist); }
-.service-page .nav-links a,
-.service-page .services-trigger,
-.service-page .nav-cta { color:var(--mist); }
-
-@media (min-width:801px) {
-  .hero { display:grid; grid-template-columns:minmax(0, .92fr) minmax(0, 1.08fr); align-items:stretch; padding:92px 5.5vw 62px; }
-  .hero-media { position:relative; grid-column:2; grid-row:1; min-height:0; }
-  .hero-content { grid-column:1; grid-row:1; align-self:end; width:auto; max-width:590px; padding-bottom:24px; }
-  .hero-shade { background:linear-gradient(90deg,rgba(4,14,19,.97),rgba(4,14,19,.76) 42%,rgba(4,14,19,0) 72%); }
-  .service-hero { display:grid; grid-template-columns:minmax(0, .85fr) minmax(0, 1.15fr); align-items:stretch; padding:132px 8vw 90px; }
-  .service-hero-media { position:relative; grid-column:2; grid-row:1; min-height:0; }
-  .service-hero-content { grid-column:1; grid-row:1; align-self:center; max-width:620px; padding-right:48px; }
-  .service-hero-shade { background:linear-gradient(90deg,rgba(11,24,32,1) 0%,rgba(11,24,32,.96) 44%,rgba(11,24,32,0) 82%); }
-}
-
 @media (max-width:800px) {
-  .hero { min-height:720px; padding:76px 8vw 80px; display:flex; flex-direction:column; justify-content:flex-end; }
-  .hero-media { position:absolute; inset:76px 0 auto; height:310px; }
-  .hero-media img,
-  .service-hero-media picture img { object-fit:contain; object-position:center; }
-  .hero-shade { background:linear-gradient(180deg,rgba(11,24,32,.2),rgba(11,24,32,.72) 76%,rgba(11,24,32,.98)); }
-  .hero-content { position:relative; width:100%; }
-  .service-hero { min-height:680px; display:flex; flex-direction:column; padding:76px 8vw 75px; }
-  .service-hero-media { position:relative; inset:auto; order:1; height:300px; margin:0 -8vw; }
-  .service-hero-shade { display:none; }
-  .service-hero-content { order:2; position:relative; max-width:none; padding-top:32px; }
-  .service-hero[data-service="about"] .service-hero-media { display:none; }
-  .welcome-image,
-  .destination-image,
-  .hospitality-image { min-height:290px; }
-  .experience-image-wrap { height:auto; aspect-ratio:3 / 2; }
+  .service-hero[data-service="about"] { background:var(--navy); }
   .fleet-grid { column-gap:0; }
   .fleet-grid::after { display:none; }
   .fleet-item:nth-child(odd) { padding-right:0; }
 }
 
-/* Hero media stacking fix: keep the real image visible inside its bounded contain frame. */
-.service-hero-media { position:relative; z-index:1; min-width:0; min-height:0; }
-.service-hero-media picture { display:block; position:absolute; inset:0; width:100%; height:100%; }
-.service-hero-media picture img { z-index:1; }
-.service-hero-shade { z-index:2; pointer-events:none; }
-.service-hero-content { z-index:3; }
-@media (max-width:800px) {
-  .service-hero-media { width:100%; min-height:300px; }
-  .service-hero-media picture { display:block; }
-  .service-hero-shade { display:none; }
+/* Casa de Areia — navegação interna clara sobre heroes escuros, sem alterar a Home. */
+.service-page .nav-wrap { position:absolute; color:var(--mist); }
+.service-page .nav-links a,
+.service-page .services-trigger,
+.service-page .nav-cta { color:var(--mist); }
+
+
+/* Centralized editorial image system */
+.experience-image-wrap { background: var(--img-bg, var(--navy)); }
+.experience-image-wrap img { object-fit: var(--img-fit, cover); object-position: var(--img-focus, 78% center); }
+.service-hero { background: var(--img-bg, var(--navy)); }
+.service-hero > picture { background: var(--img-bg, var(--navy)); }
+.service-hero > picture img { object-fit: var(--img-fit, cover); object-position: var(--img-focus, 78% center); }
+@media (max-width: 800px) {
+  .experience-image-wrap { height: auto; aspect-ratio: 3 / 2; }
+  .experience-image-wrap img { object-fit: var(--img-fit-mobile, contain); object-position: var(--img-focus-mobile, var(--img-focus, right center)); }
+  .service-hero > picture img { object-fit: var(--img-fit-mobile, contain); object-position: var(--img-focus-mobile, var(--img-focus, right center)); }
+}
+
+/* Final structural image correction: every fill image is bounded by its own editorial frame. */
+.welcome-image,
+.destination-image,
+.hospitality-image,
+.experience-image-wrap { position: relative; overflow: hidden; }
+.welcome-image { min-height: 590px; }
+.destination-image { min-height: 590px; }
+.experience-image-wrap { height: 440px; aspect-ratio: 3 / 2; }
+.experience-image-wrap img { object-fit: cover; object-position: var(--img-focus, 78% center); }
+.hero-image,
+.service-hero > picture img { width: 110%; max-width: none; left: 7%; right: auto; transform: none; object-position: var(--img-focus, 78% center); }
+@media (max-width: 800px) {
+  .welcome-image,
+  .destination-image,
+  .hospitality-image { min-height: 290px; }
+  .experience-image-wrap { height: auto; aspect-ratio: 3 / 2; }
+  .experience-image-wrap img { object-fit: var(--img-fit-mobile, contain); object-position: var(--img-focus-mobile, var(--img-focus, right center)); }
+  .hero-image,
+  .service-hero > picture img { width: 100%; max-width: none; left: 0; right: auto; transform: none; object-fit: var(--img-fit-mobile, contain); object-position: var(--img-focus-mobile, var(--img-focus, right center)); }
+}
+
+/* Desktop hero breathing room: move the real vehicle decisively behind the right field, never under the copy. */
+@media (min-width: 801px) {
+  .hero-image { width: 118%; max-width: none; left: 14%; right: auto; object-position: center center; }
+}
+
+/* Final desktop separation: the vehicle occupies the right visual field, never the copy column. */
+@media (min-width: 801px) {
+  .hero-image { width: 125%; left: 28%; }
+  .service-hero > picture img { width: 122%; left: 16%; }
+}
+
+/* Hard editorial split on desktop: no hero bitmap is allowed beneath the copy column. */
+@media (min-width: 801px) {
+  .hero-image { clip-path: inset(0 0 0 38%); }
+  .service-hero > picture img { clip-path: inset(0 0 0 40%); }
+}
+
+/* No-copy-over-image rule: align the photographic field after the copy column on desktop. */
+@media (min-width: 801px) {
+  .hero-image { width: 135%; left: 42%; clip-path: inset(0 0 0 56%); }
+  .service-hero > picture img { width: 130%; left: 30%; clip-path: inset(0 0 0 58%); }
+}
+
+/* Softer desktop split: clean copy column with a graduated photographic entrance, avoiding a hard cut. */
+@media (min-width: 801px) {
+  .hero-image { width: 126%; left: 30%; clip-path: none; -webkit-mask-image: linear-gradient(90deg, transparent 0%, transparent 40%, rgba(0,0,0,.72) 49%, #000 58%); mask-image: linear-gradient(90deg, transparent 0%, transparent 40%, rgba(0,0,0,.72) 49%, #000 58%); }
+  .service-hero > picture img { width: 124%; left: 20%; clip-path: none; -webkit-mask-image: linear-gradient(90deg, transparent 0%, transparent 42%, rgba(0,0,0,.72) 51%, #000 61%); mask-image: linear-gradient(90deg, transparent 0%, transparent 42%, rgba(0,0,0,.72) 51%, #000 61%); }
+}
+@media (max-width: 800px) {
+  .hero-image, .service-hero > picture img { -webkit-mask-image: none; mask-image: none; }
+}
+
+/* Editorial copy column: constrain desktop line length so headings never enter the photographic field. */
+@media (min-width: 801px) {
+  .hero-content { width: min(620px, 80vw); }
+  .hero h1 { max-width: 620px; }
+  .service-hero-content { max-width: 610px; }
+  .service-hero h1 { max-width: 610px; }
+}
+
+/* Last desktop composition pass: the image begins after the copy column, with a long soft fade rather than a visible seam. */
+@media (min-width: 801px) {
+  .hero-image { width: 135%; left: 42%; -webkit-mask-image: linear-gradient(90deg, transparent 0%, transparent 54%, rgba(0,0,0,.78) 63%, #000 72%); mask-image: linear-gradient(90deg, transparent 0%, transparent 54%, rgba(0,0,0,.78) 63%, #000 72%); }
+  .service-hero > picture img { width: 132%; left: 34%; -webkit-mask-image: linear-gradient(90deg, transparent 0%, transparent 55%, rgba(0,0,0,.78) 64%, #000 73%); mask-image: linear-gradient(90deg, transparent 0%, transparent 55%, rgba(0,0,0,.78) 64%, #000 73%); }
+}
+
+/* Mobile hero fill: never leave a letterboxed image band inside the hero. */
+@media (max-width: 800px) {
+  .hero-image,
+  .service-hero > picture img { object-fit: cover; object-position: center center; }
 }
