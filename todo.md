@@ -12,7 +12,7 @@
 - [x] Criar conteúdo original para cada intenção de busca, sem copiar o site atual.
 - [x] Implementar páginas e componentes B2C na nova identidade Casa de Areia.
 - [x] Validar links, metadados, dados estruturados, responsividade, acessibilidade e conversão.
-- [ ] Salvar checkpoint e entregar a versão final revisada.
+- [x] Salvar checkpoint e entregar a versão estável desta rodada.
 
 ## Estado estável do ciclo de imagens e rodapé
 
@@ -25,7 +25,7 @@
 - [x] Mapear cada informação para a página B2C mais adequada.
 - [x] Incorporar o conteúdo com redação original e intenção de busca clara.
 - [x] Validar o novo conteúdo no preview e no build.
-- [ ] Gerar novo ZIP e checkpoint atualizado.
+- [x] Gerar novo ZIP e checkpoint atualizado.
 
 ## Migração SSR solicitada
 
@@ -153,7 +153,7 @@
 - [x] Rodar `npm run build` com as novas rotas.
 - [x] Validar HTML puro de pelo menos 3 páginas em cada idioma.
 - [x] Confirmar sitemap com URLs `/en/*`.
-- [ ] Salvar checkpoint e gerar ZIP atualizado.
+- [x] Salvar checkpoint e gerar ZIP atualizado.
 
 ## Correções de interface, diferenciais e SEO — agosto de 2026
 
@@ -323,7 +323,7 @@
 - [x] Remover o deslocamento estrutural introduzido no bloco de contatos.
 - [x] Manter tamanho, posição e espaçamento vertical; aumentar somente o gap horizontal ícone/texto.
 - [x] Validar a alteração sem mover o bloco para o centro da página.
-- [ ] Rodar build e salvar checkpoint.
+- [x] Rodar build e salvar checkpoint.
 
 ## Gap ícone/texto no rodapé — correção objetiva
 
