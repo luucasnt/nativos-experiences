@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { Differentiators } from "@/components/Differentiators";
 import { Footer, Header, eventWhatsapp, partnershipWhatsapp, whatsapp, WhatsAppButton } from "@/components/SiteChrome";
+import { ServiceHero } from "@/components/ServiceHero";
 import { canonicalSlugs, differentiatorContent, differentiators, getServiceBySlug, onboardDifferentiatorTypes } from "@/lib/data";
 
 const siteUrl = "https://nativosexperiences.com";
@@ -37,17 +38,7 @@ export default async function ServiceRoute({ params }: { params: Promise<{ slug:
     <Header />
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} /><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
     {faqSchema && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />}
-    <section className="service-hero" data-service={page.type}>
-      <picture>{page.imageMobile && <source media="(max-width: 800px)" srcSet={page.imageMobile} />}<img src={page.image} alt={page.imageAlt} loading="eager" fetchPriority="high" decoding="async" /></picture>
-      <div className="service-hero-shade" />
-      <div className="service-hero-content">
-        <a href="/" className="back-link">Voltar à Nativos</a>
-        <p className="eyebrow light"><span className="eyebrow-dot" /> {page.kicker}</p>
-        <h1>{page.title}</h1>
-        <p>{page.intro}</p>
-        <a className="hero-action" href={ctaHref} target="_blank" rel="noreferrer">{page.cta}</a>
-      </div>
-    </section>
+    <ServiceHero page={page} ctaHref={ctaHref} />
     <section className="service-body section-light">
       <div className="service-body-grid">
         <div className="service-copy">

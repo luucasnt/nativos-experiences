@@ -483,3 +483,21 @@
 - [x] Revisar o recuo à direita e o espaço de texto de todas as fotos tratadas.
 - [x] Eliminar a repetição visual da foto de Transfer Aeroporto na Home usando crop diferente ou segundo asset real.
 - [x] Validar Transfer Aeroporto, Motorista à Disposição e Home completa com zoom de placas antes da aprovação.
+
+## Falha atual de acesso ao preview
+
+- [x] Reproduzir a indisponibilidade no endereço público do preview.
+- [x] Verificar status do servidor, build e logs recentes sem alterar conteúdo.
+- [x] Restaurar o preview e confirmar resposta HTTP 200.
+- [x] Testar a Home e `/transfer-aeroporto` em navegação real.
+- [x] Entregar somente o acesso confirmado como funcional.
+
+## Correção sistêmica de imagens e rodapé — novo ciclo
+
+- [x] Criar campos centralizados de foco desktop/mobile e encaixe por imagem em `lib/data.ts`.
+- [x] Fazer o hero compartilhado consumir as variáveis CSS, com assunto à direita e texto à esquerda por padrão.
+- [x] Remover regras CSS individuais por tipo de serviço que duplicam o controle de `object-position`.
+- [x] Garantir opção `contain` com fundo da marca quando `cover` esconder o assunto principal, especialmente em 375 px.
+- [x] Tratar e aplicar `01.webp`, `02.webp` e `03.webp` nos três cards da Home na ordem exata recebida.
+- [x] Adicionar `Reserva Online` ao rodapé PT/EN em todas as páginas.
+- [x] Validar build, rotas PT/EN, carregamento dos assets e comportamento em desktop/mobile em um único ciclo.

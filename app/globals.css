@@ -287,17 +287,6 @@ a { color:inherit; text-decoration:none; }
 .fleet-item, .fleet-item:nth-child(even) { margin-left:0; margin-right:0; border-left:0; padding-left:0; }
 .fleet-item:nth-child(odd) { padding-right:35px; }
 @media (max-width:800px) {
-  .service-hero > picture img { object-position:50% center; }
-  .service-hero[data-service="airport"] > picture img,
-  .service-hero[data-service="portoSeguro"] > picture img,
-  .service-hero[data-service="chauffeur"] > picture img { object-position:72% center; }
-  .service-hero[data-service="transfer"] > picture img,
-  .service-hero[data-service="tours"] > picture img,
-  .service-hero[data-service="destinations"] > picture img { object-position:62% center; }
-  .service-hero[data-service="armored"] > picture img { object-position:76% center; }
-  .service-hero[data-service="events"] > picture img { object-position:79% center; }
-  .service-hero[data-service="partnerships"] > picture img { object-position:80% center; }
-  .service-hero[data-service="booking"] > picture img { object-position:72% center; }
   .service-hero[data-service="about"] { background:var(--navy); }
   .fleet-grid { column-gap:0; }
   .fleet-grid::after { display:none; }
@@ -309,3 +298,16 @@ a { color:inherit; text-decoration:none; }
 .service-page .nav-links a,
 .service-page .services-trigger,
 .service-page .nav-cta { color:var(--mist); }
+
+
+/* Centralized editorial image system */
+.experience-image-wrap { background: var(--img-bg, var(--navy)); }
+.experience-image-wrap img { object-fit: var(--img-fit, cover); object-position: var(--img-focus, 78% center); }
+.service-hero { background: var(--img-bg, var(--navy)); }
+.service-hero > picture { background: var(--img-bg, var(--navy)); }
+.service-hero > picture img { object-fit: var(--img-fit, cover); object-position: var(--img-focus, 78% center); }
+@media (max-width: 800px) {
+  .experience-image-wrap { height: auto; aspect-ratio: 3 / 2; }
+  .experience-image-wrap img { object-fit: var(--img-fit-mobile, contain); object-position: var(--img-focus-mobile, var(--img-focus, right center)); }
+  .service-hero > picture img { object-fit: var(--img-fit-mobile, contain); object-position: var(--img-focus-mobile, var(--img-focus, right center)); }
+}
