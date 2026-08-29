@@ -4,9 +4,9 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "NODE_ENV=production next build && NODE_ENV=production next start -H 0.0.0.0",
-    "build": "NODE_ENV=production next build",
-    "start": "NODE_ENV=production next start",
+    "dev": "cross-env NODE_ENV=production next build && cross-env NODE_ENV=production next start -H 0.0.0.0",
+    "build": "cross-env NODE_ENV=production next build",
+    "start": "cross-env NODE_ENV=production next start",
     "check": "tsc --noEmit",
     "format": "prettier --write ."
   },
@@ -22,6 +22,7 @@
     "@types/node": "^24.7.0",
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
+    "cross-env": "^10.1.0",
     "prettier": "^3.6.2",
     "tailwindcss": "^4.1.14",
     "typescript": "5.6.3"
