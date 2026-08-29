@@ -475,3 +475,11 @@
 - [x] Validar as nove páginas com assets exclusivos, mobile e desktop.
 - [x] Conferir placas aplicáveis, linha central da grade e `N / 03`.
 - [ ] Salvar checkpoint final da rodada e entregar relatório sem incluir arquivos internos de auditoria no ZIP.
+
+## Pasted_content_12.txt — correções pendentes
+
+- [ ] Corrigir proporção e suavidade dos desfoques em todas as placas visíveis.
+- [ ] Recompor e clarear a foto de Motorista à Disposição, mantendo o veículo majoritariamente visível.
+- [ ] Revisar o recuo à direita e o espaço de texto de todas as fotos tratadas.
+- [ ] Eliminar a repetição visual da foto de Transfer Aeroporto na Home usando crop diferente ou segundo asset real.
+- [ ] Validar Transfer Aeroporto, Motorista à Disposição e Home completa com zoom de placas antes da aprovação.
