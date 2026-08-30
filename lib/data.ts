@@ -11,9 +11,9 @@ const commonFaqs = [{question:"Como faço uma reserva?",answer:"Envie pelo Whats
 export const homeHeroImage = img.hero;
 export const homeWelcomeImage = "/images/zLrDzOoUTkwXaknX.webp";
 export const homeServiceImages = {
-  airport: { image: "/images/BLAidOFJuLwOGhEK.webp", imageAlt: "Aeronaves executivas no Aeroporto Terravista, próximo a Trancoso", imageFocus: "right center", imageFocusMobile: "right center", imageFit: "contain" as ImageFit, imageFitMobile: "contain" as ImageFit },
-  chauffeur: { image: "/images/MJdtpvqcywBvshoF.webp", imageAlt: "SUV premium em deslocamento privativo em Trancoso", imageFocus: "right center", imageFocusMobile: "right center", imageFit: "contain" as ImageFit, imageFitMobile: "contain" as ImageFit },
-  concierge: { image: "/images/cmrgvDdYfvgXvSph.webp", imageAlt: "Mesa de praia com champanhe diante do mar em Trancoso", imageFocus: "right center", imageFocusMobile: "right center", imageFit: "contain" as ImageFit, imageFitMobile: "contain" as ImageFit },
+  airport: { image: "/images/BLAidOFJuLwOGhEK.webp", imageAlt: "Aeronaves executivas no Aeroporto Terravista, próximo a Trancoso", imageFocus: "right center", imageFocusMobile: "right center", imageFit: "contain" as ImageFit, imageFitMobile: "cover" as ImageFit },
+  chauffeur: { image: "/images/MJdtpvqcywBvshoF.webp", imageAlt: "SUV premium em deslocamento privativo em Trancoso", imageFocus: "right center", imageFocusMobile: "right center", imageFit: "contain" as ImageFit, imageFitMobile: "cover" as ImageFit },
+  concierge: { image: "/images/cmrgvDdYfvgXvSph.webp", imageAlt: "Mesa de praia com champanhe diante do mar em Trancoso", imageFocus: "right center", imageFocusMobile: "right center", imageFit: "contain" as ImageFit, imageFitMobile: "cover" as ImageFit },
 } as const;
 
 export const differentiators: Differentiator[] = [{kind:"water",label:"Água mineral e água de coco",text:"Água mineral e água de coco a bordo."},{kind:"snacks",label:"Snacks a bordo",text:"Snacks selecionados para o trajeto."},{kind:"sanitizer",label:"Álcool em gel e lenços",text:"Álcool em gel e lenço umedecido disponíveis a bordo."},{kind:"signal",label:"Internet Starlink",text:"Conexão via satélite em veículos e rotas compatíveis."},{kind:"chargers",label:"Carregadores",text:"Carregadores para eletrônicos disponíveis a bordo."},{kind:"family",label:"Conforto para crianças",text:"Bebê conforto, cadeirinha e assento elevado sem custo adicional."}];
@@ -54,18 +54,18 @@ export const serviceData: Record<ServiceType, ServiceData> = {
 
 /* Casa de Areia — fonte única do enquadramento dos heroes. Novas fotos herdam assunto à direita e preservação integral no mobile. */
 const serviceImagePresentation: Record<ServiceType, ImagePresentation> = {
-  airport: { imageFocus: "72% center", imageFocusMobile: "right center", imageFit: "cover", imageFitMobile: "contain" },
-  portoSeguro: { imageFocus: "74% center", imageFocusMobile: "right center", imageFit: "cover", imageFitMobile: "contain" },
-  transfer: { imageFocus: "72% center", imageFocusMobile: "right center", imageFit: "cover", imageFitMobile: "contain" },
-  tours: { imageFocus: "70% center", imageFocusMobile: "right center", imageFit: "cover", imageFitMobile: "contain" },
-  fleet: { imageFocus: "74% center", imageFocusMobile: "right center", imageFit: "cover", imageFitMobile: "contain" },
-  armored: { imageFocus: "78% center", imageFocusMobile: "right center", imageFit: "cover", imageFitMobile: "contain" },
-  chauffeur: { imageFocus: "78% center", imageFocusMobile: "right center", imageFit: "cover", imageFitMobile: "contain" },
-  concierge: { imageFocus: "72% center", imageFocusMobile: "right center", imageFit: "cover", imageFitMobile: "contain" },
-  events: { imageFocus: "78% center", imageFocusMobile: "right center", imageFit: "cover", imageFitMobile: "contain" },
-  destinations: { imageFocus: "70% center", imageFocusMobile: "right center", imageFit: "cover", imageFitMobile: "contain" },
-  about: { imageFocus: "right center", imageFocusMobile: "right center", imageFit: "cover", imageFitMobile: "contain" },
-  booking: { imageFocus: "74% center", imageFocusMobile: "right center", imageFit: "cover", imageFitMobile: "contain" },
+  airport: { imageFocus: "72% center", imageFocusMobile: "right center", imageFit: "cover", imageFitMobile: "cover" },
+  portoSeguro: { imageFocus: "74% center", imageFocusMobile: "right center", imageFit: "cover", imageFitMobile: "cover" },
+  transfer: { imageFocus: "72% center", imageFocusMobile: "right center", imageFit: "cover", imageFitMobile: "cover" },
+  tours: { imageFocus: "70% center", imageFocusMobile: "right center", imageFit: "cover", imageFitMobile: "cover" },
+  fleet: { imageFocus: "74% center", imageFocusMobile: "right center", imageFit: "cover", imageFitMobile: "cover" },
+  armored: { imageFocus: "78% center", imageFocusMobile: "right center", imageFit: "cover", imageFitMobile: "cover" },
+  chauffeur: { imageFocus: "78% center", imageFocusMobile: "right center", imageFit: "cover", imageFitMobile: "cover" },
+  concierge: { imageFocus: "72% center", imageFocusMobile: "right center", imageFit: "cover", imageFitMobile: "cover" },
+  events: { imageFocus: "78% center", imageFocusMobile: "right center", imageFit: "cover", imageFitMobile: "cover" },
+  destinations: { imageFocus: "70% center", imageFocusMobile: "right center", imageFit: "cover", imageFitMobile: "cover" },
+  about: { imageFocus: "right center", imageFocusMobile: "right center", imageFit: "cover", imageFitMobile: "cover" },
+  booking: { imageFocus: "74% center", imageFocusMobile: "right center", imageFit: "cover", imageFitMobile: "cover" },
   partnerships: { imageFocus: "80% center", imageFocusMobile: "right center", imageFit: "cover", imageFitMobile: "cover" },
 };
 const pageOverrides: Partial<Record<ServiceType, Partial<ServiceData>>> = {
