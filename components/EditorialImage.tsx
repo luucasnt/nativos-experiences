@@ -16,9 +16,10 @@ type EditorialImageProps = ImagePresentation & {
   alt: string;
   className: string;
   children?: ReactNode;
+  priority?: boolean;
 };
 
-export function EditorialImage({ src, alt, className, children, imageFocus = "right center", imageFocusMobile, imageFit = "cover", imageFitMobile = "contain", imageBackground = "#29433b" }: EditorialImageProps) {
+export function EditorialImage({ src, alt, className, children, imageFocus = "right center", imageFocusMobile, imageFit = "cover", imageFitMobile = "contain", imageBackground = "#29433b", priority = false }: EditorialImageProps) {
   const style: ImageStyle = {
     "--img-focus": imageFocus,
     "--img-focus-mobile": imageFocusMobile ?? imageFocus,
@@ -27,5 +28,5 @@ export function EditorialImage({ src, alt, className, children, imageFocus = "ri
     "--img-bg": imageBackground,
   };
 
-  return <div className={className} style={style}><Image src={src} alt={alt} fill sizes="(max-width: 800px) 100vw, 50vw" priority />{children}</div>;
+  return <div className={className} style={style}><Image src={src} alt={alt} fill sizes="(max-width: 800px) 100vw, 50vw" priority={priority} loading={priority ? undefined : "lazy"} />{children}</div>;
 }

@@ -1,5 +1,6 @@
 // Casa de Areia: layout SSR global para transfer de luxo e concierge em Trancoso, com entidade de marca consistente.
 import type { Metadata } from "next";
+import { headers } from "next/headers";
 import "./globals.css";
 
 const siteUrl = "https://nativosexperiences.com";
@@ -21,7 +22,10 @@ export const metadata: Metadata = {
   icons: { icon: "/images/usTPVzSokKzdeTWC.png", apple: "/images/usTPVzSokKzdeTWC.png" },
 };
 
-export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+export default async function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+  const headersList = await headers();
+  const pathname = headersList.get("x-pathname") ?? "";
+  const htmlLang = pathname.startsWith("/en") ? "en" : "pt-BR";
   const jsonLd = {
     "@context": "https://schema.org",
     "@graph": [
@@ -47,5 +51,5 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     ],
   };
 
-  return <html lang="pt-BR"><body><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />{children}</body></html>;
+  return <html lang={htmlLang}><body><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />{children}</body></html>;
 }

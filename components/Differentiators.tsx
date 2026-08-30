@@ -1,7 +1,7 @@
 // Casa de Areia: seis diferenciais com ícones SVG inline, renderização SSR segura e conteúdo editorial parametrizado por página.
 import type { Differentiator, DifferentiatorContent } from "@/lib/data";
 import type { SVGProps } from "react";
-import { Icon } from "lucide-react";
+import { Icon as LucideLabIcon } from "lucide-react";
 import { coconut } from "@lucide/lab";
 
 type IconProps = SVGProps<SVGSVGElement> & { size?: number; strokeWidth?: number };
@@ -12,7 +12,7 @@ function IconBase({ children, size = 25, strokeWidth = 1.35, ...props }: IconPro
 }
 
 function BottleIcon({ ...props }: IconProps) { return <IconBase {...props}><path d="M12 2.8C10.2 6 6.8 9.1 6.8 13.4a5.2 5.2 0 0 0 10.4 0C17.2 9.1 13.8 6 12 2.8Z" /><path d="M9.5 15.2c.7 1.2 1.6 1.8 2.8 1.9" /></IconBase>; }
-function CoconutIcon({ size = 25, strokeWidth = 1.35, ...props }: IconProps) { return <Icon iconNode={coconut} size={size} strokeWidth={strokeWidth} aria-hidden="true" {...props} />; }
+function CoconutIcon({ size = 25, strokeWidth = 1.35, ...props }: IconProps) { return <LucideLabIcon iconNode={coconut} size={size} strokeWidth={strokeWidth} aria-hidden="true" {...props} />; }
 function SnackIcon({ ...props }: IconProps) { return <IconBase {...props}><circle cx="12" cy="12" r="8"/><path d="M8.5 9.5h.01M12 8h.01M15.5 10h.01M9.5 14h.01M13 15.5h.01M16 14h.01" /></IconBase>; }
 function WipeIcon({ ...props }: IconProps) { return <IconBase {...props}><rect x="5" y="9" width="14" height="12" rx="1.5"/><ellipse cx="12" cy="9" rx="4" ry="1.3"/><path d="M9.5 8.3 Q11 5 13.5 7.5"/></IconBase>; }
 function SanitizerIcon({ ...props }: IconProps) { return <IconBase {...props}><path d="M12 3.2 19 6v5.1c0 4.4-2.8 7.8-7 9.7-4.2-1.9-7-5.3-7-9.7V6l7-2.8Z" /><path d="m8.8 12.1 2.1 2.1 4.4-4.5" /></IconBase>; }
