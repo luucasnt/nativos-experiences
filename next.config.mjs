@@ -1,14 +1,10 @@
 /**
  * Nativos Experiences — Casa de Areia.
- * Configuração de estabilidade para imagens remotas e preservação de autoridade
- * dos aliases antigos; as imagens reais serão substituídas em etapa posterior.
+ * Todas as imagens são servidas localmente via /public/images.
  */
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    remotePatterns: [
-      { protocol: 'https', hostname: 'files.manuscdn.com' },
-    ],
     formats: ['image/avif', 'image/webp'],
     minimumCacheTTL: 86400,
   },
