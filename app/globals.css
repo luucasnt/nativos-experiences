@@ -373,6 +373,5 @@ a { color:inherit; text-decoration:none; }
   .welcome-image,
   .destination-image {
     min-height: 300px;
-    aspect-ratio: 4 / 3;
   }
 }
