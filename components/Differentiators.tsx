@@ -1,8 +1,6 @@
 // Casa de Areia: seis diferenciais com ícones SVG inline, renderização SSR segura e conteúdo editorial parametrizado por página.
 import type { Differentiator, DifferentiatorContent } from "@/lib/data";
 import type { SVGProps } from "react";
-import { Icon as LucideLabIcon } from "lucide-react";
-import { coconut } from "@lucide/lab";
 
 type IconProps = SVGProps<SVGSVGElement> & { size?: number; strokeWidth?: number };
 type IconComponent = (props: IconProps) => JSX.Element;
@@ -12,15 +10,13 @@ function IconBase({ children, size = 25, strokeWidth = 1.35, ...props }: IconPro
 }
 
 function BottleIcon({ ...props }: IconProps) { return <IconBase {...props}><path d="M12 2.8C10.2 6 6.8 9.1 6.8 13.4a5.2 5.2 0 0 0 10.4 0C17.2 9.1 13.8 6 12 2.8Z" /><path d="M9.5 15.2c.7 1.2 1.6 1.8 2.8 1.9" /></IconBase>; }
-function CoconutIcon({ size = 25, strokeWidth = 1.35, ...props }: IconProps) { return <LucideLabIcon iconNode={coconut} size={size} strokeWidth={strokeWidth} aria-hidden="true" {...props} />; }
 function SnackIcon({ ...props }: IconProps) { return <IconBase {...props}><circle cx="12" cy="12" r="8"/><path d="M8.5 9.5h.01M12 8h.01M15.5 10h.01M9.5 14h.01M13 15.5h.01M16 14h.01" /></IconBase>; }
-function WipeIcon({ ...props }: IconProps) { return <IconBase {...props}><rect x="5" y="9" width="14" height="12" rx="1.5"/><ellipse cx="12" cy="9" rx="4" ry="1.3"/><path d="M9.5 8.3 Q11 5 13.5 7.5"/></IconBase>; }
 function SanitizerIcon({ ...props }: IconProps) { return <IconBase {...props}><path d="M12 3.2 19 6v5.1c0 4.4-2.8 7.8-7 9.7-4.2-1.9-7-5.3-7-9.7V6l7-2.8Z" /><path d="m8.8 12.1 2.1 2.1 4.4-4.5" /></IconBase>; }
 function ChargerIcon({ ...props }: IconProps) { return <IconBase {...props}><path d="m13.2 2-6 11h4.7L10.8 22l6-11h-4.7L13.2 2Z" /></IconBase>; }
 function SignalIcon({ ...props }: IconProps) { return <IconBase {...props}><path d="M12 18v3M8.5 14.5a5 5 0 0 1 7 0M5.5 11.5a9.2 9.2 0 0 1 13 0M2.8 8.5a13 13 0 0 1 18.4 0" /><circle cx="12" cy="19" r="1" /></IconBase>; }
 function FamilyIcon({ ...props }: IconProps) { return <IconBase {...props}><circle cx="12" cy="5" r="2.1"/><path d="M8.8 10.5c.5-1.4 1.6-2.1 3.2-2.1s2.7.7 3.2 2.1l1.2 6.2H7.6l1.2-6.2Z"/><path d="M8.2 16.7h7.6v3.5H8.2zM9.5 20.2v1.4M14.5 20.2v1.4"/></IconBase>; }
 
-const icons: Record<Differentiator["kind"], IconComponent> = { water: BottleIcon, coconut: CoconutIcon, snacks: SnackIcon, wipes: WipeIcon, sanitizer: SanitizerIcon, chargers: ChargerIcon, signal: SignalIcon, family: FamilyIcon };
+const icons: Record<Differentiator["kind"], IconComponent> = { water: BottleIcon, snacks: SnackIcon, sanitizer: SanitizerIcon, chargers: ChargerIcon, signal: SignalIcon, family: FamilyIcon };
 
 export function DifferentialIcon({ kind, size = 72 }: { kind: Differentiator["kind"]; size?: number }) { const Icon = icons[kind]; return <Icon size={size} strokeWidth={1.35} />; }
 

@@ -1,7 +1,7 @@
 // Fonte única de conteúdo: fatos operacionais organizados para jornadas B2C e uma entrada B2B discreta.
 export type ServiceType = "airport" | "transfer" | "portoSeguro" | "tours" | "fleet" | "armored" | "chauffeur" | "concierge" | "events" | "destinations" | "about" | "booking" | "partnerships";
 export type Faq = { question: string; answer: string };
-export type Differentiator = { kind: "water" | "coconut" | "snacks" | "wipes" | "sanitizer" | "chargers" | "signal" | "family"; label: string; text: string };
+export type Differentiator = { kind: "water" | "snacks" | "sanitizer" | "chargers" | "signal" | "family"; label: string; text: string };
 export type DifferentiatorContent = { eyebrow: string; title: string; emphasis: string; description?: string };
 export type ImageFit = "cover" | "contain";
 export type ImagePresentation = { imageFocus?: string; imageFocusMobile?: string; imageFit?: ImageFit; imageFitMobile?: ImageFit; imageBackground?: string };
@@ -17,7 +17,7 @@ export const homeServiceImages = {
 } as const;
 
 export const differentiators: Differentiator[] = [{kind:"water",label:"Água mineral e água de coco",text:"Água mineral e água de coco a bordo."},{kind:"snacks",label:"Snacks a bordo",text:"Snacks selecionados para o trajeto."},{kind:"sanitizer",label:"Álcool em gel e lenços",text:"Álcool em gel e lenço umedecido disponíveis a bordo."},{kind:"signal",label:"Internet Starlink",text:"Conexão via satélite em veículos e rotas compatíveis."},{kind:"chargers",label:"Carregadores",text:"Carregadores para eletrônicos disponíveis a bordo."},{kind:"family",label:"Conforto para crianças",text:"Bebê conforto, cadeirinha e assento elevado sem custo adicional."}];
-export const onboardDifferentiatorTypes: ServiceType[] = ["airport","transfer","portoSeguro","armored","chauffeur","events","booking","tours"];
+export const onboardDifferentiatorTypes: ServiceType[] = ["airport","transfer","portoSeguro","tours","fleet","armored","chauffeur","concierge","events","destinations","about","booking","partnerships"];
 
 export const differentiatorContent: Record<ServiceType | "home", DifferentiatorContent> = {
   home:{eyebrow:"O cuidado nos detalhes",title:"Uma chegada com",emphasis:"tudo no lugar.",description:"Pequenos cuidados que deixam a viagem mais leve desde o primeiro quilômetro."},
