@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1, "max-video-preview": -1 } },
   openGraph: { type: "website", locale: "pt_BR", alternateLocale: ["en_US"], siteName: "Nativos Experiences", title: "Transfer de luxo e concierge em Trancoso | Nativos Experiences", description: "Chegue a Trancoso com conforto, discrição e um concierge local cuidando do caminho.", url: siteUrl, images: [{ url: heroImage, width: 1600, height: 1000, alt: "SUV premium em estrada costeira de Trancoso" }] },
   twitter: { card: "summary_large_image", title: "Transfer de luxo e concierge em Trancoso | Nativos Experiences", description: "Transfer privativo, motorista à disposição e concierge em Trancoso e região.", images: [heroImage] },
-  icons: { icon: "/images/usTPVzSokKzdeTWC.png", apple: "/images/usTPVzSokKzdeTWC.png" },
+  icons: { icon: "/images/n-icon-512.png", apple: "/images/n-icon-512.png" },
 };
 
 export default async function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
@@ -40,7 +40,7 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
         telephone: "+55 73 99168-1630",
         email: "contato@nativosexperiences.com",
         image: heroImage,
-        logo: "/images/usTPVzSokKzdeTWC.png",
+        logo: "/images/n-icon-512.png",
         sameAs: ["https://instagram.com/nativosexperiences"],
         contactPoint: [{ "@type": "ContactPoint", telephone: "+55 73 99168-1630", contactType: "customer service", availableLanguage: ["Portuguese", "English"] }],
         address: { "@type": "PostalAddress", streetAddress: "Rua Carlos Alberto Parracho, 436", addressLocality: "Trancoso", addressRegion: "BA", postalCode: "45818-000", addressCountry: "BR" },
