@@ -6,7 +6,7 @@ import { Footer, Header, eventWhatsapp, partnershipWhatsapp, whatsapp, WhatsAppB
 import { ServiceHero } from "@/components/ServiceHero";
 import { canonicalSlugs, differentiatorContent, differentiators, getServiceBySlug, onboardDifferentiatorTypes } from "@/lib/data";
 
-const siteUrl = "https://nativosexperiences.com";
+const siteUrl = "https://www.nativosexperiences.com";
 
 export function generateStaticParams() { return canonicalSlugs.map((slug) => ({ slug })); }
 

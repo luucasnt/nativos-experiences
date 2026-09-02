@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { Footer, Header } from "@/components/SiteChrome";
 import { guides, guidesEn, guideSlugsEn } from "@/lib/guides";
 
-const siteUrl = "https://nativosexperiences.com";
+const siteUrl = "https://www.nativosexperiences.com";
 const allGuides = guideSlugsEn.map((slug) => ({ pt: guides[slug], en: guidesEn[slug] })).filter((g) => g.pt && g.en);
 
 export const metadata: Metadata = {

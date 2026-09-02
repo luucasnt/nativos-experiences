@@ -12,7 +12,7 @@ export function GET() {
 - Operação: desde 2015
 - Contato: contato@nativosexperiences.com
 - WhatsApp: +55 73 99168-1630
-- Site: https://nativosexperiences.com/
+- Site: https://www.nativosexperiences.com/
 
 ## Serviços
 - Transfer privativo entre o Aeroporto de Porto Seguro, Trancoso, Terravista, Outeiro das Brisas e outros destinos sob consulta.
@@ -27,19 +27,19 @@ export function GET() {
 Trancoso, Porto Seguro, Arraial d’Ajuda, Praia do Espelho, Caraíva, Santo André, Corumbau e Itacaré.
 
 ## Idiomas
-Português: https://nativosexperiences.com/
-English: https://nativosexperiences.com/en
+Português: https://www.nativosexperiences.com/
+English: https://www.nativosexperiences.com/en
 
 ## Páginas principais
-- https://nativosexperiences.com/transfer-aeroporto
-- https://nativosexperiences.com/transfer-blindado
-- https://nativosexperiences.com/motorista-a-disposicao
-- https://nativosexperiences.com/concierge-trancoso
-- https://nativosexperiences.com/casamentos-e-eventos
-- https://nativosexperiences.com/frota
-- https://nativosexperiences.com/destinos
-- https://nativosexperiences.com/parcerias
-- https://nativosexperiences.com/sobre-nativos
+- https://www.nativosexperiences.com/transfer-aeroporto
+- https://www.nativosexperiences.com/transfer-blindado
+- https://www.nativosexperiences.com/motorista-a-disposicao
+- https://www.nativosexperiences.com/concierge-trancoso
+- https://www.nativosexperiences.com/casamentos-e-eventos
+- https://www.nativosexperiences.com/frota
+- https://www.nativosexperiences.com/destinos
+- https://www.nativosexperiences.com/parcerias
+- https://www.nativosexperiences.com/sobre-nativos
 
 ## Observação
 Informações de disponibilidade, valores, veículos específicos e rotas devem ser confirmadas diretamente com a equipe Nativos Experiences.

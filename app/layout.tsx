@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { headers } from "next/headers";
 import "./globals.css";
 
-const siteUrl = "https://nativosexperiences.com";
+const siteUrl = "https://www.nativosexperiences.com";
 const heroImage = "/images/VtQimewDJyvHxHBP.jpg";
 
 export const metadata: Metadata = {

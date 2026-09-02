@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { Footer, Header } from "@/components/SiteChrome";
 import { guides } from "@/lib/guides";
 
-const siteUrl = "https://nativosexperiences.com";
+const siteUrl = "https://www.nativosexperiences.com";
 const allGuides = Object.values(guides);
 
 export const metadata: Metadata = {

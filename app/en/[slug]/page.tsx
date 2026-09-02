@@ -6,7 +6,7 @@ import { Footer, Header, WhatsAppButton, eventWhatsapp, partnershipWhatsapp, wha
 import { ServiceHero } from "@/components/ServiceHero";
 import { canonicalSlugs, englishDifferentiators, englishDifferentiatorContent, getLocalizedServiceBySlug, onboardDifferentiatorTypes } from "@/lib/data";
 
-const siteUrl = "https://nativosexperiences.com";
+const siteUrl = "https://www.nativosexperiences.com";
 export function generateStaticParams() { return canonicalSlugs.map((slug) => ({ slug })); }
 function cleanTitle(title: string) { return title.replace(/\s*\|\s*Nativos Experiences\s*$/i, ""); }
 function languageAlternates(slug: string) { return { "pt-BR": `${siteUrl}/${slug}`, en: `${siteUrl}/en/${slug}`, "x-default": `${siteUrl}/${slug}` }; }

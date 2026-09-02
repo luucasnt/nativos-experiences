@@ -8,7 +8,7 @@ export default function robots(): MetadataRoute.Robots {
       { userAgent: "OAI-SearchBot", allow: "/" },
       { userAgent: "GPTBot", allow: "/" },
     ],
-    sitemap: "https://nativosexperiences.com/sitemap.xml",
-    host: "https://nativosexperiences.com",
+    sitemap: "https://www.nativosexperiences.com/sitemap.xml",
+    host: "https://www.nativosexperiences.com",
   };
 }

@@ -6,7 +6,7 @@ import { Footer, Header, whatsapp, WhatsAppButton } from "@/components/SiteChrom
 import { getGuideBySlug, getGuideTranslation, guideSlugsEn, guides, guidesEn } from "@/lib/guides";
 import { getServiceBySlug, getLocalizedServiceBySlug } from "@/lib/data";
 
-const siteUrl = "https://nativosexperiences.com";
+const siteUrl = "https://www.nativosexperiences.com";
 
 export function generateStaticParams() { return guideSlugsEn.map((slug) => ({ slug })); }
 
