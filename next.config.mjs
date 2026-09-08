@@ -11,6 +11,7 @@ const nextConfig = {
   async redirects() {
     const aliases = [
       ['sobre', 'sobre-nativos'],
+      ['about', 'sobre-nativos'],
       ['concierge', 'concierge-trancoso'],
       ['transfer-blindado-trancoso', 'transfer-blindado'],
       ['transfer-aeroporto-terravista', 'transfer-aeroporto'],
