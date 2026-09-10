@@ -7,7 +7,7 @@ const siteUrl = "https://www.nativosexperiences.com";
 const allGuides = Object.values(guides);
 
 export const metadata: Metadata = {
-  title: "Guia de Trancoso e Região | Nativos Experiences",
+  title: { absolute: "Guia de Trancoso e Região | Nativos Experiences" },
   description: "Respostas diretas sobre como chegar, quanto custa e o que saber antes de viajar para Trancoso, Arraial d'Ajuda, Caraíva e a Costa do Descobrimento.",
   alternates: { canonical: "/guia", languages: { "pt-BR": `${siteUrl}/guia`, "x-default": `${siteUrl}/guia` } },
 };

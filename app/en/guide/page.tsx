@@ -7,7 +7,7 @@ const siteUrl = "https://www.nativosexperiences.com";
 const allGuides = guideSlugsEn.map((slug) => ({ pt: guides[slug], en: guidesEn[slug] })).filter((g) => g.pt && g.en);
 
 export const metadata: Metadata = {
-  title: "Trancoso Travel Guide | Nativos Experiences",
+  title: { absolute: "Trancoso Travel Guide | Nativos Experiences" },
   description: "Direct answers about how to get there, what it costs, and what to know before traveling to Trancoso, Caraíva, and the Discovery Coast of Bahia, Brazil.",
   alternates: { canonical: "/en/guide", languages: { "pt-BR": `${siteUrl}/guia`, en: `${siteUrl}/en/guide`, "x-default": `${siteUrl}/guia` } },
 };
