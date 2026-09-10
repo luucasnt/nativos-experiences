@@ -22,7 +22,7 @@ export function ServiceHero({ page, ctaHref, locale = "pt-BR" }: ServiceHeroProp
     "--img-focus": page.imageFocus ?? "75% center",
     "--img-focus-mobile": page.imageFocusMobile ?? page.imageFocus ?? "right center",
     "--img-fit": page.imageFit ?? "cover",
-    "--img-fit-mobile": page.imageFitMobile ?? "contain",
+    "--img-fit-mobile": page.imageFitMobile ?? "cover",
     "--img-bg": page.imageBackground ?? "#344c43",
   };
 

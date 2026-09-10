@@ -19,7 +19,7 @@ type EditorialImageProps = ImagePresentation & {
   priority?: boolean;
 };
 
-export function EditorialImage({ src, alt, className, children, imageFocus = "right center", imageFocusMobile, imageFit = "cover", imageFitMobile = "contain", imageBackground = "#29433b", priority = false }: EditorialImageProps) {
+export function EditorialImage({ src, alt, className, children, imageFocus = "right center", imageFocusMobile, imageFit = "cover", imageFitMobile = "cover", imageBackground = "#29433b", priority = false }: EditorialImageProps) {
   const style: ImageStyle = {
     "--img-focus": imageFocus,
     "--img-focus-mobile": imageFocusMobile ?? imageFocus,
