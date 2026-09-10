@@ -16,10 +16,18 @@ const nextConfig = {
       ['transfer-aeroporto-terravista', 'transfer-aeroporto'],
       ['reserva', 'reserva-online'],
     ];
-    return aliases.flatMap(([source, destination]) => [
-      { source: `/${source}`, destination: `/${destination}`, permanent: true },
-      { source: `/en/${source}`, destination: `/en/${destination}`, permanent: true },
-    ]);
+    const extras = [
+      { source: '/passeios-trancoso-caraiva', destination: '/passeios', permanent: true },
+      { source: '/rotas-trancoso-caraiva', destination: '/guia/como-chegar-em-caraiva-sem-carro', permanent: true },
+      { source: '/transfer-santo-andre-bahia', destination: '/guia/santo-andre-bahia-o-que-saber', permanent: true },
+    ];
+    return [
+      ...aliases.flatMap(([source, destination]) => [
+        { source: `/${source}`, destination: `/${destination}`, permanent: true },
+        { source: `/en/${source}`, destination: `/en/${destination}`, permanent: true },
+      ]),
+      ...extras,
+    ];
   },
 };
 
