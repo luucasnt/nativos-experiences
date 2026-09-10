@@ -24,9 +24,11 @@ const nextConfig = {
       // Caminhos herdados do domínio antigo nativostransfer.com — o redirect de domínio
       // na Vercel preserva o path, então essas rotas antigas caíam em 404 no site novo.
       { source: '/contato', destination: '/reserva-online', permanent: true },
-      { source: '/sobre-nós', destination: '/sobre-nativos', permanent: true },
+      // Fontes com acento precisam ir percent-encoded: o Next.js compara o `source`
+      // com o path bruto da requisição, sem decodificar, então o literal com acento não batia.
+      { source: '/sobre-n%C3%B3s', destination: '/sobre-nativos', permanent: true },
       { source: '/sobre-nos', destination: '/sobre-nativos', permanent: true },
-      { source: '/nossos-serviços', destination: '/', permanent: true },
+      { source: '/nossos-servi%C3%A7os', destination: '/', permanent: true },
       { source: '/nossos-servicos', destination: '/', permanent: true },
       { source: '/service-page/transfer-aeroporto-trancoso', destination: '/transfer-aeroporto', permanent: true },
     ];
