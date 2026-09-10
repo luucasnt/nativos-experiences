@@ -6,43 +6,28 @@ export function GET() {
 
 > Transfer privativo de luxo e concierge local em Trancoso, Bahia.
 
-## Empresa
-- Nome: Nativos Experiences
-- Base: Trancoso, Bahia, Brasil
-- Operação: desde 2015
-- Contato: contato@nativosexperiences.com
-- WhatsApp: +55 73 99168-1630
-- Site: https://www.nativosexperiences.com/
+Empresa fundada em 2015, sediada em Trancoso, Bahia, Brasil. Contato: contato@nativosexperiences.com, WhatsApp +55 73 99168-1630.
 
-## Serviços
-- Transfer privativo entre o Aeroporto de Porto Seguro, Trancoso, Terravista, Outeiro das Brisas e outros destinos sob consulta.
-- Transfer blindado em Porto Seguro, Trancoso e região.
-- Motorista particular à disposição com veículo dedicado.
-- Concierge local para experiências, reservas e planejamento da estadia.
-- Transfer e logística para casamentos e eventos.
-- Passeios privativos e rotas personalizadas a partir de Trancoso.
-- Frota com categorias convencional, executiva, grupo, luxo, premium, elite, exclusive, vans e blindado.
+Serviços: transfer privativo entre o Aeroporto de Porto Seguro, Trancoso, Terravista, Outeiro das Brisas e outros destinos sob consulta; transfer blindado; motorista particular à disposição; concierge local para experiências, reservas e planejamento da estadia; transfer e logística para casamentos e eventos; passeios privativos e rotas personalizadas. Frota com categorias convencional, executiva, grupo, luxo, premium, elite, exclusive, vans e blindado.
 
-## Destinos
-Trancoso, Porto Seguro, Arraial d’Ajuda, Praia do Espelho, Caraíva, Santo André, Corumbau e Itacaré.
+Destinos atendidos: Trancoso, Porto Seguro, Arraial d’Ajuda, Praia do Espelho, Caraíva, Santo André, Corumbau e Itacaré.
+
+Informações de disponibilidade, valores, veículos específicos e rotas devem ser confirmadas diretamente com a equipe Nativos Experiences.
 
 ## Idiomas
-Português: https://www.nativosexperiences.com/
-English: https://www.nativosexperiences.com/en
+- [Português](https://www.nativosexperiences.com/): versão principal do site
+- [English](https://www.nativosexperiences.com/en): English version of the site
 
 ## Páginas principais
-- https://www.nativosexperiences.com/transfer-aeroporto
-- https://www.nativosexperiences.com/transfer-blindado
-- https://www.nativosexperiences.com/motorista-a-disposicao
-- https://www.nativosexperiences.com/concierge-trancoso
-- https://www.nativosexperiences.com/casamentos-e-eventos
-- https://www.nativosexperiences.com/frota
-- https://www.nativosexperiences.com/destinos
-- https://www.nativosexperiences.com/parcerias
-- https://www.nativosexperiences.com/sobre-nativos
-
-## Observação
-Informações de disponibilidade, valores, veículos específicos e rotas devem ser confirmadas diretamente com a equipe Nativos Experiences.
+- [Transfer Aeroporto](https://www.nativosexperiences.com/transfer-aeroporto): transfer privativo do Aeroporto de Porto Seguro para Trancoso
+- [Transfer Blindado](https://www.nativosexperiences.com/transfer-blindado): transfer blindado em Porto Seguro e Trancoso
+- [Motorista à Disposição](https://www.nativosexperiences.com/motorista-a-disposicao): motorista particular por período
+- [Concierge](https://www.nativosexperiences.com/concierge-trancoso): concierge local em Trancoso
+- [Casamentos e Eventos](https://www.nativosexperiences.com/casamentos-e-eventos): transporte para casamentos e eventos
+- [Frota](https://www.nativosexperiences.com/frota): categorias de veículos disponíveis
+- [Destinos](https://www.nativosexperiences.com/destinos): rotas e destinos atendidos
+- [Parcerias](https://www.nativosexperiences.com/parcerias): operação para hotéis, pousadas e DMCs
+- [Sobre](https://www.nativosexperiences.com/sobre-nativos): história e operação da empresa
 `;
   return new NextResponse(content, { headers: { "Content-Type": "text/plain; charset=utf-8", "Cache-Control": "public, max-age=3600" } });
 }
