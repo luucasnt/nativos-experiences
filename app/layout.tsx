@@ -31,8 +31,8 @@ const heroImage = "/images/VtQimewDJyvHxHBP.jpg";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: { default: "Transfer de luxo e concierge em Trancoso | Nativos Experiences", template: "%s | Nativos Experiences" },
-  description: "Transfer privativo de luxo em Trancoso, Bahia. Recepção no Aeroporto de Porto Seguro, Terravista e Outeiro das Brisas, motorista à disposição, concierge, eventos e carro blindado.",
+  title: { default: "Transfer de Luxo Porto Seguro–Trancoso | Nativos Experiences", template: "%s | Nativos Experiences" },
+  description: "Transfer privativo de luxo do Aeroporto de Porto Seguro a Trancoso, Bahia. Recepção em Terravista e Outeiro das Brisas, motorista à disposição, concierge, eventos e carro blindado.",
   keywords: ["transfer de luxo em Trancoso", "transfer Porto Seguro Trancoso", "Aeroporto Terravista", "transfer privativo Trancoso", "concierge Trancoso", "carro blindado Trancoso"],
   authors: [{ name: "Nativos Experiences" }],
   creator: "Nativos Experiences",
@@ -40,8 +40,8 @@ export const metadata: Metadata = {
   category: "travel",
   alternates: { canonical: "/", languages: { "pt-BR": "/", en: "/en", "x-default": "/" } },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1, "max-video-preview": -1 } },
-  openGraph: { type: "website", locale: "pt_BR", alternateLocale: ["en_US"], siteName: "Nativos Experiences", title: "Transfer de luxo e concierge em Trancoso | Nativos Experiences", description: "Chegue a Trancoso com conforto, discrição e um concierge local cuidando do caminho.", url: siteUrl, images: [{ url: heroImage, width: 1600, height: 1000, alt: "SUV premium em estrada costeira de Trancoso" }] },
-  twitter: { card: "summary_large_image", title: "Transfer de luxo e concierge em Trancoso | Nativos Experiences", description: "Transfer privativo, motorista à disposição e concierge em Trancoso e região.", images: [heroImage] },
+  openGraph: { type: "website", locale: "pt_BR", alternateLocale: ["en_US"], siteName: "Nativos Experiences", title: "Transfer de Luxo Porto Seguro–Trancoso | Nativos Experiences", description: "Transfer privativo de luxo do Aeroporto de Porto Seguro a Trancoso, com concierge local cuidando de cada detalhe da chegada.", url: siteUrl, images: [{ url: heroImage, width: 1600, height: 1000, alt: "SUV premium em estrada costeira de Trancoso" }] },
+  twitter: { card: "summary_large_image", title: "Transfer de Luxo Porto Seguro–Trancoso | Nativos Experiences", description: "Transfer privativo de luxo, motorista à disposição e concierge em Trancoso e região da Bahia.", images: [heroImage] },
   icons: { icon: "/images/n-icon-512.png", apple: "/images/n-icon-512.png" },
 };
 
