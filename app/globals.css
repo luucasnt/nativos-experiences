@@ -206,6 +206,7 @@ a { color:inherit; text-decoration:none; }
 /* Casa de Areia motion layer: tactile, slow, and restrained; never decorative for its own sake. */
 @media (prefers-reduced-motion: no-preference) {
   .hero-image, .service-hero > img { animation: casa-image-drift 18s ease-in-out infinite alternate; }
+  .sand-hero .hero-image { animation: casa-hero-drive 24s ease-in-out infinite alternate; }
   .hero-action, .dark-button, .nav-cta { transition: color .24s var(--ease), background-color .24s var(--ease), border-color .24s var(--ease), transform .24s var(--ease), box-shadow .24s var(--ease); }
   .hero-action:hover, .dark-button:hover, .nav-cta:hover { transform: translateY(-2px); box-shadow: 0 10px 24px rgba(18,49,42,.12); }
   .experience-card, .fleet-item, .service-related a { transition: transform .28s var(--ease), background-color .28s var(--ease), border-color .28s var(--ease); }
@@ -215,6 +216,7 @@ a { color:inherit; text-decoration:none; }
   .services-dropdown { animation: casa-dropdown-in .22s var(--ease) both; transform-origin: top left; }
 }
 @keyframes casa-image-drift { from { transform: scale(1.02); } to { transform: scale(1.07); } }
+@keyframes casa-hero-drive { from { transform: scale(1.04) translate3d(0,0,0); } to { transform: scale(1.13) translate3d(-2.2%,-1.1%,0); } }
 @keyframes casa-dropdown-in { from { opacity:0; transform:translateY(-6px); } to { opacity:1; transform:translateY(0); } }
 
 /* Mobile navigation hierarchy: primary destinations first, service routes nested with quiet editorial indentation. */
