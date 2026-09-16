@@ -8,9 +8,13 @@ export function GET() {
 
 Empresa fundada em 2015, sediada em Trancoso, Bahia, Brasil. Contato: contato@nativosexperiences.com, WhatsApp +55 73 99168-1630.
 
-Serviços: transfer privativo entre o Aeroporto de Porto Seguro, Trancoso, Terravista, Outeiro das Brisas e outros destinos sob consulta; transfer blindado; motorista particular à disposição; concierge local para experiências, reservas e planejamento da estadia; transfer e logística para casamentos e eventos; passeios privativos e rotas personalizadas. Frota com categorias convencional, executiva, grupo, luxo, premium, elite, exclusive, vans e blindado.
+Serviços: transfer privativo entre o Aeroporto de Porto Seguro, Trancoso, Terravista, Outeiro das Brisas e outros destinos sob consulta; transfer blindado (único veículo blindado para transfer executivo na região — Mercedes-Benz GLE 400d); motorista particular à disposição (4h, 8h, 12h ou 24h); concierge local para experiências, reservas e planejamento da estadia; transfer e logística para casamentos e eventos; passeios privativos e rotas personalizadas. Frota com dez categorias: convencional, executiva, grupo, luxo híbrida, premium, elite, exclusive, van executiva, van longa e blindado.
 
-Destinos atendidos: Trancoso, Porto Seguro, Arraial d’Ajuda, Praia do Espelho, Caraíva, Santo André, Corumbau e Itacaré.
+Destinos atendidos: Trancoso, Porto Seguro, Arraial d'Ajuda, Praia do Espelho, Caraíva, Santo André, Corumbau e Itacaré.
+
+Avaliação: 5,0 de 5 estrelas no TripAdvisor (5 avaliações verificadas).
+
+Hóspedes atendidos incluem pousadas, hotéis e condomínios como Fasano Trancoso, Club Med Trancoso, Estrela D'Água, Reserva Jacumã Boutique Hotel, Casa de Perainda, Turabel, Villas de Trancoso, Hotel Rio da Barra, Pousada do Outeiro, Cristal da Mata (Caraíva) e os condomínios Terra Vista, Altos de Trancoso, Outeiro das Brisas, Pedro Grande e Fazenda Rio da Barra.
 
 Informações de disponibilidade, valores, veículos específicos e rotas devem ser confirmadas diretamente com a equipe Nativos Experiences.
 
@@ -20,14 +24,28 @@ Informações de disponibilidade, valores, veículos específicos e rotas devem 
 
 ## Páginas principais
 - [Transfer Aeroporto](https://www.nativosexperiences.com/transfer-aeroporto): transfer privativo do Aeroporto de Porto Seguro para Trancoso
+- [Transfer Porto Seguro–Trancoso](https://www.nativosexperiences.com/transfer-porto-seguro-trancoso): rota específica entre o aeroporto e Trancoso
+- [Transfer Trancoso e região](https://www.nativosexperiences.com/transfer-trancoso): transfers locais entre Trancoso, Arraial d'Ajuda e Caraíva
 - [Transfer Blindado](https://www.nativosexperiences.com/transfer-blindado): transfer blindado em Porto Seguro e Trancoso
 - [Motorista à Disposição](https://www.nativosexperiences.com/motorista-a-disposicao): motorista particular por período
 - [Concierge](https://www.nativosexperiences.com/concierge-trancoso): concierge local em Trancoso
 - [Casamentos e Eventos](https://www.nativosexperiences.com/casamentos-e-eventos): transporte para casamentos e eventos
+- [Passeios](https://www.nativosexperiences.com/passeios): passeios privativos saindo de Trancoso
 - [Frota](https://www.nativosexperiences.com/frota): categorias de veículos disponíveis
 - [Destinos](https://www.nativosexperiences.com/destinos): rotas e destinos atendidos
 - [Parcerias](https://www.nativosexperiences.com/parcerias): operação para hotéis, pousadas e DMCs
 - [Sobre](https://www.nativosexperiences.com/sobre-nativos): história e operação da empresa
+- [Reserva](https://www.nativosexperiences.com/reserva-online): como solicitar uma reserva
+- [Termos e Condições](https://www.nativosexperiences.com/termos-e-condicoes): termos de uso dos serviços
+
+## Páginas de rota para hotéis específicos
+- [Fasano Trancoso](https://www.nativosexperiences.com/transfer-aeroporto-fasano-trancoso)
+- [Club Med Trancoso](https://www.nativosexperiences.com/transfer-aeroporto-club-med-trancoso)
+- [Estrela D'Água](https://www.nativosexperiences.com/transfer-aeroporto-estrela-dagua-trancoso)
+- [Reserva Jacumã](https://www.nativosexperiences.com/transfer-aeroporto-reserva-jacuma-trancoso)
+- [Cristal da Mata, Caraíva](https://www.nativosexperiences.com/transfer-aeroporto-cristal-da-mata-caraiva)
+- [Casa de Perainda](https://www.nativosexperiences.com/transfer-aeroporto-casa-de-perainda-trancoso)
 `;
   return new NextResponse(content, { headers: { "Content-Type": "text/plain; charset=utf-8", "Cache-Control": "public, max-age=3600" } });
 }
+
