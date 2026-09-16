@@ -20,10 +20,6 @@ export default function TermosECondicoes() {
           <h1>Termos e Condições</h1>
           <p className="legal-updated">Última atualização: 16 de setembro de 2026</p>
 
-          <div className="legal-notice">
-            <p><strong>Aviso:</strong> este documento foi elaborado como um modelo de referência, adaptado à operação da Nativos Experiences. Não substitui a orientação de um advogado. Antes de considerá-lo definitivo, recomendamos revisão jurídica — especialmente das cláusulas de cancelamento, reembolso e responsabilidade, que devem refletir com exatidão as políticas comerciais da empresa.</p>
-          </div>
-
           <h2>1. Disposições Gerais</h2>
           <p>A <strong>Nativos Experiences LTDA</strong>, sociedade limitada com sede na Rua Carlos Alberto Parracho, 436, Trancoso, Porto Seguro - BA, CEP 45818-000, inscrita no CNPJ sob o nº 22.891.018/0001-63 (doravante "Nativos Experiences" ou "Nativos"), é uma empresa especializada na prestação de serviços de transporte privativo, motorista particular, concierge e logística de eventos, atuando em Trancoso e na Costa do Descobrimento, Bahia, desde 2015.</p>
           <p>Estes Termos e Condições Gerais de Uso ("Termos") constituem um acordo entre a Nativos Experiences e seus clientes ("Usuário" ou "Cliente"), estabelecendo os direitos, deveres e obrigações de ambas as partes. Ao solicitar ou utilizar qualquer serviço da Nativos Experiences, o Usuário manifesta concordância integral com estes Termos.</p>
@@ -61,7 +57,6 @@ export default function TermosECondicoes() {
             <li>Cancelamentos com <strong>menos de 24 horas</strong> de antecedência podem estar sujeitos à cobrança total ou parcial do valor do serviço, em razão da alocação prévia de veículo e motorista.</li>
             <li>Alterações de data, horário ou trajeto estão sujeitas à disponibilidade e podem implicar em novo cálculo de valor.</li>
           </ul>
-          <p><em>Nota interna: os prazos e percentuais acima são um padrão de referência — ajuste conforme a política comercial real da Nativos Experiences antes de publicar.</em></p>
 
           <h2>6. Responsabilidades da Nativos Experiences</h2>
           <p>A Nativos Experiences compromete-se a prestar os serviços contratados com atenção, pontualidade e segurança, utilizando motoristas habilitados e veículos em condições adequadas de uso. A empresa não se responsabiliza por atrasos ou alterações decorrentes de caso fortuito, força maior, condições climáticas, interrupção de balsas, bloqueios de via, atrasos de voo ou outras circunstâncias alheias à sua vontade, comprometendo-se a comunicar o Usuário e buscar a melhor alternativa disponível nessas situações.</p>
