@@ -1,22 +1,26 @@
 /* Ajustes exclusivos de enquadramento dos seis heroes enviados em print.
-   Desktop e demais páginas permanecem inalterados. */
+   Desktop e demais páginas permanecem inalterados.
+   Valores testados com renderização real (imagem + texto real + dimensões
+   exatas do hero mobile) antes de aplicar — ver histórico do commit. */
 @media (max-width: 800px) {
   .service-hero[data-service="airport"] picture img {
-    /* Leva o carro mais para a direita no recorte mobile. */
-    object-position: 68% center !important;
+    /* Carro só na base do quadro, sem tocar o texto. */
+    object-position: 70% 0% !important;
   }
 
   .service-hero[data-service="armored"] picture img {
-    object-position: 72% center !important;
+    /* Carro menor, mais abaixo, título sobre céu/montanha. */
+    object-position: 40% 95% !important;
   }
 
   .service-hero[data-service="chauffeur"] picture img {
-    object-position: 62% center !important;
+    /* Evita o carro e a luz de freio vermelha cruzando o texto. */
+    object-position: left top !important;
   }
 
   .service-hero[data-service="events"] picture img {
-    /* Abre o enquadramento para o lado da noiva, preservando o casal no mobile. */
-    object-position: 56% center !important;
+    /* Céu e gramado limpos, convidados só ao fundo, sem sobrepor o texto. */
+    object-position: left center !important;
   }
 
   .service-hero[data-service="fleet"] picture img {
@@ -24,6 +28,7 @@
   }
 
   .service-hero[data-service="concierge"] picture img {
-    object-position: 66% center !important;
+    /* Evita mãos e prato sob o texto. */
+    object-position: left top !important;
   }
 }
