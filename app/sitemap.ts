@@ -25,5 +25,5 @@ const guideEntryEn = (slug: string): MetadataRoute.Sitemap[number] => ({
 });
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  return [entry("", "pt-BR"), entry("", "en"), ...canonicalSlugs.flatMap((slug) => [entry(slug, "pt-BR"), entry(slug, "en")]), { url: `${siteUrl}/guia`, changeFrequency: "weekly" }, { url: `${siteUrl}/en/guide`, changeFrequency: "weekly" }, ...guideSlugs.map(guideEntry), ...guideSlugsEn.map(guideEntryEn)];
+  return [entry("", "pt-BR"), entry("", "en"), ...canonicalSlugs.flatMap((slug) => [entry(slug, "pt-BR"), entry(slug, "en")]), { url: `${siteUrl}/guia`, changeFrequency: "weekly" }, { url: `${siteUrl}/en/guide`, changeFrequency: "weekly" }, ...guideSlugs.map(guideEntry), ...guideSlugsEn.map(guideEntryEn), { url: `${siteUrl}/termos-e-condicoes`, changeFrequency: "yearly" }];
 }
