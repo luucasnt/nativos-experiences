@@ -66,7 +66,7 @@ export const serviceData: Record<ServiceType, ServiceData> = {
 
 /* Casa de Areia — fonte única do enquadramento dos heroes. Novas fotos herdam assunto à direita e preservação integral no mobile. */
 const serviceImagePresentation: Record<ServiceType, ImagePresentation> = {
-  airport: { imageFocus: "72% center", imageFocusMobile: "right center", imageFit: "cover", imageFitMobile: "cover" },
+  airport: { imageFocus: "72% center", imageFocusMobile: "70% 0%", imageFit: "cover", imageFitMobile: "cover" },
   portoSeguro: { imageFocus: "74% center", imageFocusMobile: "right center", imageFit: "cover", imageFitMobile: "cover" },
   fasano: { imageFocus: "72% center", imageFocusMobile: "right center", imageFit: "cover", imageFitMobile: "cover" },
   clubMed: { imageFocus: "72% center", imageFocusMobile: "right center", imageFit: "cover", imageFitMobile: "cover" },
@@ -78,11 +78,11 @@ const serviceImagePresentation: Record<ServiceType, ImagePresentation> = {
   tours: { imageFocus: "70% center", imageFocusMobile: "right center", imageFit: "cover", imageFitMobile: "cover" },
   fleet: { imageFocus: "74% center", imageFocusMobile: "right center", imageFit: "cover", imageFitMobile: "cover" },
   armored: { imageFocus: "78% center", imageFocusMobile: "40% 95%", imageFit: "cover", imageFitMobile: "cover" },
-  chauffeur: { imageFocus: "78% center", imageFocusMobile: "right center", imageFit: "cover", imageFitMobile: "cover" },
-  concierge: { imageFocus: "72% center", imageFocusMobile: "right center", imageFit: "cover", imageFitMobile: "cover" },
-  events: { imageFocus: "78% center", imageFocusMobile: "right center", imageFit: "cover", imageFitMobile: "cover" },
+  chauffeur: { imageFocus: "78% center", imageFocusMobile: "left top", imageFit: "cover", imageFitMobile: "cover" },
+  concierge: { imageFocus: "72% center", imageFocusMobile: "left top", imageFit: "cover", imageFitMobile: "cover" },
+  events: { imageFocus: "78% center", imageFocusMobile: "left center", imageFit: "cover", imageFitMobile: "cover" },
   destinations: { imageFocus: "70% center", imageFocusMobile: "right center", imageFit: "cover", imageFitMobile: "cover" },
-  about: { imageFocus: "right center", imageFocusMobile: "right center", imageFit: "cover", imageFitMobile: "cover" },
+  about: { imageFocus: "center top", imageFocusMobile: "center top", imageFit: "cover", imageFitMobile: "cover" },
   booking: { imageFocus: "74% center", imageFocusMobile: "right center", imageFit: "cover", imageFitMobile: "cover" },
   partnerships: { imageFocus: "80% center", imageFocusMobile: "right center", imageFit: "cover", imageFitMobile: "cover" },
 };
