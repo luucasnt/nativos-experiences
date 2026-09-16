@@ -25,10 +25,10 @@ const pillars = [
 
 const routes = [
   ["Aeroporto de Porto Seguro", "Trancoso", "/transfer-porto-seguro-trancoso"],
-  ["Aeroporto de Porto Seguro", "Fasano Trancoso", "/transfer-aeroporto"],
-  ["Aeroporto de Porto Seguro", "Club Med Trancoso", "/transfer-aeroporto"],
+  ["Aeroporto de Porto Seguro", "Fasano Trancoso", "/transfer-aeroporto-fasano-trancoso"],
+  ["Aeroporto de Porto Seguro", "Club Med Trancoso", "/transfer-aeroporto-club-med-trancoso"],
   ["Aeroporto Terra Vista", "Trancoso", "/transfer-aeroporto"],
-  ["Trancoso", "Caraíva", "/transfer-trancoso-caraiva"],
+  ["Trancoso", "Caraíva", "/transfer-trancoso"],
   ["Trancoso", "Praia do Espelho", "/passeios"]
 ];
 
