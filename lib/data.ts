@@ -77,7 +77,7 @@ const serviceImagePresentation: Record<ServiceType, ImagePresentation> = {
   transfer: { imageFocus: "72% center", imageFocusMobile: "right center", imageFit: "cover", imageFitMobile: "cover" },
   tours: { imageFocus: "70% center", imageFocusMobile: "right center", imageFit: "cover", imageFitMobile: "cover" },
   fleet: { imageFocus: "74% center", imageFocusMobile: "right center", imageFit: "cover", imageFitMobile: "cover" },
-  armored: { imageFocus: "78% center", imageFocusMobile: "right center", imageFit: "cover", imageFitMobile: "cover" },
+  armored: { imageFocus: "78% center", imageFocusMobile: "40% 95%", imageFit: "cover", imageFitMobile: "cover" },
   chauffeur: { imageFocus: "78% center", imageFocusMobile: "right center", imageFit: "cover", imageFitMobile: "cover" },
   concierge: { imageFocus: "72% center", imageFocusMobile: "right center", imageFit: "cover", imageFitMobile: "cover" },
   events: { imageFocus: "78% center", imageFocusMobile: "right center", imageFit: "cover", imageFitMobile: "cover" },
