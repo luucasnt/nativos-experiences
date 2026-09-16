@@ -1,4 +1,3 @@
-// Casa de Areia: páginas internas SSR para buscas específicas, com resposta direta, prova operacional e caminhos de conversão.
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { Differentiators } from "@/components/Differentiators";
@@ -7,53 +6,28 @@ import { ServiceHero } from "@/components/ServiceHero";
 import { canonicalSlugs, differentiatorContent, differentiators, getServiceBySlug, onboardDifferentiatorTypes } from "@/lib/data";
 
 const siteUrl = "https://www.nativosexperiences.com";
+const wa = (text: string) => `https://wa.me/5573991681630?text=${encodeURIComponent(text)}`;
+const journeyContent: Partial<Record<string, { label: string; items: string[]; note: string }>> = {
+  chauffeur: { label: "Escolha o formato", items: ["8 horas · programação de meio dia ou dia leve", "12 horas · agenda completa com mais flexibilidade", "24 horas · veículo e motorista dedicados à operação"], note: "Horários, deslocamentos e paradas são alinhados previamente. Horas excedentes seguem as condições informadas na cotação." },
+  concierge: { label: "Curadoria durante a estadia", items: ["Hospedagem e chegada", "Restaurantes e gastronomia", "Praias e beach clubs", "Barcos e experiências no mar", "Festas e programação especial", "Passeios, motorista e retorno ao aeroporto"], note: "Você pode contratar uma necessidade pontual ou conectar toda a viagem em um único atendimento." },
+  tours: { label: "Experiências mais procuradas", items: ["Praia do Espelho · dia de praia e gastronomia", "Caraíva · vila, rio e praia", "Arraial d’Ajuda · praias, centro histórico e gastronomia", "Roteiro personalizado · conforme perfil e tempo disponível"], note: "Passeios são privativos e podem ter duração de até 8 horas, conforme a operação contratada." },
+  events: { label: "Operação para grupos e eventos", items: ["Casamentos e celebrações", "Eventos corporativos", "Receptivo de convidados", "Vans, carros e veículos de apoio", "Rotas e horários coordenados", "Operação dedicada no local"], note: "A frota e o plano operacional são dimensionados conforme público, locais, horários e nível de serviço." },
+  booking: { label: "Como solicitar", items: ["Informe data e horário", "Origem e destino ou hospedagem", "Número de passageiros", "Quantidade e tamanho das bagagens", "Voo, quando houver", "Serviços adicionais desejados"], note: "Esta página envia uma solicitação. A reserva é confirmada após nossa equipe validar disponibilidade, categoria e condições do serviço." },
+};
 
 export function generateStaticParams() { return canonicalSlugs.map((slug) => ({ slug })); }
-
-export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
-  const { slug } = await params;
-  const page = getServiceBySlug(slug);
-  if (!page) return {};
-  return {
-    title: page.seoTitle?.replace(/\s*\|\s*Nativos Experiences\s*$/i, "") ?? page.title,
-    description: page.seoDescription ?? page.intro,
-    alternates: { canonical: `/${page.slug}`, languages: { "pt-BR": `${siteUrl}/${page.slug}`, en: `${siteUrl}/en/${page.slug}`, "x-default": `${siteUrl}/${page.slug}` } },
-    openGraph: { type: "website", siteName: "Nativos Experiences", locale: "pt_BR", title: page.seoTitle?.replace(/\s*\|\s*Nativos Experiences\s*$/i, "") ?? page.title, description: page.seoDescription ?? page.intro, url: `${siteUrl}/${page.slug}`, images: [{ url: page.image, alt: page.imageAlt }] }, twitter: { card: "summary_large_image", title: page.seoTitle?.replace(/\s*\|\s*Nativos Experiences\s*$/i, "") ?? page.title, description: page.seoDescription ?? page.intro, images: [page.image] },
-  };
-}
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> { const { slug } = await params; const page = getServiceBySlug(slug); if (!page) return {}; const title = page.seoTitle?.replace(/\s*\|\s*Nativos Experiences\s*$/i, "") ?? page.title; return { title, description: page.seoDescription ?? page.intro, alternates: { canonical: `/${page.slug}`, languages: { "pt-BR": `${siteUrl}/${page.slug}`, en: `${siteUrl}/en/${page.slug}`, "x-default": `${siteUrl}/${page.slug}` } }, openGraph: { type: "website", siteName: "Nativos Experiences", locale: "pt_BR", title, description: page.seoDescription ?? page.intro, url: `${siteUrl}/${page.slug}`, images: [{ url: page.image, alt: page.imageAlt }] }, twitter: { card: "summary_large_image", title, description: page.seoDescription ?? page.intro, images: [page.image] } }; }
 
 export default async function ServiceRoute({ params }: { params: Promise<{ slug: string }> }) {
-  const { slug } = await params;
-  const page = getServiceBySlug(slug);
-  if (!page) notFound();
-
+  const { slug } = await params; const page = getServiceBySlug(slug); if (!page) notFound();
+  const safeFaqs = page.faqs.filter((faq) => !/cancelam transfers|zero cancelamentos/i.test(`${faq.question} ${faq.answer}`));
   const related = (page.relatedSlugs ?? ["transfer-aeroporto", "concierge-trancoso"]).map(getServiceBySlug).filter(Boolean).filter((item) => item!.slug !== page.slug).slice(0, 3);
-  const serviceSchema = { "@context":"https://schema.org", "@type":"Service", "@id":`${siteUrl}/${page.slug}#service`, name:page.title, description:page.opening ?? page.intro, provider:{"@id":`${siteUrl}/#business`}, areaServed:{"@type":"Place",name:"Trancoso, Bahia"}, url:`${siteUrl}/${page.slug}`, inLanguage:"pt-BR" }; const breadcrumbSchema = { "@context":"https://schema.org", "@type":"BreadcrumbList", itemListElement:[{"@type":"ListItem",position:1,name:"Nativos Experiences",item:`${siteUrl}/`},{"@type":"ListItem",position:2,name:page.title,item:`${siteUrl}/${page.slug}`}] };
-  const faqSchema = page.faqs.length ? { "@context":"https://schema.org", "@type":"FAQPage", mainEntity:page.faqs.map((faq) => ({ "@type":"Question", name:faq.question, acceptedAnswer:{"@type":"Answer", text:faq.answer} })) } : null;
-  const ctaHref = page.type === "partnerships" ? partnershipWhatsapp : page.type === "events" ? eventWhatsapp : whatsapp;
+  const serviceSchema = { "@context":"https://schema.org", "@type":"Service", "@id":`${siteUrl}/${page.slug}#service`, name:page.title, description:page.opening ?? page.intro, provider:{"@id":`${siteUrl}/#business`}, areaServed:{"@type":"Place",name:"Trancoso, Bahia"}, url:`${siteUrl}/${page.slug}`, inLanguage:"pt-BR" };
+  const breadcrumbSchema = { "@context":"https://schema.org", "@type":"BreadcrumbList", itemListElement:[{"@type":"ListItem",position:1,name:"Nativos Experiences",item:`${siteUrl}/`},{"@type":"ListItem",position:2,name:page.title,item:`${siteUrl}/${page.slug}`}] };
+  const faqSchema = safeFaqs.length ? { "@context":"https://schema.org", "@type":"FAQPage", mainEntity:safeFaqs.map((faq) => ({ "@type":"Question", name:faq.question, acceptedAnswer:{"@type":"Answer", text:faq.answer} })) } : null;
+  const ctaHref = page.type === "partnerships" ? partnershipWhatsapp : page.type === "events" ? eventWhatsapp : page.type === "booking" ? wa("Olá! Gostaria de solicitar uma reserva. Data: | Horário: | Origem: | Destino/hospedagem: | Passageiros: | Bagagens: | Voo (se houver):") : whatsapp;
   const pageDifferentials = page.type === "partnerships" ? differentiators.slice(0, 3) : differentiators;
   const isPrivateRoute = ["airport", "transfer", "portoSeguro", "armored", "tours"].includes(page.type);
-
-  return <main className="service-page sand-theme" lang="pt-BR">
-    <Header />
-    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} /><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-    {faqSchema && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />}
-    <ServiceHero page={page} ctaHref={ctaHref} />
-    <section className="service-body section-light">
-      <div className="service-body-grid">
-        <div className="service-copy">
-          <p className="eyebrow dark"><span className="eyebrow-dot" /> Nativos Experiences · Trancoso</p>
-          <h2>{page.heading.split("\n").map((line, index) => <span key={line}>{line}{index === 0 && <br />}</span>)}</h2>
-          <p className="service-opening">{page.opening ?? page.intro}</p>
-          <p>{page.body}</p>
-          <WhatsAppButton label={page.cta} href={ctaHref} />{isPrivateRoute && <p className="service-private-note"><strong>Todos os transfers são privativos.</strong> As rotas acima são as mais solicitadas — se o seu trajeto não estiver na lista, fale com a gente para montarmos uma rota personalizada.</p>}
-        </div>
-        <div className="service-facts"><span className="facts-label">O que você pode esperar</span>{page.items.map((item, index) => <div className="service-fact" key={item}><span>{String(index + 1).padStart(2, "0")}</span><strong>{item}</strong></div>)}</div>
-      </div>
-      {onboardDifferentiatorTypes.includes(page.type) && <Differentiators items={pageDifferentials} content={differentiatorContent[page.type]} compact />}
-      <div className="service-faqs"><span className="facts-label">Perguntas frequentes</span>{page.faqs.map((faq) => <details key={faq.question}><summary>{faq.question}</summary><p>{faq.answer}</p></details>)}</div>
-      {related.length > 0 && <nav className="service-related" aria-label="Serviços relacionados"><span className="facts-label">Continue a planejar</span><div>{related.map((item) => item && <a key={item.slug} href={`/${item.slug}`}><span>{item.kicker}</span><strong>{item.title}</strong></a>)}</div></nav>}
-    </section>
-    <Footer />
-  </main>;
+  const journey = journeyContent[page.type];
+  return <main className="service-page sand-theme" lang="pt-BR"><Header /><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} /><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />{faqSchema && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />}<ServiceHero page={page} ctaHref={ctaHref} /><section className="service-body section-light"><div className="service-body-grid"><div className="service-copy"><p className="eyebrow dark"><span className="eyebrow-dot" /> Nativos Experiences · Trancoso</p><h2>{page.heading.split("\n").map((line,index)=><span key={line}>{line}{index === 0 && <br />}</span>)}</h2><p className="service-opening">{page.opening ?? page.intro}</p><p>{page.body}</p><WhatsAppButton label={page.type === "booking" ? "Solicitar reserva" : page.cta} href={ctaHref} />{isPrivateRoute && <p className="service-private-note"><strong>Todos os transfers são privativos.</strong> Se o seu trajeto não estiver na lista, montamos uma rota personalizada.</p>}</div><div className="service-facts"><span className="facts-label">O que você pode esperar</span>{page.items.map((item,index)=><div className="service-fact" key={item}><span>{String(index + 1).padStart(2,"0")}</span><strong>{item}</strong></div>)}</div></div>{journey && <section className="service-related" aria-label={journey.label}><span className="facts-label">{journey.label}</span><div>{journey.items.map((item,index)=><div className="service-fact" key={item}><span>{String(index + 1).padStart(2,"0")}</span><strong>{item}</strong></div>)}</div><p className="service-private-note">{journey.note}</p></section>}{onboardDifferentiatorTypes.includes(page.type) && <Differentiators items={pageDifferentials} content={differentiatorContent[page.type]} compact />}<div className="service-faqs"><span className="facts-label">Perguntas frequentes</span>{safeFaqs.map((faq)=><details key={faq.question}><summary>{faq.question}</summary><p>{faq.answer}</p></details>)}</div>{related.length > 0 && <nav className="service-related" aria-label="Serviços relacionados"><span className="facts-label">Continue a planejar</span><div>{related.map((item)=>item && <a key={item.slug} href={`/${item.slug}`}><span>{item.kicker}</span><strong>{item.title}</strong></a>)}</div></nav>}</section><Footer /></main>;
 }
