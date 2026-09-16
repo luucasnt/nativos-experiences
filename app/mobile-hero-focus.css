@@ -1,0 +1,27 @@
+/* Ajustes exclusivos de enquadramento dos seis heroes enviados em print.
+   Desktop e demais páginas permanecem inalterados. */
+@media (max-width: 800px) {
+  .service-hero[data-service="airport"] picture img {
+    object-position: 78% center !important;
+  }
+
+  .service-hero[data-service="armored"] picture img {
+    object-position: 72% center !important;
+  }
+
+  .service-hero[data-service="chauffeur"] picture img {
+    object-position: 62% center !important;
+  }
+
+  .service-hero[data-service="events"] picture img {
+    object-position: 68% center !important;
+  }
+
+  .service-hero[data-service="fleet"] picture img {
+    object-position: 64% center !important;
+  }
+
+  .service-hero[data-service="concierge"] picture img {
+    object-position: 66% center !important;
+  }
+}
