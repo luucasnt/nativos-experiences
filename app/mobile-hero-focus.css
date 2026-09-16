@@ -2,7 +2,8 @@
    Desktop e demais páginas permanecem inalterados. */
 @media (max-width: 800px) {
   .service-hero[data-service="airport"] picture img {
-    object-position: 78% center !important;
+    /* Leva o carro mais para a direita no recorte mobile. */
+    object-position: 68% center !important;
   }
 
   .service-hero[data-service="armored"] picture img {
@@ -14,7 +15,8 @@
   }
 
   .service-hero[data-service="events"] picture img {
-    object-position: 68% center !important;
+    /* Abre o enquadramento para o lado da noiva, preservando o casal no mobile. */
+    object-position: 56% center !important;
   }
 
   .service-hero[data-service="fleet"] picture img {
