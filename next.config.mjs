@@ -45,6 +45,13 @@ const nextConfig = {
       { source: '/nossos-servi%C3%A7os', destination: '/', permanent: true },
       { source: '/nossos-servicos', destination: '/', permanent: true },
       { source: '/service-page/transfer-aeroporto-trancoso', destination: '/transfer-aeroporto', permanent: true },
+      // Achados na auditoria do Search Console (16/09/2026): URLs antigas retornando 404, sem redirect configurado.
+      { source: '/blog', destination: '/guia', permanent: true },
+      { source: '/destino-arraial-dajuda', destination: '/destinos', permanent: true },
+      { source: '/destino-corumbau', destination: '/destinos', permanent: true },
+      { source: '/destino-praia-do-espelho', destination: '/destinos', permanent: true },
+      { source: '/destino-caraiva', destination: '/destinos', permanent: true },
+      { source: '/transfer-arraial-dajuda-trancoso', destination: '/transfer-trancoso', permanent: true },
     ];
     return [
       ...aliases.flatMap(([source, destination]) => [
