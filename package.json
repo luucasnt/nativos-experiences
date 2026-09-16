@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "cross-env NODE_ENV=production next build && cross-env NODE_ENV=production next start -H 0.0.0.0",
+    "dev": "next dev",
     "build": "cross-env NODE_ENV=production next build",
     "start": "cross-env NODE_ENV=production next start",
     "check": "tsc --noEmit",
@@ -27,8 +27,6 @@
     "typescript": "5.6.3"
   },
   "pnpm": {
-    "onlyBuiltDependencies": [
-      "sharp"
-    ]
+    "onlyBuiltDependencies": ["sharp"]
   }
 }
