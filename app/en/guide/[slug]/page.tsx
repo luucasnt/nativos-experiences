@@ -2,7 +2,7 @@
 // de maior valor comercial para busca internacional (o resto segue só em PT por ora).
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { Footer, Header, whatsapp, WhatsAppButton } from "@/components/SiteChrome";
+import { Footer, Header, WhatsAppButton } from "@/components/SiteChrome";
 import { getGuideBySlug, getGuideTranslation, guideSlugsEn, guides, guidesEn } from "@/lib/guides";
 import { getServiceBySlug, getLocalizedServiceBySlug } from "@/lib/data";
 
@@ -46,7 +46,7 @@ export default async function GuideRouteEn({ params }: { params: Promise<{ slug:
     <section className="guide-hero">
       <p className="eyebrow light"><span className="eyebrow-dot" /> {en.kicker}</p>
       <h1>{en.title}</h1>
-      <p className="guide-intro">{en.intro}</p>
+      <p className="guide-intro">{en.intro}</p><p className="guide-meta">By Nativos Experiences · Published <time dateTime={guide.publishedAt}>{new Intl.DateTimeFormat("en-US").format(new Date(`${guide.publishedAt}T12:00:00`))}</time>{guide.updatedAt !== guide.publishedAt && <> · Updated <time dateTime={guide.updatedAt}>{new Intl.DateTimeFormat("en-US").format(new Date(`${guide.updatedAt}T12:00:00`))}</time></>}</p>
     </section>
 
     <section className="guide-body section-light">
