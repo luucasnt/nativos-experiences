@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 import { canonicalSlugs } from "@/lib/data";
-import { guideSlugs, guideSlugsEn } from "@/lib/guides";
+import { guideSlugs, guideSlugsEn, guides } from "@/lib/guides";
 
 const siteUrl = "https://www.nativosexperiences.com";
 const entry = (slug: string, locale: "pt-BR" | "en"): MetadataRoute.Sitemap[number] => {
@@ -16,7 +16,7 @@ const guideEntry = (slug: string): MetadataRoute.Sitemap[number] => {
   const pt = `${siteUrl}/guia/${slug}`;
   const hasEn = guideSlugsEn.includes(slug);
   const en = hasEn ? `${siteUrl}/en/guide/${slug}` : undefined;
-  return { url: pt, changeFrequency: "monthly", alternates: en ? { languages: { "pt-BR": pt, en, "x-default": pt } } : undefined };
+  return { url: pt, lastModified: new Date(`${guides[slug].updatedAt}T12:00:00Z`), changeFrequency: "monthly", alternates: en ? { languages: { "pt-BR": pt, en, "x-default": pt } } : undefined };
 };
 const guideEntryEn = (slug: string): MetadataRoute.Sitemap[number] => ({
   url: `${siteUrl}/en/guide/${slug}`,
