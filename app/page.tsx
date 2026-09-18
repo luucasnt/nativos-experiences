@@ -25,11 +25,11 @@ const pillars = [
 
 const routes = [
   ["Aeroporto de Porto Seguro", "Trancoso", "/transfer-porto-seguro-trancoso"],
-  ["Aeroporto de Porto Seguro", "Fasano Trancoso", "/transfer-aeroporto-fasano-trancoso"],
-  ["Aeroporto de Porto Seguro", "Club Med Trancoso", "/transfer-aeroporto-club-med-trancoso"],
-  ["Aeroporto Terra Vista", "Trancoso", "/transfer-aeroporto"],
+  ["Aeroporto Terravista", "Trancoso", "/transfer-aeroporto"],
+  ["Aeroporto de Porto Seguro", "Caraíva", "/transfer-trancoso"],
   ["Trancoso", "Caraíva", "/transfer-trancoso"],
-  ["Trancoso", "Praia do Espelho", "/passeios"]
+  ["Trancoso", "Praia do Espelho", "/passeios"],
+  ["Trancoso", "Arraial d’Ajuda", "/transfer-trancoso"]
 ];
 
 const arrival = [
@@ -78,8 +78,6 @@ export default function Home() {
     <section id="destinos" className="destinations section-light" aria-labelledby="destinations-title"><div className="destination-image reveal"><Image src={serviceData.destinations.image} alt="Praia na Costa do Descobrimento" fill sizes="(max-width: 800px) 100vw, 50vw" /><span>o destino começa no caminho</span></div><div className="destination-copy reveal"><p className="eyebrow dark"><span className="eyebrow-dot" /> Curadoria local</p><h2 id="destinations-title">Uma estadia,<br /><em>muitas possibilidades.</em></h2><p>Restaurantes, praias, barcos, beach clubs, festas e experiências. Conte o perfil da sua viagem e nosso concierge ajuda a conectar os dias, os horários e os deslocamentos.</p><div className="destination-list">{["Trancoso","Arraial d’Ajuda","Praia do Espelho","Caraíva","Santo André","Corumbau","Itacaré"].map((destination,i) => <span key={destination}><i>{String(i + 1).padStart(2, "0")}</i>{destination}</span>)}</div><WhatsAppButton label="Montar minha experiência" href={wa("Olá! Gostaria de ajuda do concierge para montar minha experiência em Trancoso. Datas: | Pessoas: | Interesses:")} /></div></section>
 
     <section id="avaliacoes" className="testimonials section-light" aria-labelledby="reviews-title"><div className="section-head reveal"><div><p className="eyebrow dark"><span className="eyebrow-dot" /> Experiências reais</p><h2 id="reviews-title">Quem chega com a Nativos<br /><em>entende o cuidado.</em></h2></div><p className="section-note">Veja avaliações públicas e conheça a experiência de quem já viajou com a gente.</p></div><div className="testimonial-list">{[{quote:"Do aeroporto até os dias em Trancoso, tivemos a sensação de que tudo já estava organizado. Atendimento discreto, pontual e muito cuidadoso.",context:"Depoimento ilustrativo — substituir por avaliação autorizada"},{quote:"Carro impecável, motorista atencioso e a sensação de segurança do primeiro ao último quilômetro.",context:"Depoimento ilustrativo — substituir por avaliação autorizada"},{quote:"Pontualidade, conforto e um atendimento que faz diferença na estadia inteira.",context:"Depoimento ilustrativo — substituir por avaliação autorizada"}].map((t)=><div className="testimonial-card reveal" key={t.context}><p>&ldquo;{t.quote}&rdquo;</p><span>{t.context}</span></div>)}</div><a className="text-link" href="https://www.tripadvisor.com.br/Attraction_Review-g303279-d33405648-Reviews-Nativos_Transfer_Trancoso-Trancoso_Porto_Seguro_State_of_Bahia.html" target="_blank" rel="noreferrer">Ver avaliações públicas no TripAdvisor</a></section>
-
-    <section className="standards section-sand" aria-labelledby="hospitality-title"><div className="section-head reveal"><div><p className="eyebrow dark"><span className="eyebrow-dot" /> Operações e relacionamento</p><h2 id="hospitality-title">Hospitalidade que conhece<br /><em>a operação local.</em></h2></div><p className="section-note">A Nativos atende operações ligadas a algumas das principais hospedagens da região. A forma de atendimento varia conforme cada relacionamento e reserva.</p></div><div className="standards-grid">{["Fasano Trancoso","Reserva Jacumã","Pousada Tangará","Club Med Trancoso"].map((name,i)=><div className="standard-card reveal" key={name}><span>{String(i+1).padStart(2,"0")}</span><h3>{name}</h3></div>)}</div><a className="text-link" href="/parcerias">Conhecer a operação para parceiros →</a></section>
 
     <section id="faq" className="home-faq section-sand" aria-labelledby="faq-title"><div className="section-head reveal"><div><p className="eyebrow dark"><span className="eyebrow-dot" /> Perguntas frequentes</p><h2 id="faq-title">Antes de reservar,<br /><em>tire suas dúvidas.</em></h2></div></div><div className="service-faqs">{homeFaqs.map((faq) => <details key={faq.question}><summary>{faq.question}</summary><p>{faq.answer}</p></details>)}</div></section>
 
