@@ -64,7 +64,7 @@ export default async function GuideRouteEn({ params }: { params: Promise<{ slug:
           <span className="facts-label">Ready to book?</span>
           <h3>{relatedService.title}</h3>
           <p>{relatedService.intro}</p>
-          <WhatsAppButton label={en.relatedServiceLabel} href={whatsapp} />
+          <WhatsAppButton label={en.relatedServiceLabel} href={`https://wa.me/5573991681630?text=${encodeURIComponent(`Hello! I read the Nativos Guide article "${en.title}" and would like help planning my trip. Dates: | Guests: | Accommodation:`)}`} />
         </div>
       )}
 
