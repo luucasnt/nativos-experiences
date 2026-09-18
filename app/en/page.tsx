@@ -54,7 +54,7 @@ export default function EnglishHome() {
   const transferFaqs = getLocalizedServiceBySlug("transfer-trancoso", "en")!.faqs;
   const airportFaqs = getLocalizedServiceBySlug("transfer-aeroporto", "en")!.faqs;
   const armoredFaqs = getLocalizedServiceBySlug("transfer-blindado", "en")!.faqs;
-  const homeFaqs = [transferFaqs[1], airportFaqs[0], armoredFaqs[0]];
+  const homeFaqs = [airportFaqs[0], airportFaqs[1], transferFaqs[1]];
   const faqSchema = { "@context": "https://schema.org", "@type": "FAQPage", inLanguage: "en", mainEntity: homeFaqs.map((faq) => ({ "@type": "Question", name: faq.question, acceptedAnswer: { "@type": "Answer", text: faq.answer } })) };
 
   return <main id="top" className="site-shell sand-theme" lang="en">
