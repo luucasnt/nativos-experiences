@@ -2,7 +2,7 @@
 // de busca e converte para a página de serviço relacionada via CTA.
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { Footer, Header, whatsapp, WhatsAppButton } from "@/components/SiteChrome";
+import { Footer, Header, WhatsAppButton } from "@/components/SiteChrome";
 import { getGuideBySlug, guideSlugs, guides } from "@/lib/guides";
 import { getServiceBySlug } from "@/lib/data";
 
