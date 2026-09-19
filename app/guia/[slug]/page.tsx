@@ -2,7 +2,7 @@
 // de busca e converte para a página de serviço relacionada via CTA.
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { Footer, Header, whatsapp, WhatsAppButton } from "@/components/SiteChrome";
+import { Footer, Header, WhatsAppButton } from "@/components/SiteChrome";
 import { getGuideBySlug, guideSlugs, guides } from "@/lib/guides";
 import { getServiceBySlug } from "@/lib/data";
 
@@ -44,7 +44,7 @@ export default async function GuideRoute({ params }: { params: Promise<{ slug: s
     <section className="guide-hero">
       <p className="eyebrow light"><span className="eyebrow-dot" /> {guide.kicker}</p>
       <h1>{guide.title}</h1>
-      <p className="guide-intro">{guide.intro}</p>
+      <p className="guide-intro">{guide.intro}</p><p className="guide-meta">Por Nativos Experiences · Publicado em <time dateTime={guide.publishedAt}>{new Intl.DateTimeFormat("pt-BR").format(new Date(`${guide.publishedAt}T12:00:00`))}</time>{guide.updatedAt !== guide.publishedAt && <> · Atualizado em <time dateTime={guide.updatedAt}>{new Intl.DateTimeFormat("pt-BR").format(new Date(`${guide.updatedAt}T12:00:00`))}</time></>}</p>
     </section>
 
     <section className="guide-body section-light">
@@ -62,7 +62,7 @@ export default async function GuideRoute({ params }: { params: Promise<{ slug: s
           <span className="facts-label">Pronto para reservar?</span>
           <h3>{relatedService.title}</h3>
           <p>{relatedService.intro}</p>
-          <WhatsAppButton label={guide.relatedServiceLabel} href={whatsapp} />
+          <a className="text-link" href={`/${relatedService.slug}`}>Conhecer este serviço →</a><WhatsAppButton label={guide.relatedServiceLabel} href={`https://wa.me/5573991681630?text=${encodeURIComponent(`Olá! Li o Guia Nativos sobre "${guide.title}" e gostaria de ajuda para planejar minha viagem. Datas: | Pessoas: | Hospedagem:`)}`} />
         </div>
       )}
 
