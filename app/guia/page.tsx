@@ -13,7 +13,7 @@ const groups = [
 export const metadata: Metadata = {
   title: { absolute: "Guia de Trancoso e Região | Nativos Experiences" },
   description: "Guia local para planejar Trancoso: como chegar, transfer, aeroportos, hospedagem, praias, Caraíva e Costa do Descobrimento.",
-  alternates: { canonical: "/guia", languages: { "pt-BR": `${siteUrl}/guia`, "x-default": `${siteUrl}/guia` } },
+  alternates: { canonical: "/guia", languages: { "pt-BR": `${siteUrl}/guia`, en: `${siteUrl}/en/guide`, "x-default": `${siteUrl}/guia` } },
 };
 
 export default function GuideHub() {
