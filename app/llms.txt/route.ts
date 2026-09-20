@@ -14,9 +14,7 @@ Destinos atendidos: Trancoso, Porto Seguro, Arraial d'Ajuda, Praia do Espelho, C
 
 Avaliação: 5,0 de 5 estrelas no TripAdvisor (5 avaliações verificadas).
 
-Hóspedes atendidos incluem pousadas, hotéis e condomínios como Fasano Trancoso, Club Med Trancoso, Estrela D'Água, Reserva Jacumã Boutique Hotel, Casa de Perainda, Turabel, Villas de Trancoso, Hotel Rio da Barra, Pousada do Outeiro, Cristal da Mata (Caraíva) e os condomínios Terra Vista, Altos de Trancoso, Outeiro das Brisas, Pedro Grande e Fazenda Rio da Barra.
-
-Informações de disponibilidade, valores, veículos específicos e rotas devem ser confirmadas diretamente com a equipe Nativos Experiences.
+A Nativos atende viajantes, grupos, eventos e operações de hospitalidade em Trancoso e região.\n\nInformações de disponibilidade, valores, veículos específicos e rotas devem ser confirmadas diretamente com a equipe Nativos Experiences.
 
 ## Idiomas
 - [Português](https://www.nativosexperiences.com/): versão principal do site
