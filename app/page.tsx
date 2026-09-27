@@ -27,10 +27,11 @@ const pillars = [
 const routes = [
   ["Aeroporto de Porto Seguro", "Trancoso", "/transfer-porto-seguro-trancoso"],
   ["Aeroporto Terravista", "Trancoso", "/transfer-aeroporto"],
-  ["Aeroporto de Porto Seguro", "Fasano Trancoso", "/transfer-aeroporto-fasano-trancoso"],
-  ["Aeroporto de Porto Seguro", "Club Med Trancoso", "/transfer-aeroporto-club-med-trancoso"],
-  ["Trancoso", "Caraíva", "/transfer-trancoso"],
-  ["Trancoso", "Praia do Espelho", "/passeios"]
+  ["Aeroporto de Porto Seguro", "Arraial d’Ajuda", "/transfer-aeroporto"],
+  ["Aeroporto de Porto Seguro", "Praia do Espelho", "/transfer-aeroporto"],
+  ["Aeroporto de Porto Seguro", "Caraíva", "/transfer-aeroporto"],
+  ["Aeroporto de Porto Seguro", "Santo André", "/transfer-aeroporto"],
+  ["Aeroporto de Porto Seguro", "Corumbau", "/transfer-aeroporto"]
 ];
 
 const arrival = [
@@ -69,7 +70,7 @@ export default function Home() {
 
     <section className="fleet-section section-dark" aria-labelledby="standard-title"><div className="section-index">N / 02</div><div className="fleet-head reveal"><p className="eyebrow light"><span className="eyebrow-dot" /> O padrão Nativos</p><h2 id="standard-title">Luxo é quando tudo<br /><em>funciona sem esforço.</em></h2><p>Nosso padrão nasce da atenção: informação certa, categoria adequada, equipe preparada e alguém cuidando do próximo passo.</p></div><div className="fleet-grid">{standards.map(([title,text],i) => <div className="fleet-item reveal" key={title}><span className="step-no">{String(i+1).padStart(2,"0")}</span><div><h3>{title}</h3><p>{text}</p></div></div>)}</div></section>
 
-    <section className="experiences section-light" aria-labelledby="routes-title"><div className="section-head reveal"><div><p className="eyebrow dark"><span className="eyebrow-dot" /> Rotas mais procuradas</p><h2 id="routes-title">Do desembarque<br /><em>ao destino certo.</em></h2></div><p className="section-note">Rotas privativas planejadas conforme passageiros, bagagens, horário e hospedagem.</p></div><div className="experience-list">{routes.map(([from,to,href],i) => <a className="experience-card reveal" href={href} key={`${from}-${to}`}><div className="experience-info"><div><p className="card-region">ROTA {String(i+1).padStart(2,"0")}</p><h3>{from}<br />→ {to}</h3></div><p className="card-description">Recepção e deslocamento privativo com planejamento da operação.<br /><strong>Ver rota →</strong></p></div></a>)}</div></section>
+    <section className="experiences section-light" aria-labelledby="routes-title"><div className="section-head reveal"><div><p className="eyebrow dark"><span className="eyebrow-dot" /> Rotas mais procuradas</p><h2 id="routes-title">Do aeroporto<br /><em>ao destino certo.</em></h2></div><p className="section-note">Transfers privativos de aeroporto para os principais destinos da Costa do Descobrimento, com operação planejada conforme passageiros, bagagens, horário e origem da chegada.</p></div><div className="experience-list">{routes.map(([from,to,href],i) => <a className="experience-card reveal" href={href} key={`${from}-${to}`}><div className="experience-info"><div><p className="card-region">ROTA {String(i+1).padStart(2,"0")}</p><h3>{from}<br />→ {to}</h3></div><p className="card-description">Recepção e deslocamento privativo com planejamento da operação.<br /><strong>Ver rota →</strong></p></div></a>)}</div></section>
 
     <section className="fleet-section section-dark" aria-labelledby="arrival-title"><div className="section-index">N / 03</div><div className="fleet-head reveal"><p className="eyebrow light"><span className="eyebrow-dot" /> Como funciona</p><h2 id="arrival-title">Da confirmação<br /><em>à porta da hospedagem.</em></h2><p>Um protocolo simples para deixar a chegada previsível, confortável e sem ruído.</p></div><div className="fleet-grid">{arrival.map(([n,title,text]) => <div className="fleet-item reveal" key={n}><span className="step-no">{n}</span><div><h3>{title}</h3><p>{text}</p></div></div>)}</div><div className="fleet-note"><a className="hero-action" href={wa("Olá! Quero solicitar um transfer. Data: | Voo: | Origem: | Destino/hospedagem: | Passageiros: | Bagagens:")} target="_blank" rel="noreferrer">Solicitar transfer</a></div></section>
 
