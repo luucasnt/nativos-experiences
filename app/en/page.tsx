@@ -8,26 +8,27 @@ import { ScrollReveal } from "@/components/ScrollReveal";
 
 export const metadata: Metadata = {
   title: "Private Luxury Transfer Porto Seguro–Trancoso",
-  description: "Private luxury transfer from Porto Seguro Airport to Trancoso, Bahia. Reception at Terravista and Outeiro das Brisas, chauffeur service, concierge, events and an armored vehicle.",
+  description: "Private luxury transfers from Porto Seguro Airport and Terravista to Trancoso, with concierge, chauffeur, armored service and local support.",
   alternates: { canonical: "/en", languages: { "pt-BR": "https://www.nativosexperiences.com/", en: "https://www.nativosexperiences.com/en", "x-default": "https://www.nativosexperiences.com/" } },
-  openGraph: { type: "website", siteName: "Nativos Experiences", locale: "en_US", title: "Private Luxury Transfer Porto Seguro–Trancoso | Nativos Experiences", description: "Private luxury transfer from Porto Seguro Airport to Trancoso, with a local concierge taking care of every detail of your arrival.", url: "https://www.nativosexperiences.com/en" },
+  openGraph: { type: "website", siteName: "Nativos Experiences", locale: "en_US", title: "Private Luxury Transfer Porto Seguro–Trancoso | Nativos Experiences", description: "Private luxury transfer from Porto Seguro Airport or Terravista to Trancoso, with a local concierge taking care of every detail of your arrival.", url: "https://www.nativosexperiences.com/en" },
   twitter: { card: "summary_large_image", title: "Private Luxury Transfer Porto Seguro–Trancoso | Nativos Experiences", description: "Private luxury transfer, chauffeur service and concierge in Trancoso and the Bahia region." }
 };
 
 const wa = (text: string) => `https://wa.me/5573991681630?text=${encodeURIComponent(text)}`;
 
 const pillars = [
-  ["01", "Private transfer", "From the airport to your accommodation, with a personalized reception sized to your group.", "/en/transfer-aeroporto"],
+  ["01", "Private transfer", "From Porto Seguro Airport or Terravista to your accommodation, with a personalized reception sized to your group.", "/en/transfer-aeroporto"],
   ["02", "Concierge", "Restaurants, beaches, boats, beach clubs, experiences and logistics coordinated by people who live the destination.", "/en/concierge-trancoso"],
   ["03", "Chauffeur service", "A dedicated vehicle for your schedule for 8h, 12h or 24h. Trancoso, on your own time.", "/en/motorista-a-disposicao"],
-  ["04", "Groups & events", "Vans, cars and coordinated operations for weddings, celebrations, groups and corporate events.", "/en/casamentos-e-eventos"]
+  ["04", "Armored transfer", "Armored Mercedes-Benz GLE 400d or Toyota SW4 for a discreet, on-demand operation.", "/en/transfer-blindado"],
+  ["05", "Groups & events", "Vans, cars and coordinated operations for weddings, celebrations, groups and corporate events.", "/en/casamentos-e-eventos"]
 ];
 
 const routes = [
   ["Porto Seguro Airport", "Trancoso", "/en/transfer-porto-seguro-trancoso"],
+  ["Terravista Airport", "Trancoso", "/en/transfer-aeroporto"],
   ["Porto Seguro Airport", "Fasano Trancoso", "/en/transfer-aeroporto-fasano-trancoso"],
   ["Porto Seguro Airport", "Club Med Trancoso", "/en/transfer-aeroporto-club-med-trancoso"],
-  ["Terravista Airport", "Trancoso", "/en/transfer-aeroporto"],
   ["Trancoso", "Caraíva", "/en/transfer-trancoso"],
   ["Trancoso", "Praia do Espelho", "/en/passeios"]
 ];
@@ -43,9 +44,11 @@ const arrival = [
 const standards = [
   ["Local since 2015", "Real knowledge of the routes, access points, timing and particularities of the region."],
   ["Planned operation", "Every service is organized around the booking, the group's profile and the trip's logistics."],
-  ["Comfort on board", "Water, snacks and support items selected to make the journey part of the experience."],
-  ["Connectivity", "Starlink available on selected operations to keep you connected along the way."],
+  ["On-board service", "Mineral water, coconut water, selected snacks, wipes, sanitizer and chargers available on board."],
+  ["Connectivity", "Starlink available on compatible vehicles and routes to keep you connected along the way."],
   ["Discretion", "Private, reserved service with vehicles free of conspicuous branding."],
+  ["Armored transfer", "Mercedes-Benz GLE 400d and Toyota SW4, both armored, available on demand. Nativos states these are the region's only armored vehicles for executive transfers."],
+  ["Family comfort", "Baby seats, child seats and booster seats can be requested at no additional cost."],
   ["One team, the whole trip", "Transfer, chauffeur, concierge, tours, groups and events coordinated through a single point of contact."]
 ];
 
@@ -75,7 +78,7 @@ export default function EnglishHome() {
 
     <section id="services" className="experiences section-sand" aria-labelledby="services-title"><div className="section-head reveal"><div><p className="eyebrow dark"><span className="eyebrow-dot" /> Beyond the arrival</p><h2 id="services-title">Trancoso at your pace,<br /><em>without building the logistics yourself.</em></h2></div><p className="section-note">Mobility and concierge work together to turn your schedule into an experience.</p></div><div className="experience-list">{services.map(({ item, media }, index) => <a className="experience-card reveal" href={`/en/${item.slug}`} key={item.type}><EditorialImage className="experience-image-wrap" src={media.image} alt={media.imageAlt} imageFocus={media.imageFocus} imageFocusMobile={media.imageFocusMobile} imageFit={media.imageFit} imageFitMobile={media.imageFitMobile}><span className="card-number">{String(index + 1).padStart(2, "0")}</span></EditorialImage><div className="experience-info"><div><p className="card-region">Nativos Experiences</p><h3>{item.title}</h3></div><p className="card-description">{item.intro}</p></div></a>)}</div></section>
 
-    <section id="fleet" className="fleet-section section-dark" aria-labelledby="fleet-title"><div className="section-index">N / 04</div><div className="fleet-head reveal"><p className="eyebrow light"><span className="eyebrow-dot" /> The right category for every trip</p><h2 id="fleet-title">Choose the standard.<br /><em>We handle the rest.</em></h2><p>From compact categories to premium SUVs, vans and the armored Mercedes-Benz GLE 400d and Toyota SW4 — <strong>the only armored vehicles for executive transfer in the region</strong>. The category is confirmed based on passengers, luggage and the operation's needs; the exact model may vary by availability.</p><a className="hero-action" href="/en/frota">View the fleet</a></div></section>
+    <section id="fleet" className="fleet-section section-dark" aria-labelledby="fleet-title"><div className="section-index">N / 04</div><div className="fleet-head reveal"><p className="eyebrow light"><span className="eyebrow-dot" /> The right category for every trip</p><h2 id="fleet-title">Choose the standard.<br /><em>We handle the rest.</em></h2><p>From compact categories to premium SUVs, vans and the armored Mercedes-Benz GLE 400d and Toyota SW4 — <strong>the only armored vehicles for executive transfer in the region</strong>. The category is confirmed based on passengers, luggage and the operation's needs; the exact model may vary by availability.</p><div className="fleet-actions"><a className="hero-action" href="/en/frota">View the fleet</a><a className="text-link light" href="/en/transfer-blindado">Discover armored transfer →</a></div></div></section>
 
     <section id="destinations" className="destinations section-light" aria-labelledby="destinations-title"><div className="destination-image reveal"><Image src={getLocalizedServiceBySlug("destinos", "en")!.image} alt="Beach on the Discovery Coast" fill sizes="(max-width: 800px) 100vw, 50vw" /><span>the destination begins on the way</span></div><div className="destination-copy reveal"><p className="eyebrow dark"><span className="eyebrow-dot" /> Local curation</p><h2 id="destinations-title">One stay,<br /><em>many possibilities.</em></h2><p>Restaurants, beaches, boats, beach clubs, parties and experiences. Tell us about your trip and our concierge will help connect the days, the timing and the transfers.</p><div className="destination-list">{["Trancoso","Arraial d'Ajuda","Praia do Espelho","Caraíva","Santo André","Corumbau","Itacaré"].map((destination,i) => <span key={destination}><i>{String(i + 1).padStart(2, "0")}</i>{destination}</span>)}</div><WhatsAppButton label="Plan my experience" href={wa("Hello! I would like the concierge's help planning my experience in Trancoso. Dates: | People: | Interests:")} /></div></section>
 
