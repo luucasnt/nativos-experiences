@@ -8,26 +8,27 @@ import { ScrollReveal } from "@/components/ScrollReveal";
 
 export const metadata: Metadata = {
   title: "Transfer de Luxo Porto Seguro–Trancoso",
-  description: "Transfer privativo de luxo do Aeroporto de Porto Seguro a Trancoso, Bahia. Recepção em Terravista e Outeiro das Brisas, motorista à disposição, concierge, eventos e carro blindado.",
+  description: "Transfer privativo de luxo a partir do Aeroporto de Porto Seguro e do Aeroporto Terravista, com concierge, motorista à disposição, serviço blindado e atendimento em Trancoso e região.",
   alternates: { canonical: "/", languages: { "pt-BR": "https://www.nativosexperiences.com/", en: "https://www.nativosexperiences.com/en", "x-default": "https://www.nativosexperiences.com/" } },
-  openGraph: { type: "website", siteName: "Nativos Experiences", locale: "pt_BR", title: "Transfer de Luxo Porto Seguro–Trancoso | Nativos Experiences", description: "Transfer privativo de luxo do Aeroporto de Porto Seguro a Trancoso, com concierge local cuidando de cada detalhe da chegada.", url: "https://www.nativosexperiences.com/" },
+  openGraph: { type: "website", siteName: "Nativos Experiences", locale: "pt_BR", title: "Transfer de Luxo Porto Seguro–Trancoso | Nativos Experiences", description: "Transfer privativo de luxo de Porto Seguro ou Terravista para Trancoso, com concierge local cuidando de cada detalhe da chegada.", url: "https://www.nativosexperiences.com/" },
   twitter: { card: "summary_large_image", title: "Transfer de Luxo Porto Seguro–Trancoso | Nativos Experiences", description: "Transfer privativo de luxo, motorista à disposição e concierge em Trancoso e região da Bahia." }
 };
 
 const wa = (text: string) => `https://wa.me/5573991681630?text=${encodeURIComponent(text)}`;
 
 const pillars = [
-  ["01", "Transfer privativo", "Do aeroporto à hospedagem, com recepção personalizada e atendimento dimensionado ao seu grupo.", "/transfer-aeroporto"],
+  ["01", "Transfer privativo", "Do Aeroporto de Porto Seguro ou Terravista à hospedagem, com recepção personalizada e operação dimensionada ao seu grupo.", "/transfer-aeroporto"],
   ["02", "Concierge", "Restaurantes, praias, barcos, beach clubs, experiências e logística coordenados por quem vive o destino.", "/concierge-trancoso"],
   ["03", "Motorista à disposição", "Um veículo dedicado à sua programação por 8h, 12h ou 24h. Trancoso no seu tempo.", "/motorista-a-disposicao"],
-  ["04", "Grupos & eventos", "Vans, carros e operação coordenada para casamentos, celebrações, grupos e eventos corporativos.", "/casamentos-e-eventos"]
+  ["04", "Transfer blindado", "Mercedes-Benz GLE 400d ou Toyota SW4, ambos blindados, para uma operação reservada e sob demanda.", "/transfer-blindado"],
+  ["05", "Grupos & eventos", "Vans, carros e operação coordenada para casamentos, celebrações, grupos e eventos corporativos.", "/casamentos-e-eventos"]
 ];
 
 const routes = [
   ["Aeroporto de Porto Seguro", "Trancoso", "/transfer-porto-seguro-trancoso"],
+  ["Aeroporto Terravista", "Trancoso", "/transfer-aeroporto"],
   ["Aeroporto de Porto Seguro", "Fasano Trancoso", "/transfer-aeroporto-fasano-trancoso"],
   ["Aeroporto de Porto Seguro", "Club Med Trancoso", "/transfer-aeroporto-club-med-trancoso"],
-  ["Aeroporto Terra Vista", "Trancoso", "/transfer-aeroporto"],
   ["Trancoso", "Caraíva", "/transfer-trancoso"],
   ["Trancoso", "Praia do Espelho", "/passeios"]
 ];
@@ -43,9 +44,11 @@ const arrival = [
 const standards = [
   ["Local desde 2015", "Conhecimento real das rotas, acessos, horários e particularidades da região."],
   ["Operação planejada", "Cada atendimento é organizado a partir da reserva, do perfil do grupo e da logística da viagem."],
-  ["Conforto a bordo", "Água, snacks e itens de apoio selecionados para tornar o percurso parte da experiência."],
-  ["Conectividade", "Starlink disponível em operações selecionadas para manter você conectado no caminho."],
+  ["Serviço de bordo", "Água mineral, água de coco, snacks selecionados, lenços, álcool em gel e carregadores disponíveis a bordo."],
+  ["Conectividade", "Starlink disponível em veículos e rotas compatíveis para manter você conectado no caminho."],
   ["Discrição", "Atendimento reservado e veículos sem comunicação visual ostensiva."],
+  ["Transfer blindado", "Mercedes-Benz GLE 400d e Toyota SW4, ambos blindados, disponíveis sob demanda. A Nativos informa operar os únicos veículos blindados para transfer executivo na região."],
+  ["Conforto para famílias", "Bebê conforto, cadeirinha e assento elevado podem ser solicitados sem custo adicional."],
   ["Uma equipe, a viagem inteira", "Transfer, motorista, concierge, passeios, grupos e eventos coordenados em um só atendimento."]
 ];
 
@@ -72,7 +75,7 @@ export default function Home() {
 
     <section id="servicos" className="experiences section-sand" aria-labelledby="services-title"><div className="section-head reveal"><div><p className="eyebrow dark"><span className="eyebrow-dot" /> Além da chegada</p><h2 id="services-title">Trancoso no seu ritmo,<br /><em>sem montar a logística sozinho.</em></h2></div><p className="section-note">Mobilidade e concierge trabalham juntos para transformar programação em experiência.</p></div><div className="experience-list">{services.map(({ item, media }, index) => <a className="experience-card reveal" href={`/${item.slug}`} key={item.type}><EditorialImage className="experience-image-wrap" src={media.image} alt={media.imageAlt} imageFocus={media.imageFocus} imageFocusMobile={media.imageFocusMobile} imageFit={media.imageFit} imageFitMobile={media.imageFitMobile}><span className="card-number">{String(index + 1).padStart(2, "0")}</span></EditorialImage><div className="experience-info"><div><p className="card-region">Nativos Experiences</p><h3>{item.title}</h3></div><p className="card-description">{item.intro}</p></div></a>)}</div></section>
 
-    <section id="frota" className="fleet-section section-dark" aria-labelledby="fleet-title"><div className="section-index">N / 04</div><div className="fleet-head reveal"><p className="eyebrow light"><span className="eyebrow-dot" /> A categoria certa para cada viagem</p><h2 id="fleet-title">Escolha o padrão.<br /><em>Nós cuidamos do restante.</em></h2><p>De categorias compactas a SUVs premium, vans e os blindados Mercedes-Benz GLE 400d e Toyota SW4 — <strong>os únicos veículos blindados para transfer executivo na região</strong>. A categoria é confirmada conforme passageiros, bagagens e necessidade da operação; o modelo pode variar por disponibilidade.</p><a className="hero-action" href="/frota">Conhecer categorias</a></div></section>
+    <section id="frota" className="fleet-section section-dark" aria-labelledby="fleet-title"><div className="section-index">N / 04</div><div className="fleet-head reveal"><p className="eyebrow light"><span className="eyebrow-dot" /> A categoria certa para cada viagem</p><h2 id="fleet-title">Escolha o padrão.<br /><em>Nós cuidamos do restante.</em></h2><p>De categorias compactas a SUVs premium, vans e os blindados Mercedes-Benz GLE 400d e Toyota SW4 — <strong>os únicos veículos blindados para transfer executivo na região</strong>. A categoria é confirmada conforme passageiros, bagagens e necessidade da operação; o modelo pode variar por disponibilidade.</p><div className="fleet-actions"><a className="hero-action" href="/frota">Conhecer categorias</a><a className="text-link light" href="/transfer-blindado">Conhecer o transfer blindado →</a></div></div></section>
 
     <section id="destinos" className="destinations section-light" aria-labelledby="destinations-title"><div className="destination-image reveal"><Image src={serviceData.destinations.image} alt="Praia na Costa do Descobrimento" fill sizes="(max-width: 800px) 100vw, 50vw" /><span>o destino começa no caminho</span></div><div className="destination-copy reveal"><p className="eyebrow dark"><span className="eyebrow-dot" /> Curadoria local</p><h2 id="destinations-title">Uma estadia,<br /><em>muitas possibilidades.</em></h2><p>Você pousa em Porto Seguro e pode seguir para muito além de Trancoso. Nosso concierge ajuda a escolher o destino conforme o perfil da viagem, o tempo disponível e a hospedagem, organizando transfers privativos, roteiros e conexões entre diferentes pontos da Costa do Descobrimento.</p><div className="destination-list">{["Trancoso","Arraial d’Ajuda","Praia do Espelho","Caraíva","Santo André","Corumbau","Itacaré"].map((destination,i) => <span key={destination}><i>{String(i + 1).padStart(2, "0")}</i>{destination}</span>)}</div><p className="section-note">Corumbau pede mais tempo e planejamento; Santo André é uma alternativa ao norte de Porto Seguro. A rota certa depende do seu roteiro.</p><WhatsAppButton label="Montar minha experiência" href={wa("Olá! Gostaria de ajuda do concierge para planejar minha chegada por Porto Seguro. Datas: | Pessoas: | Destinos de interesse:")} /></div></section>
 
